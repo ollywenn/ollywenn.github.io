@@ -1,0 +1,37 @@
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.section-title {
+    @extend %sectionHeadlines;
+    flex: 1 1 auto;
+}
+.section-subtitle {
+    @extend %sectionHeadlines;
+    flex: 0 0 $fullCol;
+    font-weight: $fontWeight-normal;
+}
+.section-viewAll,
+.section-extraNav {
+    flex: 0 0 auto;
+}
+.section-titleIconWrapper {
+    position: relative;
+    padding-right: 21px;
+}
+.section-titleIconWrapper::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(calc(-50% + 3px));
+    content: '';
+}
+.section-titleIconWrapper--toggleArrow::after {
+    background: image-url('i-arrow-red.svg') center center no-repeat;
+    background-size: 9px 16px;
+    width: 9px;
+    height: 16px;
+}

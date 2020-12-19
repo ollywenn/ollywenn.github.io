@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="icon_widget_webcast" transform="translate(-715 -4798)">
+    <g id="icon_widget_webcast-2" data-name="icon_widget_webcast" transform="translate(166.801 209.351)">
+      <path id="Path_225" data-name="Path 225" d="M465.422,171.12A15.237,15.237,0,0,0,453.4,195.746l-1.54,5.747,6.318-1.692a15.254,15.254,0,1,0,7.239-28.681Z" transform="translate(100.03 4421.529)" fill="rgba(226,18,53,0.16)" stroke="#e21235" stroke-width="1.797"/>
+      <g id="Group_258" data-name="Group 258" transform="translate(100.03 4422.529)">
+        <rect id="Rectangle_87" data-name="Rectangle 87" width="12.145" height="9.38" transform="translate(457.475 181.241)" fill="#fafafa" stroke="#e21235" stroke-width="1.797"/>
+        <path id="Path_226" data-name="Path 226" d="M469.619,187.879l3.749,2.165v-8.224l-3.561,2.056" fill="#fafafa" stroke="#e21235" stroke-width="1.739"/>
+      </g>
+      <path id="Path_227" data-name="Path 227" d="M465.422,201.626v3.759h21.215l5.748,3.416V182.614H480.207" transform="translate(100.03 4421.529)" fill="none" stroke="#e21235" stroke-width="1.829"/>
+    </g>
+    <rect id="Rectangle_94" data-name="Rectangle 94" width="46" height="46" transform="translate(715 4798)" fill="none"/>
+  </g>
+</svg>

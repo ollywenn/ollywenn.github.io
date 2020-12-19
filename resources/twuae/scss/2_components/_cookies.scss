@@ -1,0 +1,80 @@
+$cookiesTitleColor: $white;
+$cookiesBgColor: $grey2;
+
+.section--cookies {
+    @include animate;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: $z-index-3;
+    opacity: 1;
+    background: $cookiesBgColor;
+    padding: $paddingDefault 0;
+    width: 100%;
+    text-align: center;
+    color: $white;
+    @include bp(sm) {
+        padding-top: $paddingSm;
+        padding-bottom: $paddingSm;
+    }
+    @include bp(600px) {
+        text-align: left;
+    }
+    @include bp(lg) {
+        padding-top: $paddingLg;
+        padding-bottom: $paddingLg;
+    }
+}
+.section--cookies.is-accepted {
+    transform: translateY(100%);
+    opacity: 0;
+}
+.section--cookies .wrapper {
+    @include fixPadding;
+    @include bp(600px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.cookies-title {
+    @extend %header2;
+    color: $cookiesTitleColor;
+    @include bp(600px) {
+        flex: 0 0 100%;
+    }
+    @include bp(xlg) {
+        flex-basis: auto;
+    }
+}
+.section--cookies p {
+    display: inline-block;
+    flex: 0 0 100%;
+    color: $grey4;
+    font-size: rc(14);
+    @include bp(600px) {
+        flex: 0 0 calc(100% - 160px);
+    }
+    @include bp(xlg) {
+        flex: 1 0 auto;
+        margin-top: 0;
+        margin-left: 30px;
+    }
+}
+.section--cookies p a {
+    text-decoration: none;
+    color: $white;
+    white-space: nowrap;
+}
+.section--cookies .btn--accept {
+    @extend %btn--primary;
+    margin-top: 20px;
+    @include bp(600px) {
+        flex: 0 1 auto;
+        margin-top: 12px;
+    }
+    @include bp(xlg) {
+        margin-top: 0;
+    }
+}

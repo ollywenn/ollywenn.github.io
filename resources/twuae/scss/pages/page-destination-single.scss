@@ -1,0 +1,24 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+@import '../2_components/most-popular';
+@import '../2_components/sponsored-content';
+
+.page--destination-single .main-content {
+    @include bp(lg) {
+        flex-basis: $mainContentWidthWithSidebarDefault;
+        max-width: $mainContentWidthWithSidebarDefault;
+    }
+}
+.page--destination-single .sidebar {
+    margin-bottom: 40px;
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        justify-content: center;
+        max-width: $fullCol;
+    }
+    @include bp(lg) {
+        flex-basis: $sidebarWidthDefault;
+        max-width: $sidebarWidthDefault;
+    }
+}

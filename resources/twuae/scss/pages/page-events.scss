@@ -1,0 +1,74 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+@import '../2_components/most-popular';
+@import '../2_components/related-articles';
+@import '../2_components/cta';
+
+.page--events-list .article .article-body {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.page--events-list .main-content .articleSnippet-item {
+    @include bp(smd) {
+        flex: 0 0 $twoColsSmd;
+        border: 0;
+        padding-top: 0;
+        max-width: $twoColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $twoColsLg;
+        max-width: $twoColsLg;
+    }
+}
+.page--events-list .main-content .articleSnippet-item--fullImg {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.page--events-list .main-content .articleSnippet-thumb,
+.page--events-list .main-content .articleSnippet-content {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.page--events-list .main-content .articleSnippet-content {
+    @include bp(smd) {
+        margin-top: $marginHalfDefault;
+    }
+}
+.page--events-list .main-content .articleSnippet-list--calendar,
+.page--events-list .main-content .articleSnippet-list--events {
+    display: none;
+}
+.page--events-list .main-content .articleSnippet-list--calendar.is-active,
+.page--events-list .main-content .articleSnippet-list--events.is-active {
+    display: flex;
+}
+.page--events-list .btn--list,
+.page--events-list .btn--calendar {
+    display: none;
+}
+.page--events-list .btn--list.is-active,
+.page--events-list .btn--calendar.is-active {
+    display: inline-block;
+}
+.page--event-create .main-content {
+    @include bp(lg) {
+        //TODO: standardise this
+        flex-basis: 515px;
+        max-width: 515px;
+    }
+}
+.page--event-create .article-body .form,
+.page--event-create .article-body .form .btn--submit {
+    max-width: $fullCol;
+}
+.page--event-create .article-body .form {
+    padding-bottom: 0;
+}

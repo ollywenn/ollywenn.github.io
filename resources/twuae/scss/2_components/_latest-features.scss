@@ -1,0 +1,8 @@
+.section--latestFeatures .articleSnippet-item + .articleSnippet-item {
+    margin-top: $marginHalfDefault;
+}
+.section--latestFeatures .articleSnippet-thumb,
+.section--latestFeatures .articleSnippet-content {
+    flex-basis: $twoCols;
+    max-width: $twoCols;
+}

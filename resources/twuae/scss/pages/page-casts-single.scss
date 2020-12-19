@@ -1,0 +1,14 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+@import '../2_components/listen-on';
+
+.page--casts-single .main-content:last-of-type > .article {
+    @include bp(lg) {
+        padding-bottom: 0;
+    }
+}
+.page--casts-single .sidebar {
+    @include bp(smd) {
+        justify-content: center;
+    }
+}

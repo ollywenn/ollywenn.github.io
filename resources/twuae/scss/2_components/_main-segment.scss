@@ -1,0 +1,17 @@
+.main-segment {
+    margin-bottom: 50px; //TODO: review on a page basis
+    @include bp(smd) {
+        margin-top: 30px; //TODO: based on home page last designs (kept consistent for lg)
+    }
+}
+.main-segment > .wrapper {
+    background-color: $white;
+    @include bp(lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+.main-segment .main-segment .main-content {
+    margin-top: 0;
+}

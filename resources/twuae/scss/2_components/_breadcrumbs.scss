@@ -1,0 +1,51 @@
+$breadcrumbsBgColor: $white1;
+$breadcrumbsColor: $grey5;
+
+.section--breadcrumbs {
+    display: none;
+    @include bp(lg) {
+        display: block;
+    }
+}
+.section--breadcrumbs .wrapper {
+    background-color: $breadcrumbsBgColor;
+}
+.section--breadcrumbs ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include bp(lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+.section--breadcrumbs li {
+    color: $breadcrumbsColor;
+    font-size: rc(14);
+    line-height: rc(40);
+    @include bp(lg) {
+        flex: 0 0 auto;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+.section--breadcrumbs li + li {
+    @include bp(lg) {
+        position: relative;
+        margin-left: 17px;
+    }
+}
+.section--breadcrumbs li + li::before {
+    @include bp(lg) {
+        position: absolute;
+        top: 50%;
+        left: -12.5px;
+        transform: translateY(-50%);
+        content: '/';
+    }
+}
+.section--breadcrumbs a {
+    text-decoration: none;
+    color: $breadcrumbsColor;
+}

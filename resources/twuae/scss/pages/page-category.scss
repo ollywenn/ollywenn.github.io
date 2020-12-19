@@ -1,0 +1,123 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+@import '../2_components/category-hero';
+@import '../2_components/most-popular';
+@import '../2_components/sponsored-content';
+
+.page--category .main-content {
+    margin-top: 0;
+    @include bp(smd) {
+        margin-top: $marginDefault;
+    }
+    @include bp(lg) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.page--category .main-content + .main-content {
+    margin-top: 0;
+    @include bp(lg) {
+        // TODO: standardise this
+        flex: 0 0 calc(100% - 332px); //TODO: review as it was hardcoded due to issues on latest round of designs
+        max-width: calc(100% - 332px); //TODO: review as it was hardcoded due to issues on latest round of designs
+    }
+}
+.page--category .sidebar {
+    margin-bottom: 50px;
+    @include bp(lg) {
+        margin-top: 0;
+        margin-left: 32px;
+    }
+}
+.page--category .main-content + .main-content .article:first-of-type {
+    border-top: $white1 1px solid;
+    @include bp(smd) {
+        border-top: 0;
+    }
+}
+.page--category .main-content:first-of-type .article .article-body {
+    @include bp(lg) {
+        padding-bottom: 0;
+    }
+}
+.page--category .btn--back + .article-title {
+    margin-top: 50px;
+    @include bp(smd) {
+        margin-top: 40px;
+    }
+    @include bp(lg) {
+        margin-top: 28px;
+    }
+}
+.page--category .article .article-body {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.page--category .main-content .articleSnippet-item {
+    @include bp(smd) {
+        flex: 0 0 $twoColsSmd;
+        margin-bottom: $marginDefault;
+        border: 0;
+        padding-top: 0;
+        max-width: $twoColsSmd;
+        align-self: flex-start;
+    }
+    @include bp(lg) {
+        // TODO: the sidebar defined the column width of all cols
+        flex-basis: 300px; //TODO: review as it was hardcoded due to issues on latest round of designs
+        max-width: 300px; //TODO: review as it was hardcoded due to issues on latest round of designs
+    }
+}
+.page--category .main-content .articleSnippet-item + .articleSnippet-item {
+    @include bp(smd) {
+        margin-top: 0;
+    }
+}
+.page--category .main-content .articleSnippet-item .articleSnippet-thumb,
+.page--category .main-content .articleSnippet-item .articleSnippet-content {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        align-self: flex-start;
+        max-width: $fullCol;
+    }
+}
+.page--category .main-content .articleSnippet-item .articleSnippet-content {
+    @include bp(smd) {
+        margin-top: $marginHalfDefault;
+    }
+}
+.page--category .main-content .articleSnippet-item .articleSnippet-title {
+    //TODO: refactor with unified typography
+    @include bp(smd) {
+        margin-bottom: 9px;
+        font-size: rc(20);
+        line-height: rc(32);
+    }
+}
+.page--category .main-content .article-loadMoreTarget {
+    flex: 0 0 $fullCol;
+    max-width: $fullCol;
+}
+.page--category .article-loadMoreTarget .articleSnippet-item:first-of-type {
+    @include bp(md) {
+        margin-top: $marginDefault;
+        border: 0;
+        padding-top: 0;
+    }
+}
+.page--category .main-content .article-metadata {
+    display: none;
+    @include bp(smd) {
+        display: block;
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.page--category .main-content .btn--loadMore {
+    @include bp(md) {
+        max-width: 300px; //TODO: review as it was hardcoded due to issues on latest round of designs
+    }
+}

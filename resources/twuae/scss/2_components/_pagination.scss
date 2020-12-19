@@ -1,0 +1,32 @@
+.pagination {
+    margin-top: 30px;
+}
+.pagination-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.pagination li {
+    margin: 5px 5px 0;
+    height: auto;
+    vertical-align: initial;
+}
+.pagination li a {
+    display: block;
+    border-radius: 100%;
+    background-color: $white1;
+    min-width: 40px;
+    height: 40px;
+    color: $bodyDefaultColor;
+    text-decoration: none;
+    text-align: center;
+    font-size: rc(14);
+    line-height: rc(38);
+}
+.pagination li a.is-active {
+    background-color: $red1;
+    color: $white;
+}

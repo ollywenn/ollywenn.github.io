@@ -1,0 +1,80 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+@import '../2_components/main-hero';
+@import '../2_components/comment';
+@import '../2_components/highlights';
+@import '../2_components/destinations';
+@import '../2_components/photos-and-videos';
+@import '../2_components/competitions';
+@import '../2_components/events';
+@import '../2_components/most-popular';
+@import '../2_components/sponsored-content';
+
+.page--home .main-content .section {
+    padding-bottom: 0;
+}
+.page--home .main-segment {
+    margin-bottom: 0;
+}
+.page--home .main-segment--homeHero {
+    margin-top: 0;
+}
+.page--home .main-segment + .main-segment {
+    margin-top: $marginDefault;
+    @include bp(smd) {
+        margin-top: $paddingSmd;
+    }
+    @include bp(lg) {
+        margin-top: $paddingLg;
+    }
+}
+.page--home .main-segment--ad {
+    @include bp(lg) {
+        display: none;
+    }
+}
+.page--home .main-segment--group {
+    padding-bottom: 40px; //TODO: standardise this
+}
+.page--home .main-segment--group .main-content {
+    @include bp(lg) {
+        //TODO: last round of designs approved with this narrow sidebar
+        flex-basis: $mainContentWidthNarrow;
+        max-width: $mainContentWidthNarrow;
+    }
+}
+.page--home .main-segment--group .sidebar {
+    display: none;
+    @include bp(lg) {
+        display: flex;
+        //TODO: last round of designs approved with this narrow sidebar
+        flex-basis: $sidebarWidthNarrow;
+        margin-top: 0;
+        max-width: $sidebarWidthNarrow;
+    }
+}
+.page--home .main-segment--group .sidebarWidget-title {
+    @include bp(lg) {
+        font-size: rc(20);
+    }
+}
+.page--home .main-segment--group .sidebarWidget-header--icon {
+    @include bp(lg) {
+        padding-left: 80px;
+    }
+}
+.page--home .main-segment--group .main-content > .section + .section {
+    margin-top: 40px; //TODO: standardise this
+}
+.page--home .main-segment--group {
+    padding-bottom: 40px; //TODO: standardise this
+}
+.page--home .main-segment--group .sidebar--extra {
+    display: none;
+    @include bp(smd) {
+        display: flex;
+    }
+    @include bp(lg) {
+        display: none;
+    }
+}

@@ -1,0 +1,99 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+body {
+    @extend %body;
+    position: relative;
+    color: $bodyDefaultColor;
+    font-family: $bodyFontFamily;
+}
+body.no-scroll,
+body.search-is-active {
+    overflow: hidden;
+}
+body.search-is-active main {
+    filter: blur(5px);
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+:focus {
+    outline: 0;
+    // box-shadow: focusOutline($red0); //TODO: reactivate this in the end of the project WAI-ARIA
+}
+a {
+    @include animate;
+    color: $red0;
+}
+a:hover,
+// a:visited,
+a:active {
+    @include bp(1025px) {
+        color: $red1;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+button {
+    cursor: pointer;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 1px solid $grey5;
+}
+.wrapper {
+    margin: auto;
+    padding: 0 $paddingDefault;
+    max-width: $maxWidth;
+    @include bp(sm) {
+        padding-right: $paddingSm;
+        padding-left: $paddingSm;
+    }
+    @include bp(smd) {
+        padding-right: $paddingSmd;
+        padding-left: $paddingSmd;
+    }
+    @include bp(lg) {
+        padding-right: $paddingLg;
+        padding-left: $paddingLg;
+    }
+}
+.mainContent {
+    background-color: $white;
+}
+.mainColumn {
+    @include bp(lg) {
+        flex: 0 0 620px;
+        max-width: 620px;
+    }
+}
+.mainContent > .section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.mainContent > .section > .wrapper {
+    @include bp(lg) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        max-width: 947px;
+    }
+}
+.pointer {
+    cursor: pointer;
+}

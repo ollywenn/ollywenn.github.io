@@ -1,0 +1,136 @@
+.main-segment--highlights {
+    background-color: $white2;
+    @include bp(lg) {
+        background-color: transparent;
+    }
+}
+.main-segment--highlights > .wrapper {
+    background-color: transparent;
+    padding-top: $paddingDefault;
+    padding-bottom: $paddingDefault;
+    @include bp(sm) {
+        padding-top: $paddingSm;
+        padding-bottom: $paddingSm;
+    }
+    @include bp(smd) {
+        padding-top: $paddingSmd;
+        padding-bottom: $paddingSmd;
+    }
+    @include bp(lg) {
+        background-color: $white2;
+        padding-top: $paddingLg;
+        padding-bottom: $paddingLg;
+    }
+}
+.main-segment--highlights .main-content {
+    margin-top: 0;
+}
+.section--highlights {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.section--highlights .section-header {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.section--highlights .articleSnippet-item {
+    position: relative;
+    @include bp(smd) {
+        flex-basis: $twoColsSmd;
+        max-width: $twoColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $threeColsLg;
+        max-width: $threeColsLg;
+    }
+}
+.section--highlights .articleSnippet-item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-index-1;
+    background-color: $red1;
+    width: 5px;
+    height: 100%;
+    content: '';
+    @include bp(smd) {
+        width: 3px;
+    }
+    @include bp(lg) {
+        width: 6px;
+    }
+}
+.section--highlights .articleSnippet-item:nth-of-type(1)::before {
+    width: 5px;
+    @include bp(smd) {
+        width: 6px;
+    }
+}
+.section--highlights .articleSnippet-item + .articleSnippet-item {
+    border: 0;
+    padding-top: 0;
+    @include bp(smd) {
+        margin-top: $gutterSmd;
+    }
+    @include bp(lg) {
+        margin-top: $gutterLg;
+    }
+}
+.section--highlights .articleSnippet-item:nth-of-type(1) {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+    @include bp(lg) {
+        flex-basis: $twoColsLg;
+        max-width: $twoColsLg;
+    }
+}
+.section--highlights .articleSnippet-item:nth-of-type(2) {
+    @include bp(lg) {
+        flex-basis: $twoColsLg;
+        margin-top: 0;
+        max-width: $twoColsLg;
+    }
+}
+.section--highlights .articleSnippet-thumb {
+    flex-basis: $fullCol;
+    max-width: $fullCol;
+    min-height: 0;
+}
+.section--highlights .articleSnippet-content {
+    flex-basis: $fullCol;
+    width: $fullCol;
+    max-width: $fullCol;
+}
+.section--highlights .articleSnippet-item--fullBg:nth-of-type(1) .articleSnippet-content {
+    @include bp(smd) {
+        padding-bottom: 18px;
+    }
+    @include bp(lg) {
+        padding-bottom: 20px;
+    }
+}
+.section--highlights .articleSnippet-item--fullBg:nth-of-type(1) .articleSnippet-content::after {
+    @include bp(smd) {
+        min-height: 182px;
+    }
+    @include bp(lg) {
+        min-height: 147px;
+    }
+}
+.section--highlights .articleSnippet-item--fullBg:nth-of-type(2) .articleSnippet-content {
+    @include bp(lg) {
+        padding-bottom: 20px;
+    }
+}
+.section--highlights .articleSnippet-item--fullBg .articleSnippet-title {
+    //TODO: refactor with unified typography
+    font-size: rc(20);
+    line-height: rc(28);
+}

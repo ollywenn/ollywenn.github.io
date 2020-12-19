@@ -1,0 +1,129 @@
+$btnPrimaryColor: $white;
+$btnPrimaryBgColor: $red1;
+$btnSecondaryColor: $red1;
+$btnSecondaryBorderColor: $red1;
+$btnSecondaryBgColor: $white;
+$btnFontFamily: $bodyFontFamily;
+$btnDisabledBgColor: $grey12;
+$btnDisabledColor: $white;
+
+.btn,
+%btn {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    font-family: $btnFontFamily;
+}
+.btn--primary,
+%btn--primary {
+    @include animate;
+    @extend .btn;
+    background-color: $btnPrimaryBgColor;
+    padding: 9px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $btnPrimaryColor;
+    font-size: rc(16);
+    font-weight: $fontWeight-bold;
+    line-height: rc(25);
+}
+.btn--secondary,
+%btn--secondary {
+    @include animate;
+    @extend .btn;
+    @extend .btn--primary;
+    border: $btnSecondaryBorderColor 1px solid;
+    background-color: $btnSecondaryBgColor;
+    color: $btnSecondaryColor;
+    font-weight: $fontWeight-bold;
+}
+.btn--back {
+    @extend .btn;
+    position: relative;
+    padding-left: 25px;
+    text-decoration: none;
+    color: $bodyDefaultColor;
+    font-weight: $fontWeight-bold;
+}
+.btn--back::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(180deg);
+    background: image-url('i-arrow-red.svg') left center no-repeat;
+    background-size: 9px 16px;
+    width: 9px;
+    height: 16px;
+    content: '';
+}
+.btn--close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: $paddingDefault;
+    background: image-url('i-close-circle-black.svg') center center no-repeat;
+    background-size: 22px 22px;
+    width: 22px;
+    height: 22px;
+    text-indent: -9999px;
+}
+.btn--rss {
+    @extend %btn--secondary;
+    background: transparent image-url('i-rss.svg') 21px center no-repeat;
+    background-size: 15.67px 15.67px;
+    padding-left: 53px;
+}
+.btn--block,
+%btn--block {
+    width: 100%;
+    max-width: 330px;
+}
+.btn--loadMore {
+    @extend %btn--secondary;
+    @extend %btn--block;
+    @include bp(md) {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        line-height: rc(15);
+    }
+    @include bp(lg) {
+        max-width: 230px;
+    }
+}
+.btn--disabled,
+%btn--disabled {
+    @extend %btn--primary;
+    background-color: $btnDisabledBgColor;
+    color: $btnDisabledColor;
+}
+.btn--partnerContent {
+    @extend %btn--disabled;
+    font-size: rc(11);
+    line-height: 1em;
+    font-weight: $fontWeight-semibold;
+}
+.btn--partnerContent:hover {
+    color: $btnDisabledColor;
+}
+.btn--calendar {
+    background: image-url('i-calendar.svg') center center no-repeat;
+    background-size: 24px 26.67px;
+    width: 24px;
+    height: 26.67px;
+    text-indent: -9999px;
+}
+.btn--list {
+    background: image-url('i-list.svg') center center no-repeat;
+    background-size: 25.5px 21px;
+    width: 25.5px;
+    height: 26.67px;
+    text-indent: -9999px;
+}
+.btn--viewAllNews {
+    @extend .btn--secondary;
+}
+.btn--viewAll,
+.btn--filter {
+    @extend %button;
+}

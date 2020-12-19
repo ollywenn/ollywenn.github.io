@@ -1,0 +1,17 @@
+@import '../toolbox/toolbox';
+
+.page--subscribe .article-bodySection--highlight .article-simpleSegment {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.page--subscribe .article-bodySection--highlight .article-simpleSegment .btn {
+    margin-right: 15px;
+}
+.page--subscribe .article-bodySection--highlight .article-simpleSegment .btn + .btn {
+    @include bp(520px) {
+        margin-top: 0;
+    }
+}
+.page--subscribe .article-simpleSegment--ctas {
+    max-width: 330px;
+}

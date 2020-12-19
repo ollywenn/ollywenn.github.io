@@ -1,0 +1,114 @@
+// add global variables using the colours and fonts variables
+// e.g. $headerBackgroundColor: $white;
+// !important: specific module variables should be at the top of each specific scss module file
+$browser-context: 16;
+$imagePath: '../img/';
+
+// outer gutter
+// $paddingDefault: em(20px);
+$paddingDefault: em(10px);
+// $paddingSm: em(23px);
+$paddingSm: em(23px);
+$paddingSmd: em(30px);
+$paddingXmd: em(35px);
+$paddingLg: em(30px);
+
+// gaps, inner gutters
+$gapUnit: em(10px);
+$gapUnitSm: em(22px);
+$gapUnitSmd: em(22px);
+$gapUnitMd: em(14px);
+$gapUnitLg: em(14px);
+$gutterDefault: $gapUnit;
+$gutterSm: $gapUnitSm;
+$gutterSmd: $gapUnitSmd;
+$gutterMd: $gapUnitMd;
+$gutterLg: $gapUnitLg;
+$horizontalGapUnit: 20px;
+
+// margin (top, bottom)
+$marginDefault: $horizontalGapUnit;
+$marginHalfDefault: ($marginDefault / 2);
+$marginThreeQuartersDefault: ($marginDefault * 0.75);
+$marginTwoThirdsDefault: (($marginDefault / 3) * 2);
+
+// breakpoints
+$sm: em(375px);
+$smd: em(667px);
+$md: em(768px);
+$xmd: em(980px);
+$lg: em(1024px);
+$xlg: em(1160px);
+$xxlg: em(1366px);
+$xxxlg: em(1540px);
+$wide: em(1890px);
+$short: (min-height em(568px));
+$largest: $wide;
+
+$maxWidth: em(1024px);
+$maxWidthAd: $maxWidth;
+$skyscraperWidth: 160px;
+$bodyWidthLg: calc(100% - #{($skyscraperWidth * 2)});
+
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-10: 1000;
+
+$fontWeight-light: 300;
+$fontWeight-normal: 400;
+$fontWeight-medium: 500;
+$fontWeight-semibold: 600;
+$fontWeight-bold: 700;
+$fontWeight-black: 900;
+
+$headingFont: $firaSans;
+$copyFont: $firaSans;
+$specialFont: $proximaNova;
+
+$bodyFontFamily: $copyFont;
+$bodyBgColor: $white;
+$bodyDefaultColor: $grey2;
+
+//articles
+$articleThumbWidthDefault: 40%;
+$articleThumbWidthSm: calc(50% - 15px);
+
+//main content and sidebar width
+$sidebarWidthDefault: em(300px);
+$sidebarWidthWide: em(390px);
+$sidebarWidthNarrow: em(248px);
+$mainContentWidthDefault: 100%;
+$mainContentWidthWithSidebarDefault: calc(100% - #{$sidebarWidthDefault + $gutterMd});
+$mainContentMaxWidth: 624px;
+$mainContentWidthNarrow: calc(100% - #{$sidebarWidthNarrow + $gutterLg});
+
+// cols width
+$oneCol: 100%;
+$twoCols: calc(50% - #{($gutterDefault * 0.5)});
+$twoColsSm: calc(50% - #{($gutterSm * 0.5)});
+$twoColsSmd: calc(50% - #{($gutterSmd * 0.5)});
+$twoColsLg: calc(50% - #{($gutterLg * 0.5)});
+$threeCols: calc(33.33% - #{($gutterMd * 0.5)});
+$threeColsSmd: calc(33.33% - #{($gutterSmd * 0.5)});
+$threeColsLg: calc(33.33% - #{($gutterLg * 0.6)});
+$fourCols: calc(25% - #{($gutterDefault * 0.83)});
+$fourColsLg: calc(25% - #{($gutterLg * 0.83)});
+$fullCol: $oneCol;
+$twoQuartersCol: $twoCols;
+$twoThirdsCol: calc(66.66% - #{($gutterDefault * 0.33)});
+$twoThirdsColSmd: calc(66.66% - #{($gutterSmd * 0.33)});
+$twoThirdsColLg: calc(66.66% - #{($gutterLg * 0.33)});
+$oneThirdCol: $threeCols;
+$oneThirdColSmd: $threeColsSmd;
+$oneThirdColLg: $threeColsLg;
+$oneQuarterCol: $fourCols;
+$oneQuarterColLg: $fourColsLg;
+$twoQuartersCol: $twoCols;
+$threeQuartersColLg: calc(75% - #{($gutterLg * 0.25)});

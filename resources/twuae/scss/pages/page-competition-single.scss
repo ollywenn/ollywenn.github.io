@@ -1,0 +1,13 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+@import '../2_components/most-popular';
+@import '../2_components/sponsored-content';
+
+.page--competition-single .main-content {
+    @include bp(lg) {
+        flex-basis: $mainContentWidthWithSidebarDefault;
+        max-width: $mainContentWidthWithSidebarDefault;
+    }
+}
+// TODO: check with new designer if sidebar elements should show only on lg

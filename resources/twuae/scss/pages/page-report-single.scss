@@ -1,0 +1,28 @@
+@import '../toolbox/toolbox';
+
+.page--report-single .main-content {
+    // TODO: standardise this
+    @include bp(smd) {
+        flex-basis: 620px;
+        max-width: 620px;
+    }
+}
+.component--form {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 360px;
+}
+.page--report-single .component--form {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 360px;
+    @include bp(xlg) {
+        max-width: 515px;
+    }
+}
+.page--report-single .btn--submit {
+    max-width: 360px;
+    @include bp(xlg) {
+        max-width: 515px;
+    }
+}

@@ -1,0 +1,14 @@
+@import '../toolbox/toolbox';
+
+.page--incentive-single .main-content {
+    @include bp(lg) {
+        // TODO: standardise this
+        flex-basis: 700px;
+        max-width: 700px;
+    }
+}
+.page--incentive-single .article-body .form {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 360px; //TODO: standardise this
+}

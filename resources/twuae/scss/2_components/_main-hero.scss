@@ -1,0 +1,184 @@
+.section--mainHero {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: $marginDefault;
+    }
+}
+.section--mainHero .wrapper {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    background-color: $white;
+}
+.section--mainHero .articleSnippet-item + .articleSnippet-item {
+    @include bp(smd) {
+        margin-top: 0;
+        border-top: 0;
+        padding-top: 0;
+    }
+}
+.section--mainHero .section-header {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.section--mainHero .articleSnippet-thumb,
+.section--mainHero .articleSnippet-content {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.mainHero-col1 {
+    @include bp(smd) {
+        display: flex;
+        flex: 0 0 $twoThirdsColSmd;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: $twoThirdsColSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.mainHero-col1 .articleSnippet-item:nth-of-type(1) {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-right: -$paddingDefault;
+    margin-left: -$paddingDefault;
+    @include bp(sm) {
+        margin-right: -$paddingSm;
+        margin-left: -$paddingSm;
+    }
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: $fullCol;
+    }
+    @include bp(lg) {
+        flex-basis: $threeQuartersColLg;
+        max-width: $threeQuartersColLg;
+    }
+}
+.mainHero-col1 .articleSnippet-item:nth-of-type(1) .articleSnippet-thumb {
+    flex-basis: $fullCol;
+    max-width: $fullCol;
+    min-height: 168px;
+    @include bp(lg) {
+        flex-basis: $twoThirdsColLg;
+        order: 2;
+        max-width: $twoThirdsColLg;
+    }
+}
+.mainHero-col1 .articleSnippet-item:nth-of-type(1) .articleSnippet-content {
+    flex-basis: $fullCol;
+    padding: $marginThreeQuartersDefault $paddingDefault;
+    width: 100%;
+    max-width: $fullCol;
+    @include bp(sm) {
+        padding-right: $paddingSm;
+        padding-left: $paddingSm;
+    }
+    @include bp(smd) {
+        margin-top: 18px;
+        padding: 0;
+    }
+    @include bp(lg) {
+        flex-basis: $oneThirdColLg;
+        order: 1;
+        margin-top: 0;
+        max-width: $oneThirdColLg;
+    }
+}
+.mainHero-col1 .articleSnippet-item:nth-of-type(1) .articleSnippet-content p {
+    display: none;
+    @include bp(smd) {
+        display: flex;
+        margin-top: 5px;
+    }
+}
+.mainHero-col1 .articleSnippet-item:nth-of-type(1) .articleSnippet-title {
+    //TODO: refactor with unified typography
+    font-size: rc(20);
+    font-weight: $fontWeight-bold;
+    line-height: rc(28);
+}
+.mainHero-col1 .articleSnippet-item:nth-of-type(2),
+.mainHero-col1 .articleSnippet-item:nth-of-type(3),
+.mainHero-col1 .articleSnippet-item:nth-of-type(4),
+.mainHero-col1 .articleSnippet-item:nth-of-type(5),
+.mainHero-col1 .articleSnippet-item:nth-of-type(6) {
+    @include bp(smd) {
+        display: none;
+    }
+    @include bp(lg) {
+        display: flex;
+        flex-basis: $fourColsLg;
+        margin-top: $gutterLg;
+        max-width: $fourColsLg;
+    }
+}
+.mainHero-col1 .articleSnippet-item:nth-of-type(2) {
+    border-top: 0;
+    padding-top: 0;
+    @include bp(lg) {
+        margin-top: 0;
+    }
+}
+.mainHero-col2 {
+    display: none;
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 0 $threeColsSmd;
+        max-width: $threeColsSmd;
+    }
+    @include bp(lg) {
+        display: none;
+    }
+}
+.mainHero-col2 .articleSnippet-item + .articleSnippet-item {
+    @include bp(smd) {
+        margin-top: $gutterSmd;
+    }
+}
+.mainHero-col3 {
+    display: none;
+    @include bp(smd) {
+        display: flex;
+        justify-content: space-between;
+        margin-top: $gutterSmd;
+    }
+    @include bp(lg) {
+        display: none;
+    }
+}
+.mainHero-col3 .articleSnippet-item {
+    @include bp(smd) {
+        flex-basis: $threeColsSmd;
+        max-width: $threeColsSmd;
+    }
+}
+.btn--viewAllNews {
+    display: block;
+    flex: 0 0 329px;
+    max-width: 329px;
+    margin: 30px auto 0;
+    @include bp(smd) {
+        flex-basis: $oneThirdColSmd;
+        margin-right: 0;
+        max-width: $oneThirdColSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $oneQuarterColLg;
+        max-width: $oneQuarterColLg;
+    }
+}

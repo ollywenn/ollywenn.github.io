@@ -1,0 +1,129 @@
+$sidebarWidgetBgColor: $white2;
+
+.sidebar {
+    @include fixPadding;
+    margin-top: 40px; //TODO:standardise this
+    // margin-bottom: 40px; //TODO:standardise this
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    @include bp(lg) {
+        flex: 0 0 $sidebarWidthDefault;
+        align-self: flex-start;
+        justify-content: center;
+        margin: $marginDefault 0 $marginDefault $gutterMd;
+        max-width: $sidebarWidthDefault;
+    }
+}
+.sidebar--extra {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.sidebar .section,
+.sidebar--extra .section {
+    @include bp(smd) {
+        flex: 0 0 $twoColsSmd;
+        margin: 0;
+        max-width: $twoColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $fullCol;
+        align-self: flex-start;
+        max-width: $fullCol;
+    }
+}
+.sidebar .sidebarAd {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        padding-bottom: 40px;
+    }
+}
+.sidebar .sidebarAd + .section {
+    margin-top: $marginDefault;
+    @include bp(smd) {
+        margin-top: 0;
+    }
+}
+.sidebar .section + .section {
+    margin-top: 40px;
+}
+.sidebar .section + .section:nth-of-type(2) {
+    @include bp(smd) {
+        margin-top: 0;
+    }
+    @include bp(lg) {
+        margin-top: 40px;
+    }
+}
+.sidebar-widget {
+    background-color: $sidebarWidgetBgColor;
+}
+.sidebarWidget-header {
+    @include fixPadding;
+    border-bottom: $red1 1px solid;
+    padding: 30px 24px;
+}
+.sidebarWidget-header--doubleTitle {
+    padding-top: 21px;
+    padding-bottom: 17px;
+}
+.sidebarWidget-header--icon {
+    border-bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 91px;
+}
+.sidebarWidget-supraTitle {
+    @extend %category;
+}
+.sidebarWidget-title {
+    @extend %header2;
+}
+.sidebarWidget-content {
+    @include fixPadding;
+    @extend %body;
+    padding: 30px 24px;
+}
+.sidebarWidget-header--icon + .sidebarWidget-content {
+    padding-top: 0;
+}
+.sidebarWidget-content .btn {
+    @extend %btn--primary;
+    display: block;
+}
+.sidebarWidget-footer {
+    margin-top: 20px;
+}
+.sidebar-smallWidgets {
+    @include fixPadding;
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    @include bp(lg) {
+        flex: 0 0 $sidebarWidthDefault;
+        margin-top: $marginDefault;
+        max-width: $sidebarWidthDefault;
+    }
+}
+.section + .sidebar-smallWidgets {
+    margin-top: $marginDefault;
+}
+.sidebar .section--mostPopular,
+.sidebar .section--latestFeatures,
+.sidebar .section--sponsoredContent {
+    @include bp(xmd) {
+        flex-basis: $oneThirdCol;
+        max-width: $oneThirdCol;
+    }
+    @include bp(lg) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}

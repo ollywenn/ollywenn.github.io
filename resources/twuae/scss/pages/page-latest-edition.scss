@@ -1,0 +1,95 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+$latestEditionColWidth: 330px;
+
+.page--latest-edition .main-segment > .wrapper {
+    @include bp(lg) {
+        justify-content: center;
+    }
+}
+.page--latest-edition .main-content {
+    @include bp(lg) {
+        // TODO: standardise this
+        flex-basis: 750px;
+        max-width: 750px;
+    }
+}
+.page--latest-edition .article-header {
+    @include bp(lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.page--latest-edition .article-title {
+    @include bp(lg) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.page--latest-edition .article-subtitle {
+    margin-top: 22px;
+    border-top: $white1 1px solid;
+    padding-top: 17px;
+    @include bp(lg) {
+        flex: 0 0 $latestEditionColWidth;
+        border-top: 0;
+        padding-top: 0;
+        max-width: $latestEditionColWidth;
+        pointer-events: none;
+    }
+}
+.page--latest-edition .article-body .btn {
+    display: block;
+    max-width: $latestEditionColWidth;
+}
+.page--latest-edition .article-linksList {
+    border: 0;
+}
+.page--latest-edition .article-hero {
+    @include bp(lg) {
+        flex: 0 0 $latestEditionColWidth;
+        max-width: $latestEditionColWidth;
+    }
+}
+.page--latest-edition .article-hero img {
+    margin-left: 0;
+}
+.page--latest-edition .article-body--digitalVersionContent {
+    @include bp(lg) {
+        flex: 0 0 $latestEditionColWidth;
+        //FIXME: this had to be hardcoded for release. Rewrite markup to allow proper flow on lg
+        margin-top: -360px;
+        max-width: $latestEditionColWidth;
+    }
+}
+.page--latest-edition .article-body--contentMenu {
+    @include bp(lg) {
+        flex: 0 0 $latestEditionColWidth;
+        //FIXME: this had to be hardcoded for release. Rewrite markup to allow proper flow on lg
+        margin-top: 80px;
+        padding-top: 0;
+        max-width: $latestEditionColWidth;
+    }
+}
+.page--latest-edition .article-body--ctas {
+    @include bp(lg) {
+        display: flex;
+        flex: 0 0 $fullCol;
+        justify-content: space-between;
+        //FIXME: this had to be hardcoded for release. Rewrite markup to allow proper flow on lg
+        margin-top: 55px;
+        padding-top: 0;
+        max-width: $fullCol;
+    }
+}
+.page--latest-edition .article-body--ctas .article-bodySection {
+    @include bp(lg) {
+        flex: 0 0 $latestEditionColWidth;
+        margin-top: 0;
+        border: 0;
+        padding-top: 0;
+        max-width: $latestEditionColWidth;
+    }
+}

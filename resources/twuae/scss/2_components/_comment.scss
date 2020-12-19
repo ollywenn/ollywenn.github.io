@@ -1,0 +1,112 @@
+.main-segment--comment .main-content {
+    margin-top: $marginDefault;
+    @include bp(lg) {
+        flex-basis: $mainContentWidthWithSidebarDefault;
+        max-width: $mainContentWidthWithSidebarDefault;
+    }
+}
+.main-segment--comment .sidebar {
+    @include bp(lg) {
+        margin-top: 0;
+    }
+}
+.section--comment {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.section--comment .section-header {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.section--comment .articleSnippet-item {
+    display: flex;
+    justify-content: space-between;
+    @include bp(smd) {
+        flex-basis: $threeColsSmd;
+        margin-top: $marginDefault;
+        max-width: $threeColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $threeColsLg;
+        max-width: $threeColsLg;
+    }
+}
+.section--comment .articleSnippet-thumb,
+.section--comment .articleSnippet-content {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.section--comment .articleSnippet-content {
+    @include bp(smd) {
+        margin-top: $marginHalfDefault;
+    }
+}
+.section--comment .articleSnippet-item + .articleSnippet-item {
+    @include bp(smd) {
+        border-top: 0;
+        padding-top: 0;
+    }
+    @include bp(lg) {
+        margin-top: $gutterLg;
+    }
+}
+.section--comment .articleSnippet-item:nth-of-type(1) {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        margin-top: 0;
+        max-width: $fullCol;
+    }
+}
+.section--comment .articleSnippet-item:nth-of-type(1) .articleSnippet-thumb {
+    @include bp(smd) {
+        flex-basis: $twoColsSmd;
+        max-width: $twoColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $twoColsLg;
+        order: 2;
+        max-width: $twoColsLg;
+    }
+}
+.section--comment .articleSnippet-item:nth-of-type(1) .articleSnippet-content {
+    @include bp(smd) {
+        flex-basis: $twoColsSmd;
+        max-width: $twoColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $twoColsLg;
+        order: 1;
+        max-width: $twoColsLg;
+    }
+}
+.section--comment .articleSnippet-item:nth-of-type(1) .articleSnippet-title {
+    @include bp(smd) {
+        //TODO: standardise typography
+        font-size: rc(20);
+        line-height: rc(24);
+    }
+    @include bp(lg) {
+        //TODO: standardise typography
+        font-size: rc(24);
+        line-height: rc(28);
+    }
+}
+.section--comment .articleSnippet-item:nth-of-type(1) .articleSnippet-content p {
+    display: none;
+    @include bp(smd) {
+        display: block;
+    }
+}
+.main-segment--comment .sidebar {
+    display: none;
+    @include bp(lg) {
+        display: block;
+    }
+}

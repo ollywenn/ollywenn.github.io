@@ -1,0 +1,32 @@
+.mainNav .searchBar {
+    display: flex;
+    margin-top: 37px;
+    @include bp(425px) {
+        display: none;
+    }
+}
+.mainNav .searchBar input {
+    display: block;
+    border: 0;
+    background-color: $black;
+    height: 80px;
+    color: $mainNavActiveColor;
+    font-family: $headingFont;
+    font-size: rc(25);
+    font-weight: $fontWeight-medium;
+}
+.mainNav .searchBar-input::placeholder {
+    color: transparentize($mainNavActiveColor, 0.4);
+}
+.mainNav .searchBar-input {
+    flex: 1 0 calc(100% - 80px);
+    padding-left: 20px;
+    width: calc(100% - 80px); //overwrite default css
+    @include bp(sm) {
+        padding-left: 30px;
+    }
+}
+.mainNav .searchBar-submit {
+    flex: 0 0 80px;
+    text-indent: -9999px;
+}

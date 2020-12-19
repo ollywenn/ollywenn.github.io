@@ -1,0 +1,27 @@
+.section--sponsoredContent .articleSnippet-item {
+    display: flex;
+    justify-content: space-between;
+}
+.section--sponsoredContent .articleSnippet-item + .articleSnippet-item {
+    margin-top: 26px;
+}
+.section--sponsoredContent .articleSnippet-thumb {
+    flex: 0 0 100px;
+    max-width: 100px;
+    @include bp(sm) {
+        flex: 0 0 120px;
+        max-width: 120px;
+    }
+}
+.section--sponsoredContent .articleSnippet-title a {
+    @extend %body;
+    text-decoration: none;
+    font-weight: $fontWeight-semibold;
+    line-height: rc(21);
+}
+.section--sponsoredContent .articleSnippet-content {
+    flex: 0 0 calc(100% - 115px);
+    @include bp(sm) {
+        flex: 0 0 calc(100% - 140px);
+    }
+}

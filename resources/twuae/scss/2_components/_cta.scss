@@ -1,0 +1,20 @@
+.section--cta {
+    margin-top: $marginDefault;
+    @include bp(smd) {
+        margin-top: 50px; //TODO: standardise to variable
+    }
+}
+.section--cta .section-title {
+    text-transform: none;
+    @include bp(smd) {
+        text-align: center;
+    }
+}
+.section--cta .btn {
+    display: block;
+    @include bp(smd) {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 330px; //TODO: transform to variable
+    }
+}

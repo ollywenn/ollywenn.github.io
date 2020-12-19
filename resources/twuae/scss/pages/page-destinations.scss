@@ -1,0 +1,228 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+@import '../2_components/related-articles';
+
+.page--destinations-list .article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page--destinations-list .article-body {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item {
+    @include bp(smd) {
+        flex-basis: $threeColsSmd;
+        margin-bottom: $gutterSmd;
+        border: 0;
+        padding-top: 0;
+        max-width: $threeColsSmd;
+        align-self: flex-start;
+    }
+    @include bp(lg) {
+        flex-basis: $threeColsLg;
+        margin-bottom: $gutterLg;
+        max-width: $threeColsLg;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item + .articleSnippet-item {
+    @include bp(smd) {
+        margin-top: 0;
+        border: 0;
+        padding-top: 0;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item .articleSnippet-thumb,
+.page--destinations-list .article-body .articleSnippet-item .articleSnippet-content {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item .articleSnippet-content {
+    @include bp(smd) {
+        margin-top: $marginHalfDefault;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item .articleSnippet-title {
+    //TODO: refactor with unified typography. This looks wrong, check with new designer
+    @include bp(lg) {
+        font-size: rc(20);
+        line-height: rc(32);
+    }
+}
+.page--destinations-list .article-byline {
+    position: relative;
+    z-index: 3;
+    margin-top: 7px;
+    font-size: rc(14); //TODO: check with designer as this is not default
+    line-height: rc(20);
+}
+.page--destinations-list .article-body .articleSnippet-item:nth-of-type(1) {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-right: -$paddingDefault;
+    margin-left: -$paddingDefault;
+    @include bp(sm) {
+        margin-right: -$paddingSm;
+        margin-left: -$paddingSm;
+    }
+    @include bp(smd) {
+        flex: 1 1 auto;
+        margin-top: 0;
+        margin-right: -$paddingSmd;
+        margin-left: -$paddingSmd;
+        max-width: initial; //TODO: check if this works on IE
+    }
+    @include bp(lg) {
+        margin-right: -$paddingLg;
+        margin-left: -$paddingLg;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item:nth-of-type(1) .articleSnippet-title {
+    pointer-events: initial;
+    @include bp(smd) {
+        color: $bodyDefaultColor;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item:nth-of-type(1) .articleSnippet-thumb {
+    flex-basis: $fullCol;
+    max-width: $fullCol;
+}
+.page--destinations-list .article-body .articleSnippet-item:nth-of-type(1) .articleSnippet-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    flex-basis: $fullCol;
+    padding: 24px;
+    width: 100%;
+    max-width: $fullCol;
+    @include bp(smd) {
+        bottom: 50%;
+        left: $paddingSmd;
+        flex-basis: 320px;
+        transform: translateY(50%);
+        background-color: $white;
+        padding: 30px 24px 26px;
+        max-width: 320px;
+    }
+    @include bp(lg) {
+        bottom: $paddingLg;
+        left: $paddingLg;
+        transform: none;
+        flex-basis: 380px;
+        padding: 20px;
+        max-width: 380px;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item:nth-of-type(1) .articleSnippet-content::after {
+    @include bp(smd) {
+        display: none;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item:nth-of-type(1) .articleSnippet-content p {
+    display: none;
+    @include bp(smd) {
+        display: block;
+    }
+}
+.page--destinations-list .article-body .articleSnippet-item:nth-of-type(2) {
+    border-top: 0;
+    margin-top: $marginHalfDefault;
+    @include bp(smd) {
+        margin-top: 0;
+    }
+}
+.page--destinations-list .sidebar {
+    margin-bottom: 40px; //TODO: standardise this
+    @include bp(lg) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.page--destinations-list .article-author {
+    color: $grey5;
+}
+.page--destinations-list .btn--filter {
+    line-height: rc(28);
+}
+.page--destinations-list .article-quickFilterMenu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: $z-index-1;
+    margin: 0;
+    background-color: $white;
+    width: 100%;
+    box-shadow: 0 -1px 17px 0 rgba(0, 0, 0, 0.16);
+    @include bp(smd) {
+        position: initial;
+        bottom: initial;
+        left: initial;
+        flex: 1 1 380px;
+        box-shadow: none;
+    }
+}
+.page--destinations-list .article-quickFilterMenu ul {
+    @include bp(smd) {
+        margin-right: 0;
+        margin-left: auto;
+        max-width: 380px;
+    }
+}
+.page--destinations-list .article-quickFilterMenu .btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $grey13;
+    font-weight: $fontWeight-bold;
+    font-size: rc(14);
+    line-height: rc(45);
+    @include bp(smd) {
+        margin-right: 5px;
+        margin-left: 5px;
+        background-color: $grey14;
+        padding-right: 15px;
+        padding-left: 15px;
+        color: $grey15;
+        line-height: rc(35);
+    }
+}
+.page--destinations-list .article-quickFilterMenu .btn.is-active {
+    color: $red1;
+    @include bp(smd) {
+        background-color: $red1;
+        color: $white;
+    }
+}
+.page--destinations-list .article-quickFilterMenu .btn--dropdown {
+    @include bp(smd) {
+        position: relative;
+        // background-color: $red1;
+        padding-right: 35px;
+        // color: $white;
+    }
+}
+.page--destinations-list .article-quickFilterMenu .btn--dropdown.is-active {
+    @include bp(smd) {
+        background-color: $red1;
+    }
+}
+.page--destinations-list .article-quickFilterMenu .btn--dropdown::after {
+    @include bp(smd) {
+        position: absolute;
+        top: 50%;
+        right: 11.5px;
+        transform: translateY(-50%);
+        background: image-url('i-chevron-grey.svg') center center no-repeat;
+        background-size: 14.14px 7.07px;
+        width: 14.14px;
+        height: 7.07px;
+        content: '';
+    }
+}

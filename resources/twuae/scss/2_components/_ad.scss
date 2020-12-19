@@ -1,0 +1,13 @@
+.main-segment + .main-segment--ad {
+    margin-top: $marginDefault;
+}
+
+.section--ad .wrapper {
+    background-color: $white;
+    padding: 0;
+}
+.section--ad .ad a,
+.section--ad .ad img {
+    display: block;
+    margin: auto;
+}

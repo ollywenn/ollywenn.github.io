@@ -1,0 +1,37 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+@import '../2_components/share-article';
+@import '../2_components/related-topics';
+@import '../2_components/related-articles';
+@import '../2_components/paywall_block';
+
+$pageArticleSectionBorderColor: $white1;
+
+.page--article-single .main-segment > .wrapper {
+    @include bp(lg) {
+        justify-content: space-between;
+    }
+}
+.page--article-single .main-content {
+    @include bp(lg) {
+        flex: 0 0 $mainContentWidthWithSidebarDefault;
+        max-width: $mainContentWidthWithSidebarDefault;
+    }
+}
+.page--article-single .sidebar {
+    margin-bottom: 50px;
+}
+.page--article-single .main-content .section {
+    border-top: $pageArticleSectionBorderColor 1px solid;
+}
+.page--article-single .sidebar {
+    @include bp(smd) {
+        justify-content: center;
+    }
+}
+.page--article-single .sidebar-widget {
+    display: none;
+}
+.page--article-single .sidebar-widget.section--mostPopular {
+    display: block;
+}

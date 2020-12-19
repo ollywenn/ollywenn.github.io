@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="icon_widget_podcast" transform="translate(-715 -4466)">
+    <g id="icon_widget_podcast-2" data-name="icon_widget_podcast" transform="translate(226 -122.001)">
+      <path id="Rectangle_85" data-name="Rectangle 85" d="M412.053,170.471h0a8.956,8.956,0,0,1,8.956,8.956v11.194a8.956,8.956,0,0,1-8.956,8.956h0a8.955,8.955,0,0,1-8.955-8.956V179.427A8.955,8.955,0,0,1,412.053,170.471Z" transform="translate(100.03 4421.529)" fill="rgba(226,18,53,0.16)" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+      <g id="Group_256" data-name="Group 256" transform="translate(100.03 4421.529)">
+        <g id="Group_254" data-name="Group 254">
+          <line id="Line_33" data-name="Line 33" x2="5.224" transform="translate(403.098 179.426)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Line_34" data-name="Line 34" x2="5.224" transform="translate(403.098 183.158)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Line_35" data-name="Line 35" x2="5.224" transform="translate(403.098 186.889)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Line_36" data-name="Line 36" x2="5.224" transform="translate(403.098 190.621)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+        <g id="Group_255" data-name="Group 255">
+          <line id="Line_37" data-name="Line 37" x2="5.224" transform="translate(415.785 179.426)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Line_38" data-name="Line 38" x2="5.224" transform="translate(415.785 183.158)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Line_39" data-name="Line 39" x2="5.224" transform="translate(415.785 186.889)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="Line_40" data-name="Line 40" x2="5.224" transform="translate(415.785 190.621)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+      <path id="Path_222" data-name="Path 222" d="M412.842,204.092a13.5,13.5,0,0,0,12.4-12.2" transform="translate(100.03 4421.529)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_223" data-name="Path 223" d="M398.97,191.892a13.5,13.5,0,0,0,12.387,12.2" transform="translate(100.03 4421.529)" fill="none" stroke="#e21235" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Line_41" data-name="Line 41" y2="8.886" transform="translate(512.083 4621.445)" fill="none" stroke="#e21235" stroke-width="2"/>
+      <line id="Line_42" data-name="Line 42" x2="13.78" transform="translate(505.193 4630.33)" fill="none" stroke="#e21235" stroke-width="2"/>
+    </g>
+    <rect id="Rectangle_95" data-name="Rectangle 95" width="46" height="46" transform="translate(715 4466)" fill="none"/>
+  </g>
+</svg>

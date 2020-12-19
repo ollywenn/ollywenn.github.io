@@ -1,0 +1,54 @@
+$sociaMediaBorderColor: $white1;
+
+.socialMedia-title {
+    @extend %footerTitle;
+}
+.socialMedia {
+    margin-top: 18px;
+}
+.socialMedia ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.socialMedia li {
+    flex: 0 0 40px;
+}
+.socialMedia-link {
+    @include animate;
+    display: block;
+    border: 1px solid $sociaMediaBorderColor;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 40px;
+    width: 40px;
+    text-indent: -9999px;
+}
+.socialMedia-link:hover {
+    background-color: transparentize($white, 0.85);
+}
+.socialMedia-link--tt {
+    background-image: image-url('i-tt.svg');
+    background-size: 19.5px 15.84px;
+}
+.socialMedia-link--ln {
+    background-image: image-url('i-ln.svg');
+    background-size: 15.36px 15.35px;
+}
+.socialMedia-link--fb {
+    background-image: image-url('i-fb.svg');
+    background-size: 9.11px 18.21px;
+}
+.socialMedia-link--in {
+    background-image: image-url('i-in.svg');
+    background-size: 19.26px 19.26px;
+}
+.socialMedia-link--yt {
+    background-image: image-url('i-yt.svg');
+    background-size: 21.43px 15px;
+}
+.socialMedia-link--email {
+    background-image: image-url('i-email.svg');
+    background-size: 18.87px 12.98px;
+}

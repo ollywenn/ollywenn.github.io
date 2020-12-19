@@ -1,0 +1,14 @@
+@import '../toolbox/toolbox';
+
+.page--supplement-editions .main-content {
+    @include bp(lg) {
+        // TODO: standardise this
+        flex-basis: 750px;
+        max-width: 750px;
+    }
+}
+.page--supplement-editions .article-magazineList {
+    @include bp(md) {
+        transform: translateX(-7.5px);
+    }
+}

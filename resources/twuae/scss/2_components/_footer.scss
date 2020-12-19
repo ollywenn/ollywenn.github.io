@@ -1,0 +1,259 @@
+$footerBgColor: $grey2;
+$footerTWNavLinkColor: $white;
+$footerTWColor: $grey1;
+$footerJacobsBgColor: $white2;
+$footerJacobsColor: $grey3;
+$footerLegalLinksColor: $white;
+$footerLegalLinksHoverColor: $red1;
+
+.mainFooter {
+    position: relative;
+    background-color: $footerBgColor;
+}
+.mainFooter-travelweekly {
+    background-color: $footerBgColor;
+}
+.mainFooter-title {
+    @extend %footerTitle;
+}
+.mainFooter-travelweekly .wrapper {
+    padding-top: 50px;
+    padding-bottom: 34px;
+    @include bp(xmd) {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 46px;
+    }
+}
+.mainFooter-section--1 {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    @include bp(lg) {
+        flex: 0 0 315px;
+        max-width: 315px;
+    }
+}
+.mainFooter-travelweeklyDetails {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.mainFooter-section--2 {
+    margin-top: 40px;
+    @include bp(xmd) {
+        flex: 0 0 calc(100% - 315px);
+        margin-top: 0;
+        padding-left: 50px;
+        max-width: calc(100% - 315px);
+    }
+}
+.mainFooter-travelweeklyDetails .logo--travelweekly-footer {
+    margin: auto;
+    @include bp(xmd) {
+        margin-left: 0;
+    }
+}
+.mainFooter-socialMedia {
+    margin: 44px auto 0;
+    max-width: 315px;
+    @include bp(smd) {
+        flex: 0 0 315px;
+    }
+    @include bp(xmd) {
+        margin-top: 35px;
+    }
+}
+.mainFooter-socialMedia .socialMedia-title {
+    @include bp(xmd) {
+        text-align: left;
+    }
+}
+.socialMedia--mainFooter {
+    @include bp(smd) {
+        margin-top: 11px;
+    }
+}
+.mainFooter-menus {
+    @include bp(smd) {
+        display: flex;
+        justify-content: center;
+    }
+    @include bp(lg) {
+        justify-content: space-between;
+    }
+}
+.mainFooter-menus .mainFooter-title {
+    @include bp(smd) {
+        text-align: left;
+    }
+}
+.mainFooter-nav ul {
+    text-align: center;
+    @include bp(smd) {
+        text-align: left;
+    }
+}
+.mainFooter-nav .mainFooter-title + ul {
+    margin-top: 10px;
+    @include bp(smd) {
+        margin-top: 6px;
+    }
+}
+.mainFooter-nav a {
+    @include animate;
+    text-decoration: none;
+    color: $footerTWNavLinkColor;
+    font-size: rc(14);
+    line-height: rc(32);
+    @include bp(smd) {
+        line-height: rc(26);
+    }
+}
+.mainFooter-menusCol--1 {
+    @include bp(smd) {
+        flex: 0 0 auto;
+        transform: translateY(-5px);
+    }
+}
+.mainFooter-menusCol--1 .mainFooter-nav ul {
+    @include bp(smd) {
+        text-align: right;
+    }
+}
+.mainFooter-menusCol--1 .mainFooter-nav a {
+    @include bp(smd) {
+        line-height: rc(26);
+    }
+}
+.mainFooter-menusCol--2,
+.mainFooter-menusCol--2 .mainFooter-nav + .mainFooter-nav {
+    margin-top: 43px;
+}
+.mainFooter-menusCol--2 {
+    @include bp(smd) {
+        flex: 0 1 auto;
+        transform: translateY(2px);
+        margin-top: 0;
+        padding-left: 40px;
+        width: auto;
+    }
+    @include bp(lg) {
+        flex: 1 0 auto;
+        padding-left: 43px;
+    }
+}
+.mainFooter-menusCol--2 .mainFooter-nav + .mainFooter-nav {
+    @include bp(smd) {
+        margin-top: 31px;
+    }
+}
+.mainFooter-menusCol--2 .mainFooter-nav ul {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+.mainFooter-menusCol--2 .mainFooter-nav--legal ul {
+    @include bp(lg) {
+        justify-content: space-between;
+    }
+}
+.mainFooter-menusCol--2 .mainFooter-nav li {
+    @include bp(smd) {
+        padding-right: 10px;
+    }
+    @include bp(855px) {
+        padding-right: 15px;
+    }
+    @include bp(915px) {
+        padding-right: 27px;
+    }
+}
+.mainFooter-menusCol--2 .mainFooter-nav--legal li {
+    @include bp(lg) {
+        padding-right: 0;
+    }
+}
+.mainFooter-menusCol--2 .mainFooter-nav li:last-of-type {
+    @include bp(smd) {
+        padding-right: 0;
+    }
+}
+.mainFooter-jacobs {
+    background-color: $footerJacobsBgColor;
+}
+.mainFooter-jacobs > .wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include bp(lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.mainFooter-jacobs .logo--jacobs {
+    margin: 0 auto;
+    @include bp(smd) {
+        flex: 0 0 119px;
+        background-size: 119px 48px;
+        width: 119px;
+        height: 48px;
+    }
+}
+.jacobs-content {
+    @include bp(smd) {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include bp(lg) {
+        flex: 0 0 530px;
+        max-width: 530px;
+    }
+}
+.mainFooter-copyright {
+    margin-top: 20px;
+    @include bp(smd) {
+        flex: 1 1 auto;
+        margin-top: 0;
+        padding-left: 40px;
+    }
+}
+.mainFooter-copyright p {
+    margin-top: 0;
+    color: $footerJacobsColor;
+    font-size: rc(12);
+    line-height: rc(18);
+    @include bp(smd) {
+        text-align: left;
+        font-size: rc(14);
+    }
+}
+.mainFooter-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    @include bp(smd) {
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 600px;
+    }
+    @include bp(lg) {
+        flex: 0 0 calc(100% - 560px);
+        margin-top: 0;
+        width: 100%;
+        max-width: calc(100% - 560px);
+        min-height: 30px;
+    }
+}
+.mainFooter-logos a {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+}

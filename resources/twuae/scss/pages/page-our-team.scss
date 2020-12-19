@@ -1,0 +1,41 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+@import '../2_components/filter';
+@import '../2_components/author-snippet';
+
+.page--our-team .main-content {
+    @include bp(lg) {
+        // TODO: standardise this
+        flex: 0 0 750px;
+        max-width: 750px;
+    }
+}
+.article--ourTeam .ourTeam-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.article--ourTeam .authorSnippet {
+    display: none;
+    flex: 0 0 $twoCols;
+    margin-bottom: $gutterDefault;
+    max-width: $twoCols;
+    @include bp(smd) {
+        flex-basis: $oneThirdColSmd;
+        margin-bottom: $gutterSmd;
+        max-width: $oneThirdColSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $fourColsLg;
+        margin-bottom: $gutterLg;
+        max-width: $fourColsLg;
+    }
+}
+.article--ourTeam .authorSnippet.is-active {
+    display: block;
+}
+.article--ourTeam .filter + p {
+    margin-top: 22px;
+}

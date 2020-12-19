@@ -1,0 +1,95 @@
+.queen-award {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #15265b;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @include bp(500px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+.queen-award--strip {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: $maxWidth;
+}
+.queen-award--strip a {
+    text-decoration: none;
+}
+.queen-award .wrapper {
+    width: 100%;
+    max-width: 768px;
+    @include bp(md) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.queen-award--logo {
+    padding-bottom: 0;
+    text-align: center;
+    @include bp(md) {
+        flex: 0 0 160px;
+    }
+}
+.queen-award--logo img {
+    margin: 0 auto;
+    max-width: 120px;
+}
+.queen-award--logo div {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 120px;
+    width: 120px;
+    height: 199px;
+}
+.queen-award--blurb {
+    @include fixPadding;
+    margin: 40px auto 0;
+    max-width: 300px;
+    text-align: center;
+    @include bp(md) {
+        flex: 1 1 90%;
+        margin-top: 0;
+        padding-left: 20px;
+        max-width: none;
+        text-align: left;
+    }
+}
+.queen-award--strip .queen-award--blurb {
+    margin-top: 0;
+    max-width: none;
+    @include bp(md) {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+}
+.queen-award--blurb h6 {
+    color: $white;
+    font-size: rc(18);
+    line-height: rc(24);
+    @include bp(md) {
+        font-size: rc(22);
+        line-height: rc(32);
+    }
+}
+.queen-award--strip .queen-award--blurb h6 {
+    font-size: rc(14);
+    font-weight: $fontWeight-bold;
+}
+.queen-award--blurb p {
+    color: transparentize($white, 0.2);
+    font-size: rc(15);
+    @include bp(md) {
+        font-size: rc(17);
+    }
+}
+.queen-award--blurb a {
+    text-decoration: underline;
+    color: $white;
+}

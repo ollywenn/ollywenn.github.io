@@ -1,0 +1,65 @@
+$mostPopBtnBgColor: $white1;
+$mostPopBtnColor: transparentize($grey2, 0.7);
+$mostPopBtnBgColorActive: $white2;
+$mostPopBtnColorActive: $grey2;
+
+//TODO: use https://github.com/marcj/css-element-queries
+
+.section--mostPopular .sidebarWidget-header {
+    display: flex;
+    border: 0;
+    padding: 0;
+}
+.section--mostPopular .btn {
+    @include animate;
+    @extend %header2;
+    background-color: $mostPopBtnBgColor;
+    min-height: 86px;
+    color: $mostPopBtnColor;
+    font-size: rc(14);
+}
+.section--mostPopular .btn.is-active {
+    background-color: $mostPopBtnBgColorActive;
+    color: $mostPopBtnColorActive;
+    pointer-events: none;
+    @include bp(sm) {
+        font-size: rc(22);
+    }
+}
+.section--mostPopular .btn--mostPop {
+    flex: 0 0 203px;
+    max-width: 203px;
+}
+.section--mostPopular .btn--latest {
+    flex: 0 0 calc(100% - 203px);
+    max-width: calc(100% - 203px);
+}
+.section--mostPopular .articleSnippet-list {
+    display: none;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: li;
+}
+.section--mostPopular .articleSnippet-list.is-active {
+    display: block;
+}
+.section--mostPopular .articleSnippet-list li {
+    position: relative;
+    padding-left: 46px;
+}
+.section--mostPopular .articleSnippet-list li + li {
+    margin-top: 21px;
+}
+.section--mostPopular .articleSnippet-list li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    width: 33px; //magic number defined by the width of the longest character (length)
+    text-align: right; //essential to align the dots to the right based on the magic number (width)
+    font-family: $specialFont;
+    font-size: rc(37);
+    line-height: 1em;
+    content: counter(li) '.';
+    counter-increment: li;
+}

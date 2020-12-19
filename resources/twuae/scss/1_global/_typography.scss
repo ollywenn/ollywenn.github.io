@@ -1,0 +1,125 @@
+@import '../toolbox/toolbox';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: $headingFont;
+    font-weight: $fontWeight-normal;
+}
+p {
+    margin-bottom: 0;
+}
+%mainMenuLinks {
+    font-weight: $fontWeight-bold;
+}
+//FIXME: these were the original styles but they got overwritten on the last design iteration.
+%header1 {
+    font-family: $headingFont;
+    font-size: rc(30);
+    font-weight: $fontWeight-bold;
+    line-height: rc(42);
+    color: $grey2;
+    @include bp(md) {
+        font-size: rc(37);
+        line-height: rc(48);
+    }
+}
+%header2 {
+    transform: translateY(-2px); //required to align the line-height (the font looks too close to baseline)
+    text-transform: uppercase;
+    color: $grey2;
+    font-family: $headingFont;
+    font-size: rc(22);
+    font-weight: $fontWeight-bold;
+    line-height: rc(28);
+}
+%header3 {
+    text-transform: uppercase;
+    color: $grey2;
+    font-family: $headingFont;
+    font-size: rc(14);
+    font-weight: $fontWeight-semibold;
+    line-height: rc(18);
+}
+%subtitle {
+    color: $grey2;
+    font-family: $headingFont;
+    font-size: rc(16);
+    font-weight: $fontWeight-semibold;
+    line-height: rc(20);
+}
+%body {
+    color: $grey2;
+    font-size: rc(16);
+    line-height: rc(26);
+}
+%bodyOutline {
+    color: $grey2;
+    font-family: $headingFont;
+    font-weight: $fontWeight-bold;
+    font-size: rc(16);
+    line-height: rc(26);
+}
+%hashtag {
+    text-decoration: none;
+    color: $red1;
+    font-family: $headingFont;
+    font-size: rc(16);
+    font-weight: $fontWeight-medium;
+    line-height: rc(26);
+}
+%date {
+    color: $grey5;
+    font-size: rc(14);
+    line-height: rc(18);
+}
+%writer {
+    color: $red1;
+    font-size: rc(14);
+    line-height: rc(18);
+}
+%category {
+    text-transform: uppercase;
+    color: $red1;
+    font-family: $headingFont;
+    font-size: rc(14);
+    font-weight: $fontWeight-medium;
+    line-height: rc(18);
+}
+%button {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $red1;
+    font-family: $headingFont;
+    font-size: rc(14);
+    font-weight: $fontWeight-bold;
+    line-height: rc(18);
+}
+
+%sectionHeadlines {
+    @extend %header2;
+}
+%articleTitle {
+    @extend %header1;
+}
+%articleSubtitle {
+    @extend %header2;
+}
+%articleTitle--list {
+    @extend %header2;
+    @include bp(lg) {
+        font-size: rc(30);
+    }
+}
+%footerTitle {
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    font-size: rc(14);
+    font-weight: $fontWeight-semibold;
+    line-height: rc(14);
+}

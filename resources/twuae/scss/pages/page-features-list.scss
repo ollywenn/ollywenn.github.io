@@ -1,0 +1,36 @@
+@import '../toolbox/toolbox';
+
+.page--features-list .main-content {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        margin-bottom: 30px;
+        max-width: $fullCol;
+    }
+    @include bp(lg) {
+        // TODO: standardise this
+        flex-basis: 700px;
+        max-width: 700px;
+    }
+}
+.page--features-list .article-body {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.page--features-list .article-ctaBlock {
+    @include bp(smd) {
+        flex: 0 0 $twoColsSmd;
+        margin-top: 0;
+        margin-bottom: $marginDefault;
+        max-width: $twoColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $twoColsLg;
+        max-width: $twoColsLg;
+    }
+}
+.page--features-list .article-ctaBlockTitle {
+    margin-bottom: 0;
+}

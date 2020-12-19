@@ -1,0 +1,5 @@
+node_modules/
+public/**/**/external/
+resources/**/**/external/
+resources/**/**/__tests__/
+*.json

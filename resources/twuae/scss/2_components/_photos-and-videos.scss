@@ -1,0 +1,126 @@
+.section--photosAndVideos {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.section--photosAndVideos .section-header {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.section--photosAndVideos .articleSnippet-item {
+    @include bp(smd) {
+        flex-basis: $threeColsSmd;
+        max-width: $threeColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $threeColsLg;
+        max-width: $threeColsLg;
+    }
+}
+.section--photosAndVideos .articleSnippet-item + .articleSnippet-item {
+    @include bp(smd) {
+        border-top: 0;
+        margin-top: $gutterSmd;
+        padding-top: 0;
+    }
+    @include bp(lg) {
+        margin-top: $gutterLg;
+    }
+}
+.section--photosAndVideos .articleSnippet-item .articleSnippet-thumb,
+.section--photosAndVideos .articleSnippet-item .articleSnippet-content {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.section--photosAndVideos .articleSnippet-item .articleSnippet-content {
+    @include bp(smd) {
+        margin-top: $marginHalfDefault;
+    }
+}
+
+.section--photosAndVideos .articleSnippet-item .articleSnippet-metaData {
+    margin-top: 3px;
+    @include bp(smd) {
+        margin-top: $marginHalfDefault;
+    }
+}
+.section--photosAndVideos .btn--partnerContent {
+    margin-top: 15px;
+}
+.section--photosAndVideos .articleSnippet-item:nth-of-type(1) {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-right: -$paddingDefault;
+    margin-left: -$paddingDefault;
+    @include bp(sm) {
+        margin-right: -$paddingSm;
+        margin-left: -$paddingSm;
+    }
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: $fullCol;
+    }
+    @include bp(lg) {
+        flex-basis: $twoThirdsColLg;
+        max-width: $twoThirdsColLg;
+    }
+}
+.section--photosAndVideos .articleSnippet-item:nth-of-type(1) .articleSnippet-thumb {
+    flex-basis: $fullCol;
+    max-width: $fullCol;
+}
+.section--photosAndVideos .articleSnippet-item:nth-of-type(1) .articleSnippet-title {
+    //TODO: standardise typography
+    font-size: rc(20);
+    font-weight: $fontWeight-bold;
+    line-height: rc(28);
+    @include bp(smd) {
+        //TODO: standardise typography
+        font-size: rc(20);
+        line-height: rc(24);
+    }
+}
+.section--photosAndVideos .articleSnippet-item:nth-of-type(1) .articleSnippet-content {
+    flex-basis: $fullCol;
+    margin-top: 14px; //TODO: check with designer and standardise
+    padding: 0 $paddingDefault;
+    max-width: $fullCol;
+    @include bp(sm) {
+        padding-right: $paddingSm;
+        padding-left: $paddingSm;
+    }
+    @include bp(smd) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+.section--photosAndVideos .articleSnippet-item:nth-of-type(1) .articleSnippet-metaData {
+    margin-top: $marginHalfDefault;
+}
+.section--photosAndVideos .articleSnippet-item:nth-of-type(2) {
+    border-top: 0;
+    margin-top: $marginHalfDefault;
+    @include bp(smd) {
+        margin-top: $gutterSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $oneThirdColLg;
+        margin-top: 0;
+        max-width: $oneThirdColLg;
+    }
+}
+.section--photosAndVideos .articleSnippet-item:nth-of-type(5) {
+    display: none;
+    @include bp(lg) {
+        display: flex;
+    }
+}

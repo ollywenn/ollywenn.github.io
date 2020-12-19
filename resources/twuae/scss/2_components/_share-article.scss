@@ -1,0 +1,41 @@
+.main-content .section--shareArticle {
+    padding-bottom: 0;
+}
+.section--shareArticle .section-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include bp(570px) {
+        padding-top: 15.5px; //to compensate the height of the sharing icons
+        padding-bottom: 15.5px;
+    }
+}
+.section--shareArticle .section-title {
+    flex: 1 1 100%;
+    padding-right: 10px;
+    max-width: 100%;
+    @include bp(570px) {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+}
+.section--shareArticle .section-title + .sharingWidget {
+    margin-top: 16px;
+    flex: 0 0 100%;
+    @include bp(400px) {
+        flex-basis: 257px;
+        max-width: 257px;
+    }
+    @include bp(570px) {
+        // flex: 0 0 257px;
+        margin-top: 0;
+        // max-width: 257px;
+    }
+}
+.section--shareArticle .sharingWidget-link {
+    @include bp(570px) {
+        width: 33px;
+        height: 33px;
+    }
+}

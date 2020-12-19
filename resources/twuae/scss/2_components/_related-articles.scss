@@ -1,0 +1,58 @@
+.section--relatedArticles .articleSnippet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section--relatedArticles .articleSnippet-item {
+    @include bp(smd) {
+        flex: 0 0 $twoColsSmd;
+        max-width: $twoColsSmd;
+    }
+}
+.section--relatedArticles .articleSnippet-item + .articleSnippet-item {
+    @include bp(smd) {
+        margin-top: 0;
+        margin-bottom: 29px; //FIXME: standardise article widgets (no magic numbers!)
+        border: 0;
+        padding-top: 0;
+    }
+}
+.section--relatedArticles .articleSnippet-thumb {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+}
+.section--relatedArticles .articleSnippet-content {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        margin-top: $marginDefault; //TODO: this space doesn't seem right. Check with new designer
+        max-width: $fullCol;
+    }
+    @include bp(lg) {
+        margin-top: $marginHalfDefault;
+    }
+}
+.section--relatedArticles .articleSnippet-title {
+    //TODO: refactor with unified typography
+    @include bp(smd) {
+        font-size: rc(20);
+        line-height: rc(28);
+    }
+}
+.section--relatedArticles .article-mediaList {
+    margin-top: $marginHalfDefault;
+}
+.section--relatedArticles-spotlight .section-header {
+    flex-wrap: wrap;
+}
+.section--relatedArticles-spotlight .articleSnippet-item {
+    @include bp(smd) {
+        flex-basis: $threeColsSmd;
+        max-width: $threeColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $threeColsLg;
+        max-width: $threeColsLg;
+    }
+}

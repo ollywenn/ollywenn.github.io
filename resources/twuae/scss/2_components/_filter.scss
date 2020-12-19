@@ -1,0 +1,32 @@
+$filterBgColor: $white1;
+$filterActiveBgColor: $red1;
+$filterColor: $bodyDefaultColor;
+$filterActiveColor: $white;
+
+.filter {
+    margin-top: 30px;
+}
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    transform: translate(-10px, -10px);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.filter-item {
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 0;
+    border-radius: 15px;
+    background-color: $filterBgColor;
+    padding: 6px 13px;
+    color: $filterColor;
+    font-size: rc(14);
+    line-height: rc(17);
+}
+.filter-item.is-active {
+    background-color: $filterActiveBgColor;
+    color: $filterActiveColor;
+}

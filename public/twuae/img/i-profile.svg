@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <ellipse id="Ellipse_15" data-name="Ellipse 15" cx="10.375" cy="10.375" rx="10.375" ry="10.375" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="icon_profile_cropped" transform="translate(0.555 1)">
+    <g id="Group_177" data-name="Group 177" transform="translate(0.859 1.25)">
+      <g id="Group_176" data-name="Group 176" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <g id="Group_175" data-name="Group 175" transform="translate(2.3 2.404)">
+          <path id="Path_159" data-name="Path 159" d="M672.371,303.684a7.156,7.156,0,0,0-6.772-5.169h-2.871a7.156,7.156,0,0,0-6.772,5.169l0,1.868v1.6l3.6,3.069,11.409-1.668,1.4-1.067.4-1.868Z" transform="translate(-655.956 -289.14)" fill="#1d2022"/>
+          <g id="Group_24" data-name="Group 24" transform="translate(3.87)">
+            <g id="Group_23" data-name="Group 23">
+              <path id="Path_32" data-name="Path 32" d="M718.173,158a4.2,4.2,0,1,0,4.2,4.2h0A4.209,4.209,0,0,0,718.173,158Z" transform="translate(-713.969 -158)" fill="#1d2022"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <circle id="Ellipse_16" data-name="Ellipse 16" cx="11" cy="11" r="11" transform="translate(0.445 0)" fill="none" stroke="#1d2022" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

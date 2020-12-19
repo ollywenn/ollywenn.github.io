@@ -1,0 +1,87 @@
+$paywall-title: #2d2d2d;
+$paywall-sub-title: #494949;
+$paywall-login-section: #494949;
+$paywall-login-section-link: #494949;
+
+
+
+.locked-content {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  height: 50px;
+}
+
+.locked-content:before {
+  display: block;
+  position: absolute;
+  top: -220px;
+  left: 0;
+  background: rgb(17, 17, 17);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  width: 100%;
+  height: 200px;
+  content: '';
+}
+
+.locked-content:after {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  border-bottom: 1px solid $black;
+  width: 100%;
+  height: 1px;
+  content: '';
+}
+
+.lock-icon {
+  position: absolute;
+  top: -18px;
+  left: calc(50% - 15px);
+  background-image: url('/tc/img/lock.svg');
+  background-size: 30px 28px;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 28px;
+  z-index: 2;
+}
+
+.paywall {
+  text-align: center;
+}
+
+.paywall .title {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.paywall .title h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  text-align: center;
+  color: $paywall-title;
+}
+
+.paywall .title p {
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: $paywall-sub-title;
+}
+
+.paywall .already a,
+.paywall .already p {
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: $paywall-login-section;
+}
+
+.paywall .already a {
+  display: inline;
+  font-weight: 500;
+  color: $paywall-login-section-link;
+}

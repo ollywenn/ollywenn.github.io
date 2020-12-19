@@ -1,0 +1,24 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+.page--editions-archive .main-segment > .wrapper {
+    @include bp(lg) {
+        justify-content: center;
+    }
+}
+.page--editions-archive .main-content {
+    @include bp(lg) {
+        // TODO: standardise this
+        flex-basis: 620px;
+        max-width: 620px;
+    }
+}
+.page--editions-archive .article-bodySection {
+    border: 0;
+}
+.page--editions-archive .article-bodySection + .article-bodySection {
+    margin-top: 40px;
+}
+.page--editions-archive .article-linksList {
+    border-top: 0;
+}

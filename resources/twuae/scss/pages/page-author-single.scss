@@ -1,0 +1,47 @@
+@import '../2_components/author';
+@import '../2_components/pagination';
+
+.page--author-single .main-content {
+    @include bp(smd) {
+        flex: 0 0 $fullCol;
+        max-width: $fullCol;
+    }
+    @include bp(lg) {
+        // TODO: standardise this
+        flex-basis: 750px;
+        max-width: 750px;
+    }
+}
+.author-articles {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.author-articles .articleSnippet-item {
+    @include bp(smd) {
+        flex: $twoCols;
+        margin-bottom: $marginDefault;
+        max-width: $twoCols;
+    }
+}
+.author-articles .articleSnippet-item + .articleSnippet-item {
+    @include bp(smd) {
+        margin-top: 0;
+        border-top: 0;
+        padding-top: 0;
+    }
+}
+.author-articles .articleSnippet-thumb,
+.author-articles .articleSnippet-content {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.author-articles .articleSnippet-content {
+    @include bp(smd) {
+        margin-top: $marginHalfDefault;
+    }
+}

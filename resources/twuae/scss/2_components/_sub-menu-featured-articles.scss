@@ -1,0 +1,120 @@
+.subMenu-featuredArticles {
+    @include animate;
+    display: none;
+    opacity: 0;
+    background-color: $white;
+    @include bp(xmd) {
+        opacity: 1;
+        position: absolute;
+        left: 190px;
+        top: 0;
+        width: calc(100% - 190px);
+    }
+}
+.subMenu-featuredArticles.is-active {
+    @include bp(xmd) {
+        display: block;
+        z-index: 2;
+    }
+}
+.subMenu-featuredArticles a {
+    text-decoration: none;
+}
+
+.subMenu-featuredArticles .subMenu-featuredArticlesHolder {
+    @include bp(xmd) {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 0 100%;
+        justify-content: space-between;
+        opacity: 1;
+        max-width: 100%;
+    }
+}
+
+.subMenu-featuredArticles .articleSnippet-item {
+    @include animate;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 0 0 $threeColsLg;
+    margin-bottom: 35px;
+    max-width: $threeColsLg;
+}
+.subMenu-featuredArticles .articleSnippet-item > a.articleSnippet-thumb,
+.subMenu-featuredArticles .articleSnippet-item .articleSnippet-title a,
+.subMenu-featuredArticles .articleSnippet-metaData .articleSnippet-timestamp a {
+    padding: 0;
+}
+.subMenu-featuredArticles .articleSnippet-item > a.articleSnippet-thumb {
+    flex: 0 0 $fullCol;
+    max-width: $fullCol;
+}
+.subMenu-featuredArticles .articleSnippet-content {
+    flex: 0 0 $fullCol;
+    margin-top: 15px;
+    max-width: $fullCol;
+}
+.subMenu-featuredArticles .articleSnippet-item .articleSnippet-title,
+.subMenu-featuredArticles .articleSnippet-item .articleSnippet-title a {
+    white-space: inherit;
+}
+.subMenu-featuredArticles .articleSnippet-metaData {
+    flex: 0 0 100%;
+    margin-top: 3px;
+    line-height: rc(17);
+}
+.subMenu-featuredArticles .articleSnippet-timestamp {
+    line-height: rc(17);
+}
+.subMenu-featuredArticlesMain {
+    flex: 0 0 100%;
+    @include bp(lg) {
+        flex-basis: 250px;
+    }
+}
+.subMenu-featuredArticlesMain .articleSnippet-item > a.articleSnippet-thumb,
+.subMenu-featuredArticlesMain .articleSnippet-content {
+    @include bp(lg) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.subMenu-featuredArticlesMain .articleSnippet-item .articleSnippet-title,
+.subMenu-featuredArticlesMain .articleSnippet-item .articleSnippet-title a {
+    @include bp(lg) {
+        //TODO: standardise this
+        font-size: rc(18);
+        line-height: rc(23);
+    }
+}
+.subMenu-featuredArticlesMain .articleSnippet-item .articleSnippet-title {
+    @include bp(lg) {
+        margin-top: 10px;
+    }
+}
+.subMenu-featuredArticlesSecondary {
+    flex: 0 0 100%;
+    margin-top: 10px;
+    @include bp(lg) {
+        flex-basis: calc(100% - 270px);
+        margin-top: 0;
+        max-width: calc(100% - 270px);
+    }
+}
+.subMenu-featuredArticlesSecondary .articleSnippet-item + .articleSnippet-item {
+    margin-top: 10px;
+    @include bp(lg) {
+        margin-top: 27px;
+    }
+}
+.subMenu-featuredArticlesSecondary .articleSnippet-item > a.articleSnippet-thumb {
+    @include bp(lg) {
+        flex-basis: 90px;
+    }
+}
+.subMenu-featuredArticlesSecondary .articleSnippet-content {
+    @include bp(lg) {
+        flex-basis: calc(100% - 102px);
+    }
+}

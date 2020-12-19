@@ -1,0 +1,702 @@
+$articleLastUpdatedColor: $red1;
+$articleLastUpdatedDateColor: $grey5;
+
+.article-title {
+    @extend %articleTitle;
+}
+.article-title--list {
+    @extend %articleTitle--list;
+}
+.btn--back + .article-title {
+    margin-top: 4px;
+}
+.article-subtitle {
+    @extend %articleTitle;
+}
+.article-subtitle {
+    @extend %articleSubtitle;
+}
+.article-hero {
+    margin-top: ($marginDefault * 0.7);
+    @include bp(lg) {
+        margin-top: ($marginDefault * 1.2);
+    }
+}
+.article-hero img {
+    display: block;
+    margin: auto;
+}
+.article-hero + .article-metadata {
+    margin-top: ($marginDefault * 0.85);
+    @include bp(lg) {
+        margin-top: $marginDefault;
+    }
+}
+.article-heroBody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: -$marginDefault;
+    padding-right: $paddingDefault;
+    padding-left: $paddingDefault;
+    text-decoration: none;
+    color: $bodyDefaultColor;
+    @include bp(sm) {
+        padding-right: $paddingSm;
+        padding-left: $paddingSm;
+    }
+    @include bp(smd) {
+        position: absolute;
+        bottom: $paddingSmd;
+        left: $paddingSmd;
+        flex: 0 0 510px;
+        justify-content: space-between;
+        margin-top: 0;
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 510px;
+    }
+    @include bp(lg) {
+        flex-basis: 620px;
+        max-width: 620px;
+    }
+}
+.article-heroBodyThumbWrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+    @include bp(smd) {
+        flex-basis: 152px;
+        order: 2;
+        margin-top: 14px;
+        max-width: 152px;
+    }
+    @include bp(lg) {
+        flex-basis: 218px;
+        margin-top: $marginDefault;
+        max-width: 218px;
+    }
+}
+.article-hero .article-heroBodyThumb {
+    margin: 0;
+    max-width: 152px;
+    @include bp(lg) {
+        max-width: 218px;
+    }
+}
+.article-heroBodyThumb + .article-heroTitle {
+    margin-top: $marginHalfDefault;
+}
+//TODO: refactor toolbox to transform em back to px and add $padding vars back
+.article-heroTitle {
+    flex: 0 0 100%;
+    transform: translateX(-10px);
+    max-width: 100%;
+    //TODO: this is a one style only but probably should be on typography
+    font-size: rc(30);
+    font-weight: $fontWeight-bold;
+    line-height: rc(48);
+    @include bp(sm) {
+        transform: translateX(-23px);
+    }
+    @include bp(smd) {
+        align-self: flex-start;
+        order: 1;
+        transform: translateX(-30px);
+        color: $white;
+        font-size: rc(36);
+        font-weight: $fontWeight-normal;
+    }
+    @include bp(lg) {
+        font-size: rc(48);
+    }
+}
+.article-heroTitleInner {
+    display: inline-block;
+    position: relative;
+    padding-right: 10px;
+    padding-bottom: $marginHalfDefault;
+    padding-left: 10px;
+    @include bp(sm) {
+        padding-right: 23px;
+        padding-left: 23px;
+    }
+    @include bp(smd) {
+        padding-right: 30px;
+        padding-bottom: $marginHalfDefault;
+        padding-left: 30px;
+        max-width: 410px;
+    }
+    @include bp(lg) {
+        padding-bottom: $marginDefault;
+        max-width: 620px;
+    }
+}
+.article-heroTitleInner::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $bodyDefaultColor;
+    width: 100%;
+    height: 1px;
+    content: '';
+    @include bp(smd) {
+        background-color: $white;
+        height: 2px;
+    }
+}
+.article-heroContent {
+    @include fixPadding;
+    margin-top: 16.5px;
+    font-size: rc(14);
+    line-height: rc(17);
+    @include bp(smd) {
+        flex: 0 0 340px;
+        order: 3;
+        margin-top: 14px;
+        color: $white;
+        max-width: 340px;
+    }
+    @include bp(lg) {
+        flex-basis: 385px;
+        margin-top: $marginDefault;
+        max-width: 385px;
+        font-size: rc(16);
+        line-height: rc(19);
+    }
+}
+.article-heroContent > * {
+    font-size: inherit;
+    line-height: inherit;
+}
+.article-metadata {
+    @extend %date;
+    @include bp(650px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.article-byline {
+    @include bp(650px) {
+        flex: 1 1 50%;
+    }
+}
+.article-author {
+    display: inline-block;
+    font-style: normal;
+}
+.article-authorsPermalink {
+    text-decoration: none;
+}
+.article-lastUpdated {
+    color: $articleLastUpdatedColor;
+}
+.article-lastUpdatedDate {
+    color: $articleLastUpdatedDateColor;
+}
+.articleSnippet-timestamp {
+    @extend %date;
+}
+.article-mediaList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: $red1;
+}
+.article-mediaList > li + li {
+    margin-left: 28px;
+}
+.article-mediaList > li {
+    position: relative;
+    padding-left: 30px;
+    font-size: rc(14);
+    line-height: rc(20);
+}
+.article-mediaList > li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    content: '';
+}
+.article-videoLength::before {
+    background-image: image-url('i-play.svg');
+}
+.article-photoItems::before {
+    background-image: image-url('i-images.svg');
+}
+.article-podcast::before {
+    background-image: image-url('i-podcast.svg');
+    background-size: 14.69px 21.43px;
+}
+.article-webcast::before {
+    background-image: image-url('i-webcast.svg');
+    background-size: 26px 26px;
+}
+.article-share {
+    margin-top: ($marginDefault * 0.8);
+    @include bp(650px) {
+        flex: 0 0 257px;
+        margin-top: 0;
+    }
+}
+.article-share .sharingWidget {
+    @include bp(400px) {
+        max-width: 257px;
+    }
+}
+.article-share .sharingWidget-link {
+    @include bp(650px) {
+        width: 33px;
+        height: 33px;
+    }
+}
+.article-body {
+    @include fixPadding;
+    padding-top: $horizontalGapUnit; //FIXME: make it a variable
+}
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body h6 {
+    margin-top: 0.87em;
+    margin-bottom: 0.67em;
+    font-weight: $fontWeight-semibold;
+}
+.article-body p a {
+    word-break: break-all;
+}
+.article-body blockquote,
+.article-body pre {
+    @include fixPadding;
+}
+.article-body pre {
+    border: $grey0 1px solid;
+    border-radius: 2px;
+    background-color: $white1;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.article-body blockquote {
+    position: relative;
+    margin-right: $gutterDefault;
+    margin-left: $gutterDefault;
+    border-left: 6px solid $red1;
+    padding: 45px 30px 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: rc(20);
+    font-weight: $fontWeight-bold;
+    line-height: rc(28);
+    @include bp(smd) {
+        margin-right: $gutterSmd;
+        margin-left: $gutterSmd;
+    }
+    @include bp(lg) {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+}
+.article-body blockquote::before,
+.article-body blockquote::after {
+    position: absolute;
+    background: image-url('i-quote.svg') center center no-repeat;
+    background-size: 26.53px 21.42px;
+    width: 26.53px;
+    height: 21.42px;
+    content: '';
+}
+.article-body blockquote::before {
+    top: 10px;
+    left: 32px;
+}
+.article-body blockquote::after {
+    right: 32px;
+    bottom: 10px;
+    transform: rotate(180deg);
+}
+.article-body blockquote p {
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+.article-body table {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border: $grey0 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
+.article-body td,
+.article-body th,
+.article-body tr {
+    border: $grey0 1px solid;
+    padding: 5px;
+}
+.article-body dt {
+    font-weight: $fontWeight-bold;
+}
+.article-body iframe {
+    max-width: 100%;
+    @include bp(590px) {
+        display: block;
+        margin: 2em auto;
+    }
+}
+.article-body .form {
+    max-width: 634px;
+    @include bp(md) {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 360px;
+    }
+}
+.article-body * + .btn {
+    margin-top: ($marginDefault * 0.8);
+}
+.article-bodySection {
+    margin-top: $marginDefault;
+    border-top: $white1 1px solid;
+    padding-top: ($marginDefault * 0.7);
+}
+.article-bodySection--highlight {
+    margin-right: -$paddingDefault;
+    margin-left: -$paddingDefault;
+    border: 0;
+    background-color: $white1;
+    padding-right: $paddingDefault;
+    padding-bottom: 20px;
+    padding-left: $paddingDefault;
+    @include bp(sm) {
+        margin-right: -$paddingSm;
+        margin-left: -$paddingSm;
+        padding-right: $paddingSm;
+        padding-left: $paddingSm;
+    }
+}
+.article-bodySectionHeader {
+    @include fixPadding;
+}
+.article-bodySectionTitle {
+    @extend %articleSubtitle;
+    text-transform: none;
+}
+.article-linksList {
+    margin-top: $marginDefault;
+    border-top: $white1 1px solid;
+    border-bottom: $white1 1px solid;
+    padding-left: 0;
+    list-style: none;
+}
+.article-linksList li + li {
+    border-top: $white1 1px solid;
+}
+.article-linksList li a {
+    display: block;
+    background: image-url('i-arrow-red.svg') right center no-repeat;
+    background-size: 9px 16px;
+    padding: 15px 30px 15px 0;
+    text-decoration: none;
+    color: $bodyDefaultColor;
+    font-weight: $fontWeight-bold;
+}
+.article-linksList a + p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.article-magazineList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.article-magazineList li {
+    flex: 0 0 $twoCols;
+    align-self: flex-start;
+    margin-bottom: 30px;
+    max-width: $twoCols;
+    @include bp(smd) {
+        flex-basis: $threeColsSmd;
+        max-width: $threeColsSmd;
+    }
+    @include bp(lg) {
+        flex-basis: $fourColsLg;
+        max-width: $fourColsLg;
+    }
+}
+.article-magazineThumb {
+    display: block;
+    border: $white1 1px solid;
+}
+.article-magazineThumb img {
+    display: block;
+}
+.article-magazineThumb + .article-magazineTitle {
+    margin-top: $marginThreeQuartersDefault;
+}
+.article-body .article-magazineTitle {
+    margin-bottom: 0;
+}
+.article-magazineTitle a {
+    @extend %body;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    line-height: rc(21);
+    word-break: break-all;
+}
+.article-simpleSegment {
+    margin-top: ($marginDefault * 1.65);
+    margin-bottom: ($marginDefault * 1.65);
+}
+.article-simpleSegmentDivider {
+    display: flex;
+    justify-content: center;
+    margin-top: ($marginDefault * 0.8);
+}
+.article-simpleSegmentDividerContent {
+    display: inline-block;
+    position: relative;
+    padding-right: 36px;
+    padding-left: 36px;
+}
+.article-simpleSegmentDividerContent::before,
+.article-simpleSegmentDividerContent::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $grey10;
+    width: 24px;
+    height: 1px;
+    content: '';
+}
+.article-simpleSegmentDividerContent::before {
+    left: 0;
+}
+.article-simpleSegmentDividerContent::after {
+    right: 0;
+}
+.article-simpleSegment--ctas > .btn {
+    @extend %btn--block;
+}
+.article-bodyMedia {
+    margin-top: $marginDefault;
+    @include bp(lg) {
+        margin-top: 50px; //FIXME: make it a variable
+    }
+}
+.article-bodyMedia--photoAlbum {
+    @include bp(smd) {
+        column-count: 2;
+        column-gap: $gutterSmd;
+    }
+    @include bp(lg) {
+        column-count: 3;
+        column-gap: $gutterLg;
+    }
+}
+.article-bodyMediaItem {
+    margin-bottom: $marginDefault;
+    @include bp(smd) {
+        margin-bottom: $gutterSmd;
+    }
+    @include bp(lg) {
+        margin-bottom: $gutterLg;
+    }
+}
+.article-bodyMediaItem img {
+    display: block;
+}
+.article-highlightBlock {
+    position: relative;
+    margin-top: 30px;
+    padding-top: 33px;
+    padding-left: 30px;
+    @include bp(lg) {
+        margin-right: 26px;
+        padding-left: 56px;
+    }
+}
+.article-highlightBlockTitle {
+    @include fixPadding;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    margin: 0;
+    background-color: $red1;
+    padding: 20px 15px;
+    min-width: 86px;
+    min-height: 86px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    font-size: rc(23);
+    font-weight: $fontWeight-bold;
+    line-height: rc(25);
+    @include bp(lg) {
+        min-width: 124px;
+        min-height: 124px;
+        font-size: rc(42);
+        line-height: rc(38);
+    }
+}
+.article-highlightBlockTitle > * {
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+.article-highlightBlock--rounded .article-highlightBlockTitle {
+    border-radius: 100%;
+    min-width: 91px;
+    min-height: 91px;
+    @include bp(lg) {
+        min-width: 140px;
+        min-height: 140px;
+    }
+}
+.article-highlightBlockContent {
+    @include fixPadding;
+    position: relative;
+    z-index: 1;
+    background-color: $white1;
+    padding: 25px 15px 25px 70px;
+    @include bp(lg) {
+        padding-right: 50px;
+        padding-left: 110px;
+    }
+}
+.article-quickFilterMenu {
+    padding: 0 $paddingDefault;
+    @include bp(sm) {
+        padding-right: $paddingSm;
+        padding-left: $paddingSm;
+    }
+    @include bp(smd) {
+        padding-right: $paddingSmd;
+        padding-left: $paddingSmd;
+    }
+}
+.article-quickFilterMenu ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    @include bp(smd) {
+        justify-content: center;
+    }
+}
+.article-quickFilterMenu li {
+    list-style: none;
+}
+.article-ctaBlock {
+    @include fixPadding;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 28px; //TODO: standardise
+    background-color: $white2;
+    padding: 36px $gutterSm $gutterSm; //TODO: standardise
+    @include bp(smd) {
+        padding-right: $gutterSmd;
+        padding-bottom: $gutterSmd;
+        padding-left: $gutterSmd;
+    }
+}
+.article-ctaBlockTitle {
+    @extend %articleSubtitle;
+}
+.article-ctaBlockTitle--alphabeticalOrder,
+.article-ctaBlockTitle--numberOrder {
+    position: relative;
+    padding-left: 57px; //TODO: standardise
+}
+.article-ctaBlockTitle--alphabeticalOrder::before,
+.article-ctaBlockTitle--numberOrder::before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: center center no-repeat;
+    content: '';
+}
+.article-ctaBlockTitle--alphabeticalOrder::before {
+    background-image: image-url('i-order-alphabetical.svg');
+    background-size: 34px 38px;
+    width: 34px;
+    height: 38px;
+}
+.article-ctaBlockTitle--numberOrder::before {
+    background-image: image-url('i-order-number.svg');
+    background-size: 32px 38px;
+    width: 32px;
+    height: 38px;
+}
+.article-ctaBlockTitle + .btn--primary {
+    align-self: flex-end;
+    margin-top: 30px; //TODO: standardise
+    @include bp(smd) {
+        margin-top: $marginDefault;
+    }
+    @include bp(sm) {
+        margin-top: 30px; //TODO: standardise
+    }
+}
+.article-bodyFloatCenter,
+.article-bodyFloatLeft,
+.article-bodyFloatRight {
+    @include bp(smd) {
+        max-width: $twoColsSmd;
+    }
+    @include bp(lg) {
+        max-width: $twoColsLg;
+    }
+}
+.article-bodyFloatCenter img,
+.article-bodyFloatLeft img,
+.article-bodyFloatRight img {
+    display: block;
+}
+.article-bodyFloatRight {
+    @include bp(smd) {
+        float: right;
+        margin-bottom: $gutterSmd;
+        margin-left: $gutterSmd;
+    }
+    @include bp(lg) {
+        margin-bottom: $gutterLg;
+        margin-left: $gutterLg;
+    }
+}
+.article-bodyFloatLeft {
+    @include bp(smd) {
+        float: left;
+        margin-bottom: $gutterSmd;
+        margin-right: $gutterSmd;
+    }
+    @include bp(lg) {
+        margin-bottom: $gutterLg;
+        margin-right: $gutterLg;
+    }
+}
+.article-bodyFloatCenter {
+    @include bp(smd) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

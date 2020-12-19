@@ -1,0 +1,396 @@
+$mainNavBgColor: $white;
+$mainNavBgColorLg: $white;
+$mainNavColor: $grey7;
+$mainNavColorLg: $grey7;
+$mainNavActiveColor: $grey2;
+$mainNavActiveColorLg: $black1;
+$mainNavHoverColor: $red0;
+$mainNavSubMenuBgColor: $red0;
+$mainNavSubMenuBgColorLg: $red0;
+$manNavDividerColor: rgba(255, 255, 255, 0.1);
+$subNavBgColor: $white;
+$subNavColor: $grey2;
+$subNavActiveColor: $grey2;
+$subSubNavBgColor: $white;
+$mainNavButtonPadding: 15px;
+
+.mainNav {
+    @include animate;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-index-1;
+    transform: translateY(-100vh);
+    background-color: $mainNavBgColor;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    @include bp(xmd) {
+        position: relative;
+        flex: 0 0 100%;
+        z-index: ($z-index-2 - 1);
+        transform: translateY(0);
+        margin-top: 0;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        height: auto;
+        overflow: initial;
+    }
+}
+.mainNav.is-active {
+    transform: translateY(0);
+}
+.mainNav > ul {
+    padding: 89px $paddingDefault 50px;
+    @include bp(sm) {
+        padding-right: $paddingSm;
+        padding-left: $paddingSm;
+    }
+    @include bp(smd) {
+        padding-top: 110px;
+        padding-right: $paddingSmd;
+        padding-left: $paddingSmd;
+    }
+    @include bp(xmd) {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        z-index: $z-index-2;
+        background-color: $mainNavBgColorLg;
+        padding: 0;
+    }
+    @include bp(lg) {
+        justify-content: flex-start;
+    }
+}
+.mainNav > ul::after {
+    @include bp(xmd) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: ($z-index-1 + 1);
+        background-color: $mainNavBgColorLg;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        content: '';
+    }
+}
+.mainNav > ul > li {
+    @include bp(smd) {
+        width: 38%;
+    }
+    @include bp(xmd) {
+        width: auto;
+    }
+}
+.mainNav > ul > li:first-of-type button,
+.mainNav > ul > li:first-of-type a {
+    padding-left: 0;
+}
+.mainNav > ul > li:last-of-type button,
+.mainNav > ul > li:last-of-type a {
+    padding-right: 0;
+}
+.mainNav > ul li > a,
+.mainNav > ul li > button {
+    @include animate;
+    position: relative;
+    z-index: 2;
+    background-color: $white;
+    @include bp(xmd) {
+        z-index: ($z-index-1 + 2);
+    }
+}
+.mainNav > ul li:hover > a,
+.mainNav > ul li:hover > button {
+    @include bp(lg) {
+        color: $mainNavHoverColor;
+    }
+}
+.mainNav > ul li.is-active > a,
+.mainNav > ul li.is-current > a,
+.mainNav > ul li.is-active > button,
+.mainNav > ul li.is-current > button {
+    color: $mainNavActiveColor;
+    font-weight: $fontWeight-bold;
+    @include bp(xmd) {
+        color: $mainNavActiveColorLg;
+    }
+}
+.mainNav > ul > li > a {
+    @include bp(xmd) {
+        position: relative;
+        padding: 0 15px;
+        line-height: rc(33);
+    }
+    @include bp(lg) {
+        line-height: rc(50);
+    }
+}
+.mainNav > ul > li > button {
+    @include bp(xmd) {
+        height: 33px;
+    }
+    @include bp(lg) {
+        height: 50px;
+    }
+}
+.mainNav li > a,
+.menuParentItem > button,
+.extraMenu--mainNav button {
+    display: block;
+    padding: 6.5px 0;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $mainNavColor;
+    font-family: $headerFontFamily;
+    font-size: rc(22);
+    @include bp(smd) {
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+        font-size: rc(14);
+    }
+    @include bp(xmd) {
+        padding: 0;
+        text-align: center;
+        white-space: nowrap;
+        letter-spacing: 0.28px;
+    }
+}
+.mainNav > ul > li:last-child > button,
+.mainNav > ul > li:last-child > a {
+    @include bp(lg) {
+        padding-right: 0;
+    }
+}
+.extraMenu--mainNav button {
+    @include bp(lg) {
+        padding: 0;
+    }
+}
+.mainNav button {
+    border: 0;
+    background-color: transparent;
+}
+.menuParentItem button {
+    width: 100%;
+    text-align: left;
+}
+.menuParentItem .subMenu li > a {
+    padding-left: 40px;
+    @include bp(xmd) {
+        text-transform: none;
+        color: $white;
+    }
+}
+.mainNav .menuParentItem .subMenu li > a {
+    background-color: $subSubNavBgColor;
+    padding-left: 0;
+    text-transform: none;
+    @include bp(xmd) {
+        position: relative;
+        background-color: transparent;
+        padding: 5px 22px;
+        color: $subNavColor;
+        text-align: left;
+        font-size: rc(14);
+        line-height: rc(20);
+    }
+}
+.mainNav .menuParentItem .subMenu .is-current > a::before {
+    @include bp(xmd) {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: $red1;
+        width: 5px;
+        height: 5px;
+        content: '';
+    }
+}
+.mainNav .menuParentItem button {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    @include bp(smd) {
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+    @include bp(xmd) {
+        padding: 0 15px;
+    }
+}
+.mainNav .menuParentItem button::before {
+    @include animate;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: image-url('i-arrow-red.svg') left center no-repeat;
+    background-size: 9px 16px;
+    width: 9px;
+    height: 16px;
+    content: '';
+    @include bp(xmd) {
+        display: none;
+    }
+}
+.mainNav .menuParentItem.is-active button::before {
+    transform: translateY(-50%) rotate(-90deg);
+    @include bp(smd) {
+        transform: translateY(-50%);
+    }
+}
+.menuParentItem {
+    @include animate;
+}
+.menuParentItem::before {
+    @include bp(xmd) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: ($z-index-1 + 1);
+        background-color: $mainNavBgColorLg;
+        width: 100%;
+        height: 33px;
+        pointer-events: none;
+        content: '';
+    }
+    @include bp(lg) {
+        display: none;
+    }
+}
+.mainNav .subMenu {
+    transition: opacity 0.2s ease, height 0.4s ease-in-out 0.5s, transform 0.2s ease-in-out;
+    transform: translateY(-150%);
+    z-index: 1;
+    opacity: 0;
+    height: 0;
+    pointer-events: none;
+    @include bp(smd) {
+        position: absolute;
+        top: 110px;
+        left: 52.1%;
+    }
+    @include bp(xmd) {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: $z-index-1;
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+        margin-right: -$paddingXmd;
+        margin-left: -$paddingXmd;
+        background-color: $subNavBgColor;
+        padding: 40px $paddingXmd;
+        width: calc(100% + (#{$paddingXmd} * 2));
+        height: auto;
+        min-height: 550px;
+        overflow: hidden;
+    }
+    @include bp(lg) {
+        flex-basis: calc(100% + #{($paddingLg * 2)});
+        margin-right: -$paddingLg;
+        margin-left: -$paddingLg;
+        padding-right: $paddingLg;
+        padding-left: $paddingLg;
+        width: calc(100% + #{($paddingLg * 2)});
+    }
+}
+.mainNav .is-current > .subMenu {
+    @include bp(xmd) {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+.mainNav .is-active > .subMenu {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: initial;
+    padding-top: 6px;
+    height: auto;
+    @include bp(smd) {
+        padding-top: 0;
+    }
+    @include bp(xmd) {
+        opacity: 1;
+        border-bottom: $grey5 1px solid;
+        padding-top: 22px;
+        pointer-events: initial;
+    }
+}
+.mainNav > ul > li:hover .subMenu {
+    @include bp(1025px) {
+        transform: translateY(0);
+        opacity: 1;
+        border-bottom: $grey5 1px solid;
+        pointer-events: initial;
+    }
+}
+.mainNav .subMenu > ul {
+    @include bp(xmd) {
+        position: relative;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+.mainNav .subMenu li {
+    @include bp(xmd) {
+        display: inline-block;
+        width: 100%;
+    }
+}
+.mainNav .subMenu li.is-current > a {
+    @include bp(xmd) {
+        color: $mainNavActiveColor;
+    }
+}
+.mainNav .subMenu li > a,
+.mainNav .subMenu .menuParentItem > button {
+    @include animate;
+    background-color: $mainNavSubMenuBgColor;
+    font-size: rc(16);
+    @include bp(smd) {
+        font-size: rc(14);
+    }
+    @include bp(xmd) {
+        max-width: 190px;
+        font-size: rc(20);
+    }
+    @include bp(lg) {
+        font-size: rc(16);
+        white-space: nowrap;
+    }
+}
+.mainNav .menuParentItem > button {
+    @include bp(lg) {
+        position: relative;
+    }
+}
+.mainNav .subMenu li:last-of-type a {
+    padding-bottom: 20px;
+    @include bp(xmd) {
+        padding-bottom: 5px;
+    }
+}
+.mainNav .subMenu li.is-current .subMenu-featuredArticles {
+    @include bp(xmd) {
+        display: block;
+        z-index: 1;
+    }
+}
+.mainNav .subMenu li:hover .subMenu-featuredArticles {
+    @include bp(lg) {
+        display: block;
+        z-index: 2;
+    }
+}

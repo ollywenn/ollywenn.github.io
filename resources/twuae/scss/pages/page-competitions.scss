@@ -1,0 +1,132 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+@import '../2_components/most-popular';
+@import '../2_components/sponsored-content';
+
+.page--competition-list .main-content {
+    @include bp(lg) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.page--competition-list .sidebar {
+    @include bp(lg) {
+        margin-top: $gutterLg;
+    }
+}
+.page--competition-list .main-content + .main-content {
+    @include bp(smd) {
+        margin-top: $gutterSmd;
+    }
+    @include bp(lg) {
+        flex: 0 0 $mainContentWidthWithSidebarDefault;
+        margin-top: $gutterLg;
+        max-width: $mainContentWidthWithSidebarDefault;
+    }
+}
+.page--competition-list .article-body {
+    @include bp(smd) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.page--competition-list .main-content .articleSnippet-item {
+    @include bp(smd) {
+        flex-basis: $oneThirdCol;
+        margin-top: 0;
+        margin-bottom: $marginDefault;
+        max-width: $oneThirdCol;
+    }
+    @include bp(lg) {
+        flex-basis: $twoColsLg;
+        max-width: $twoColsLg;
+    }
+}
+.page--competition-list .main-content .articleSnippet-item + .articleSnippet-item {
+    @include bp(smd) {
+        border-top: 0;
+        padding-top: 0;
+    }
+}
+.page--competition-list .main-content .articleSnippet-content,
+.page--competition-list .main-content .articleSnippet-thumb {
+    @include bp(smd) {
+        flex-basis: $fullCol;
+        max-width: $fullCol;
+    }
+}
+.page--competition-list .main-content .articleSnippet-content {
+    @include bp(smd) {
+        margin-top: $marginHalfDefault;
+    }
+}
+.page--competition-list .main-content .articleSnippet-item--fullBg {
+    margin-right: -$paddingDefault;
+    margin-left: -$paddingDefault;
+    @include bp(sm) {
+        margin-right: -$paddingSm;
+        margin-left: -$paddingSm;
+    }
+    @include bp(smd) {
+        flex-basis: $twoColsSmd;
+        max-width: $twoColsSmd;
+        margin: 0 0 $marginDefault;
+    }
+    @include bp(lg) {
+        flex-basis: $twoColsLg;
+        max-width: $twoColsLg;
+        margin-bottom: $gutterLg;
+    }
+}
+.page--competition-list .main-content .articleSnippet-item--fullBg + .articleSnippet-item--fullBg {
+    border-top: 0;
+    margin-top: $marginDefault;
+    padding-top: 0;
+    @include bp(smd) {
+        margin-top: 0;
+    }
+}
+.page--competition-list .main-content .articleSnippet-item--fullBg:nth-of-type(3),
+.page--competition-list .main-content .articleSnippet-item--fullBg:nth-of-type(4) {
+    @include bp(smd) {
+        margin-bottom: 0;
+    }
+}
+.page--competition-list .articleSnippet-item--fullBg .articleSnippet-thumb {
+    flex-basis: $fullCol;
+    max-width: $fullCol;
+    min-height: 196px;
+}
+.page--competition-list .articleSnippet-item--fullBg .articleSnippet-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-basis: $fullCol;
+    width: 100%;
+    max-width: $fullCol;
+    @include bp(smd) {
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+}
+.page--competition-list .sidebar {
+    @include bp(lg) {
+        flex-basis: $sidebarWidthDefault;
+        max-width: $sidebarWidthDefault;
+    }
+}
+.page--competition-list .sidebar .section {
+    @include bp(lg) {
+        margin-right: $marginHalfDefault;
+        margin-bottom: $marginDefault;
+        margin-left: $marginHalfDefault;
+    }
+}
+.page--competition-list .sidebar .section + .section {
+    @include bp(lg) {
+        margin-top: 0;
+    }
+}

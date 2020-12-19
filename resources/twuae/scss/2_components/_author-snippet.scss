@@ -1,0 +1,27 @@
+$authorDetailsBgColor: $white1;
+
+.authorSnippet {
+    background-color: $authorDetailsBgColor;
+    max-width: 200px;
+    text-decoration: none;
+}
+.authorSnippet-item {
+    margin: 0;
+}
+.authorSnippet-item img {
+    display: block;
+}
+.authorSnippet-details {
+    @include fixPadding;
+    padding: 13px 18px;
+}
+.authorSnippet-title,
+.authorSnippet-position {
+    @extend %body;
+}
+.authorSnippet-title {
+    font-weight: $fontWeight-bold;
+}
+.authorSnippet-position {
+    font-weight: $fontWeight-normal;
+}

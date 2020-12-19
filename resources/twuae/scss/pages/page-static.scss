@@ -1,0 +1,19 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+@import '../2_components/most-popular';
+@import '../2_components/sponsored-content';
+
+.page--static-page .main-segment > .wrapper {
+    @include bp(md) {
+        display: flex;
+        justify-content: center;
+    }
+}
+.page--static-page .main-content {
+    @include bp(md) {
+        // TODO: standardise this
+        flex-basis: 620px;
+        max-width: 620px;
+    }
+}

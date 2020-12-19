@@ -1,0 +1,33 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+.page--contact .main-content {
+    @include bp(lg) {
+        // TODO: standardise this
+        flex-basis: 750px;
+        max-width: 750px;
+    }
+}
+.page--contact .article-body {
+    @include bp(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.page--contact .article-bodyCol {
+    @include bp(lg) {
+        flex: 0 0 $twoColsSmd;
+        max-width: $twoColsSmd;
+    }
+}
+.page--contact .article-body .form {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 330px;
+    @include bp(lg) {
+        margin-right: 0;
+        margin-left: 0;
+        padding-bottom: 0;
+        max-width: $fullCol;
+    }
+}

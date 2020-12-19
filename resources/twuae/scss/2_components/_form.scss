@@ -1,0 +1,205 @@
+$formLabelColor: $grey5;
+$formLabelRequiredColor: $red1;
+$formErrorColor: $red1;
+$formInputColor: $grey2;
+$formInputBorderColor: $grey5;
+$formInpuFocusBorderColor: $grey2;
+$checkboxBorderColor: $grey9;
+$textareaBgColor: $white1;
+
+.form {
+    @include fixPadding;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.form .input-hidden {
+    display: none;
+}
+.form-field {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    position: relative;
+}
+.form-field + .form-field,
+.form-field + .form-content,
+.form-content + .form-field,
+.form-field + .btn--submit,
+.form-content + .btn--submit {
+    margin-top: 54px;
+}
+.form-field--select {
+    display: block;
+}
+.form-label {
+    @include animate;
+    position: absolute;
+    top: -3px;
+    left: 1px;
+    color: $formLabelColor;
+    width: 100%;
+}
+.form-label--select,
+.form-label--date {
+    position: relative;
+}
+.form-label--upload {
+    @extend %btn--primary;
+    position: relative;
+    color: $white;
+}
+.form-label.is-active {
+    transform: translateY(-22px);
+    font-size: rc(13);
+    line-height: rc(16);
+}
+.form-label--date.is-active {
+    transform: none;
+    font-size: rc(16);
+    line-height: rc(26);
+}
+.form .required {
+    padding-left: 3px;
+    color: $formLabelRequiredColor;
+}
+.form-helperText {
+    display: block;
+}
+.form-helperText--error {
+    color: $formErrorColor;
+}
+input + .form-helperText {
+    margin-top: 10px;
+}
+.form input,
+.form select,
+.form textarea {
+    @include animate;
+    flex: 0 0 100%;
+    border: 0;
+    border-bottom: 1px solid $formInputBorderColor;
+    width: 100%;
+    max-width: 100%;
+    height: 30px;
+    color: $formInputColor;
+    line-height: rc(30);
+}
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    box-shadow: none;
+    border-bottom-color: $formInpuFocusBorderColor;
+}
+.form input:required,
+.form select:required,
+.form textarea:required {
+    box-shadow: none;
+}
+.form select {
+    background-color: $white;
+}
+.form input[type='file'] {
+    display: none;
+}
+.form-checkbox,
+.form-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.form-labelCheckbox,
+.form-labelRadio {
+    position: relative;
+    cursor: pointer;
+}
+.form-labelCheckbox + .form-helperText,
+.form-labelRadio + .form-helperText {
+    padding-left: 35px;
+}
+.form--select {
+    transform: translateY(-22px);
+    font-size: rc(13);
+}
+.form-selectWrapper {
+    position: relative;
+}
+.form-selectWrapper::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background: $white image-url('i-caret.svg') center center no-repeat;
+    background-size: 14px 7px;
+    width: 30px;
+    height: 29px;
+    pointer-events: none;
+    content: '';
+}
+.form select {
+    position: relative;
+    font-family: $bodyFontFamily;
+    z-index: 1;
+}
+.form-labelContent {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    text-align: left;
+}
+.form-labelContent::before,
+.form-labelContent::after {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    content: '';
+}
+.form-labelContent::before {
+    display: block;
+    background: $white;
+    border: $checkboxBorderColor 2px solid;
+    border-radius: 2px;
+}
+.form-labelRadio .form-labelContent::before {
+    border-radius: 20px;
+}
+.form-labelContent::after {
+    display: none;
+    color: red;
+    font-size: rc(25);
+    content: '√';
+}
+.form-checkbox:checked + .form-labelContent::before,
+.form-radio:checked + .form-labelContent::before {
+    background-color: $white1;
+}
+.form-checkbox:checked + .form-labelContent::after,
+.form-radio:checked + .form-labelContent::after {
+    display: block;
+    transform: translate(3px, -10px);
+}
+.form-content {
+    @include fixPadding;
+    margin-top: 27px;
+}
+.form-extraInfo {
+    @include fixPadding;
+    margin-top: 27px;
+    text-align: center;
+}
+.form-extraInfo p {
+    color: $formLabelColor;
+    font-size: rc(12);
+}
+
+.btn--submit {
+    @extend %btn--primary;
+    display: block;
+    width: 100%;
+    max-width: 330px;
+}

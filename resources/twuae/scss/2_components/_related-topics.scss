@@ -1,0 +1,28 @@
+.section--relatedTopics {
+    padding-bottom: 18.5px;
+}
+.section--relatedTopics .section-header {
+    padding-bottom: 13px;
+}
+.section--relatedTopics .relatedTopics-list {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: flex-start;
+    transform: translateX(-21px);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include bp(lg) {
+        transform: translateX(-23px);
+    }
+}
+.section--relatedTopics .relatedTopics-item {
+    flex: 0 0 auto;
+    padding-left: 21px;
+    @include bp(lg) {
+        padding-left: 23px;
+    }
+}
+.section--relatedTopics .relatedTopics-item a {
+    @extend %hashtag;
+}

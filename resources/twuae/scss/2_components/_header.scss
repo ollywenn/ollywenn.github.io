@@ -1,0 +1,107 @@
+$headerFontFamily: $headingFont;
+$headerBgColor: $white;
+$headerBorderColor: $grey5;
+
+.mainHeader {
+    position: relative;
+    left: 50%;
+    z-index: ($z-index-2 + 1);
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background-color: $headerBgColor;
+    width: 100%;
+    height: 94px;
+    font-family: $headerFontFamily;
+    @include bp(smd) {
+        height: 60px;
+    }
+    @include bp(xmd) {
+        position: relative;
+        height: auto;
+    }
+    @include bp(lg) {
+        background-color: transparent;
+    }
+}
+.sticky-nav .mainHeader {
+    position: fixed;
+    top: 0;
+    z-index: $z-index-4;
+}
+.mainHeader .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include bp(smd) {
+        border-bottom: $headerBorderColor 1px solid;
+    }
+    @include bp(lg) {
+        background-color: $headerBgColor;
+    }
+}
+.mainHeader .wrapper::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: ($z-index-2 + 1);
+    background-color: $headerBgColor;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    content: '';
+    @include bp(smd) {
+        height: 60px;
+    }
+    @include bp(lg) {
+        height: 70px;
+    }
+}
+.mainLogo {
+    display: flex;
+    position: relative;
+    align-items: center;
+    z-index: $z-index-3;
+    flex: 0 0 163px;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: $white;
+    max-width: 163px;
+    height: 94px;
+    @include bp(425px) {
+        flex-basis: 194px;
+        max-width: 194px;
+    }
+    @include bp(smd) {
+        flex-basis: 267.27px;
+        height: 60px;
+        max-width: 267.27px;
+    }
+    @include bp(lg) {
+        flex-basis: 305px;
+        padding-top: 33px;
+        padding-bottom: 5px;
+        max-width: 305px;
+        height: auto;
+    }
+}
+.mainHeader .logo--travelweekly-main {
+    display: block;
+    width: 163px;
+    height: 17px;
+    @include bp(425px) {
+        background-size: 194px 20px;
+        width: 194px;
+        height: 20px;
+    }
+    @include bp(smd) {
+        background-position: left top;
+        background-size: 267.27px 28.153px;
+        width: 267.27px;
+        height: 28.153px;
+    }
+    @include bp(lg) {
+        background-size: 305px 31.55px;
+        width: 305px;
+        height: 31.55px;
+    }
+}

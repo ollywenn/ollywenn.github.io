@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="icon_widget_jobs" transform="translate(-715 -4247)">
+    <g id="icon_widget_jobs-2" data-name="icon_widget_jobs" transform="translate(4 43.083)">
+      <path id="Path_237" data-name="Path 237" d="M-7136,16642.6v10.838l15.2,3.363v-1.682h8.6v1.682l15.4-3.363V16642.6Z" transform="translate(7850 -12427)" fill="rgba(226,18,53,0.16)"/>
+      <g id="Group_269" data-name="Group 269" transform="translate(113.397 4037.445)">
+        <path id="Path_234" data-name="Path 234" d="M638.528,190.349v15.535H602.193V190.349" transform="translate(-0.091 -0.969)" fill="none" stroke="#e21235" stroke-width="2"/>
+        <path id="Path_235" data-name="Path 235" d="M616.2,193.018,600.6,189.1v-10.6h39.334v10.6l-15.268,3.917" transform="translate(0 -0.289)" fill="none" stroke="#e21235" stroke-width="2.078"/>
+        <rect id="Rectangle_90" data-name="Rectangle 90" width="8.438" height="6.121" transform="translate(616.05 190.334)" fill="none" stroke="#e21235" stroke-width="1.703"/>
+        <path id="Path_236" data-name="Path 236" d="M614.988,178.444v-4.973h13.627v4.973" transform="translate(-1.532)" fill="none" stroke="#e21235" stroke-width="1.703"/>
+      </g>
+    </g>
+    <rect id="Rectangle_96" data-name="Rectangle 96" width="46" height="46" transform="translate(715 4247)" fill="none"/>
+  </g>
+</svg>

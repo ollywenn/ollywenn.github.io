@@ -12,7 +12,11 @@
         max-width: 750px;
     }
 }
+.author-production {
+    margin-top: 30px;
+}
 .author-articles {
+    margin-top: 30px;
     @include bp(smd) {
         display: flex;
         flex-wrap: wrap;
@@ -21,9 +25,13 @@
 }
 .author-articles .articleSnippet-item {
     @include bp(smd) {
-        flex: $twoCols;
+        flex: 0 0 $twoColsSm;
         margin-bottom: $marginDefault;
-        max-width: $twoCols;
+        max-width: $twoColsSm;
+    }
+    @include bp(lg) {
+        flex-basis: $threeColsLg;
+        max-width: $threeColsLg;
     }
 }
 .author-articles .articleSnippet-item + .articleSnippet-item {

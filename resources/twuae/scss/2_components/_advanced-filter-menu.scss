@@ -1,0 +1,129 @@
+.article-advancedFilterMenu {
+    @include animate;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: $z-index-3;
+    opacity: 0;
+    background-color: $white;
+    padding: $paddingDefault;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    pointer-events: none;
+    @include bp(sm) {
+        padding: $paddingSm;
+    }
+    @include bp(smd) {
+        padding: $paddingSmd;
+        width: 50vw;
+        box-shadow: -7px 12px 17px 0 rgba(0, 0, 0, 0.16);
+    }
+    @include bp(lg) {
+        width: 30vw;
+    }
+}
+.article-advancedFilterMenu::before {
+    @include animate;
+    opacity: 0;
+    @include bp(smd) {
+        position: fixed;
+        top: 0;
+        right: 50vw;
+        z-index: ($z-index-3 - 10);
+        width: 50vw;
+        height: 100vh;
+        backdrop-filter: blur(5px);
+        content: '';
+    }
+    @include bp(lg) {
+        right: 30vw;
+        width: 70vw;
+    }
+}
+.article-advancedFilterMenu.is-active {
+    right: 0;
+    opacity: 1;
+    pointer-events: all;
+}
+.article-advancedFilterMenu.is-active::before {
+    opacity: 1;
+}
+.article-advancedFilterMenu .btn--close {
+    top: $paddingDefault;
+    right: $paddingDefault;
+    z-index: 1;
+    @include bp(sm) {
+        top: $paddingSm;
+        right: $paddingSm;
+    }
+    @include bp(smd) {
+        top: $paddingSmd;
+        right: $paddingSmd;
+    }
+    @include bp(lg) {
+        top: $paddingLg;
+        right: $paddingLg;
+    }
+}
+.advancedFilterMenu-title + .form-field {
+    margin-top: $marginDefault;
+}
+.advancedFilterMenu-menu {
+    margin-top: 40px;
+}
+.advancedFilterMenu-menu ul {
+    padding-left: 0;
+    list-style: none;
+}
+.advancedFilterMenu-menu + .btn--submit {
+    margin-top: $marginDefault;
+}
+.advancedFilterMenu-title {
+    @extend %header2;
+}
+.advancedFilterMenu-item + .advancedFilterMenu-item {
+    border-top: $white1 1px solid;
+}
+.advancedFilterMenu-item label,
+.advancedFilterMenu-item button {
+    display: block;
+    position: relative;
+    border: 0;
+    background-color: $white;
+    padding: 15px 0;
+    width: 100%;
+    text-align: left;
+}
+.advancedFilterMenu-item > input:checked + label {
+    color: $red1;
+}
+.advancedFilterMenu-item--parent > button::before,
+.advancedFilterMenu-item--parent > label::before {
+    @include animate;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(90deg);
+    background: image-url('i-arrow-red.svg') left center no-repeat;
+    background-size: 9px 16px;
+    width: 9px;
+    height: 16px;
+    content: '';
+}
+.advancedFilterMenu-item--parent > button.is-active::before,
+.advancedFilterMenu-item--parent > label.is-active::before {
+    transform: translateY(-50%) rotate(-90deg);
+}
+.advancedFilterMenu-item input {
+    display: none;
+}
+.advancedFilterMenu-submenu {
+    display: none;
+}
+.advancedFilterMenu-submenu .advancedFilterMenu-item {
+    padding-left: $paddingDefault;
+    @include bp(sm) {
+        padding-left: $paddingSm;
+    }
+}

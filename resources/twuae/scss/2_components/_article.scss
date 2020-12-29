@@ -581,29 +581,6 @@ $articleLastUpdatedDateColor: $grey5;
         padding-left: 110px;
     }
 }
-.article-quickFilterMenu {
-    padding: 0 $paddingDefault;
-    @include bp(sm) {
-        padding-right: $paddingSm;
-        padding-left: $paddingSm;
-    }
-    @include bp(smd) {
-        padding-right: $paddingSmd;
-        padding-left: $paddingSmd;
-    }
-}
-.article-quickFilterMenu ul {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    @include bp(smd) {
-        justify-content: center;
-    }
-}
-.article-quickFilterMenu li {
-    list-style: none;
-}
 .article-ctaBlock {
     @include fixPadding;
     display: flex;

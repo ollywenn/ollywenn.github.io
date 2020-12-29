@@ -29,7 +29,7 @@ import { globalState } from './tw-global-state';
 
   // FIXME: this behaves terribly 🤦🏻‍♂️. Refactor
   function fixHeaderPos() {
-    if ($window.scrollTop() >= mainHeaderOffsetTop) {
+    if ($window.scrollTop() >= mainHeaderOffsetTop && !$body.hasClass('no-scroll')) {
       $body.addClass('sticky-nav');
       if ($window.width() < globalState.screenSizes.lg) {
         $body.css('padding-top', mainHeaderHeight);

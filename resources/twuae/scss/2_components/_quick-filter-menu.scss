@@ -1,0 +1,146 @@
+.article-quickFilterMenu {
+    padding: 0 $paddingDefault;
+    @include bp(sm) {
+        padding-right: $paddingSm;
+        padding-left: $paddingSm;
+    }
+    @include bp(smd) {
+        padding-right: $paddingSmd;
+        padding-left: $paddingSmd;
+    }
+}
+.article-quickFilterMenu > ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    @include bp(smd) {
+        justify-content: center;
+    }
+}
+.article-quickFilterMenu li {
+    position: relative;
+    list-style: none;
+}
+.article-quickFilterMenu .btn {
+    background-color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $grey13;
+    font-weight: $fontWeight-bold;
+    font-size: rc(14);
+    line-height: rc(45);
+    @include bp(smd) {
+        margin-right: 5px;
+        margin-left: 5px;
+        background-color: $grey14;
+        padding-right: 15px;
+        padding-left: 15px;
+        color: $grey15;
+        line-height: rc(35);
+    }
+}
+.article-quickFilterMenu .btn.is-active {
+    color: $red1;
+    @include bp(smd) {
+        background-color: $red1;
+        color: $white;
+    }
+}
+.article-quickFilterMenu .btn--dropdown {
+    @include bp(smd) {
+        position: relative;
+        padding-right: 35px;
+    }
+}
+.article-quickFilterMenu .btn--dropdown.is-active {
+    @include bp(smd) {
+        background-color: $red1;
+    }
+}
+.article-quickFilterMenu .btn--dropdown::after {
+    @include bp(smd) {
+        position: absolute;
+        top: 50%;
+        right: 11.5px;
+        transform: translateY(-50%);
+        background: image-url('i-chevron-grey.svg') center center no-repeat;
+        background-size: 14.14px 7.07px;
+        width: 14.14px;
+        height: 7.07px;
+        content: '';
+    }
+}
+.article-quickFilterMenu .article-quickFilterMenuParent .btn--dropdown.is-active::after {
+    @include bp(smd) {
+        background-image: image-url('i-chevron-white.svg'); //selector needed more specificity to change this
+    }
+}
+.article-quickFilterMenuSubmenu {
+    @include animate;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: ($z-index-1 - 10);
+    transform: translateY(100%);
+    background-color: $white;
+    padding: 0 $paddingDefault $paddingDefault;
+    width: 100%;
+    max-height: calc(100vh - 94px);
+    overflow: scroll;
+    @include bp(sm) {
+        padding-right: $paddingSm;
+        padding-bottom: $paddingSm;
+        padding-left: $paddingSm;
+    }
+    @include bp(smd) {
+        position: absolute;
+        left: 5px;
+        transform: translateY(100%);
+        opacity: 0;
+        pointer-events: none;
+        padding: $paddingSmd;
+        width: auto;
+        max-height: 60vh;
+    }
+}
+.article-quickFilterMenuSubmenu.is-active {
+    transform: translateY(0);
+    box-shadow: 0 -1px 17px 0 rgba(0, 0, 0, 0.16);
+    @include bp(smd) {
+        transform: translateY(100%);
+        opacity: 1;
+        box-shadow: none;
+        pointer-events: all;
+    }
+}
+.article-quickFilterMenuSubmenuTitle {
+    @extend %header1;
+    @include bp(smd) {
+        display: none;
+    }
+}
+.article-quickFilterMenuSubmenu ul {
+    margin-top: 40px;
+    padding: 0;
+    @include bp(smd) {
+        margin-top: 0;
+    }
+}
+.article-quickFilterMenuSubmenu li + li {
+    margin-top: $marginDefault;
+}
+.article-quickFilterMenuSubmenu ul a,
+.article-quickFilterMenuSubmenu ul button {
+    border: 0;
+    background: none;
+    padding: 0;
+    text-decoration: none;
+    color: $bodyDefaultColor;
+    white-space: nowrap;
+}
+.article-quickFilterMenuSubmenu .btn--quickFilterMenuSubmenuClose {
+    @include bp(smd) {
+        display: none;
+    }
+}

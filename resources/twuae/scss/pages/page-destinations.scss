@@ -1,5 +1,7 @@
 @import '../toolbox/toolbox';
 @import '../1_global/typography';
+@import '../2_components/quick-filter-menu';
+@import '../2_components/advanced-filter-menu';
 @import '../2_components/related-articles';
 
 .page--destinations-list .article-header {
@@ -174,55 +176,5 @@
         margin-right: 0;
         margin-left: auto;
         max-width: 380px;
-    }
-}
-.page--destinations-list .article-quickFilterMenu .btn {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $grey13;
-    font-weight: $fontWeight-bold;
-    font-size: rc(14);
-    line-height: rc(45);
-    @include bp(smd) {
-        margin-right: 5px;
-        margin-left: 5px;
-        background-color: $grey14;
-        padding-right: 15px;
-        padding-left: 15px;
-        color: $grey15;
-        line-height: rc(35);
-    }
-}
-.page--destinations-list .article-quickFilterMenu .btn.is-active {
-    color: $red1;
-    @include bp(smd) {
-        background-color: $red1;
-        color: $white;
-    }
-}
-.page--destinations-list .article-quickFilterMenu .btn--dropdown {
-    @include bp(smd) {
-        position: relative;
-        // background-color: $red1;
-        padding-right: 35px;
-        // color: $white;
-    }
-}
-.page--destinations-list .article-quickFilterMenu .btn--dropdown.is-active {
-    @include bp(smd) {
-        background-color: $red1;
-    }
-}
-.page--destinations-list .article-quickFilterMenu .btn--dropdown::after {
-    @include bp(smd) {
-        position: absolute;
-        top: 50%;
-        right: 11.5px;
-        transform: translateY(-50%);
-        background: image-url('i-chevron-grey.svg') center center no-repeat;
-        background-size: 14.14px 7.07px;
-        width: 14.14px;
-        height: 7.07px;
-        content: '';
     }
 }

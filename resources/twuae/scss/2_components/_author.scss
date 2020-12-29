@@ -21,19 +21,13 @@ $authorDetailsBorderColor: $white1;
     height: 16px;
     content: '';
 }
-.article--ourTeam-single {
-    padding-top: 8px;
-}
-.article--ourTeam-single .article-header {
-    margin-top: 4px;
-}
 .ourTeam-author {
     margin: 29px (-($paddingDefault)) 0;
     @include bp(sm) {
         margin-right: (-($paddingSm));
         margin-left: (-($paddingSm));
     }
-    @include bp(600px) {
+    @include bp(smd) {
         display: flex;
         justify-content: space-between;
         margin-right: 0;
@@ -42,33 +36,33 @@ $authorDetailsBorderColor: $white1;
 }
 .author-thumbnail {
     display: block;
-    @include bp(600px) {
+    @include bp(smd) {
         flex: 0 0 200px;
         max-width: 200px;
     }
+    @include bp(lg) {
+        flex-basis: $twoColsLg;
+        max-width: $twoColsLg;
+    }
 }
 .author-details {
-    position: relative;
     padding: 26px $paddingDefault 20.5px;
     text-align: center;
-    @include bp(600px) {
+    @include bp(smd) {
         flex: 0 0 calc(100% - 220px);
         padding-right: 0;
         padding-left: 0;
         max-width: calc(100% - 220px);
         text-align: left;
     }
-}
-.author-details::after {
-    position: absolute;
-    bottom: 0;
-    left: $paddingDefault;
-    background-color: $authorDetailsBorderColor;
-    width: calc(100% - 40px);
-    height: 1px;
-    content: '';
-    @include bp(600px) {
-        display: none;
+    @include bp(lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-basis: $twoColsLg;
+        max-width: $twoColsLg;
+        text-align: center;
     }
 }
 .author-title,
@@ -76,6 +70,11 @@ $authorDetailsBorderColor: $white1;
 .author-email,
 .author-phone {
     @extend %body;
+    @include bp(lg) {
+        flex: 0 0 $fullCol;
+        align-self: flex-end;
+        max-width: $fullCol;
+    }
 }
 .author-title {
     font-weight: $fontWeight-bold;
@@ -103,16 +102,30 @@ $authorDetailsBorderColor: $white1;
     margin: 15px auto 0;
     padding: 0;
     list-style-type: none;
-    @include bp(600px) {
+    @include bp(smd) {
         justify-content: flex-start;
         transform: translateX(-19px);
         margin-right: 0;
         margin-left: 0;
     }
+    @include bp(lg) {
+        transform: none;
+        justify-content: center;
+        align-self: flex-start;
+    }
+}
+.author-biography {
+    border-top: $authorDetailsBorderColor 1px solid;
+    padding-top: 20px;
+    @include bp(smd) {
+        margin-top: 40px;
+        border: 0;
+        padding-top: 0;
+    }
 }
 .author-biographyTitle {
     @extend %header2;
-    margin-top: $marginDefault;
+    margin-top: 0;
     margin-bottom: 25px;
 }
 .author-socialMediaChannelsItem {
@@ -148,4 +161,11 @@ $authorDetailsBorderColor: $white1;
 .author-socialMediaChannelLink--ln::before {
     background-image: image-url('i-ln-grey.svg');
     background-size: 15.36px 15.35px;
+}
+.author-production {
+    border-top: 1px solid $red1;
+    padding-top: 20px;
+}
+.author-productionTitle {
+    @extend %header2;
 }

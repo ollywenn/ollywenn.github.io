@@ -62,8 +62,10 @@ $btnDisabledColor: $white;
     position: absolute;
     top: 20px;
     right: $paddingDefault;
+    border: 0;
     background: image-url('i-close-circle-black.svg') center center no-repeat;
     background-size: 22px 22px;
+    padding: 0;
     width: 22px;
     height: 22px;
     text-indent: -9999px;
@@ -126,4 +128,38 @@ $btnDisabledColor: $white;
 .btn--viewAll,
 .btn--filter {
     @extend %button;
+}
+.btn--filter {
+    background-color: $white;
+    padding-right: 0;
+    padding-left: 0;
+}
+.btn--submit {
+    @extend %btn--primary;
+    display: block;
+    width: 100%;
+    max-width: 330px;
+}
+.btn--upload {
+    @extend %btn--secondary;
+}
+.btn--quickFilterMenuSubmenuClose {
+    @extend .btn;
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 60px;
+    height: 45px;
+    background-color: $white;
+    text-indent: -9999px;
+}
+.btn--quickFilterMenuSubmenuClose::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $black;
+    width: 30px;
+    height: 3px;
+    content: '';
 }

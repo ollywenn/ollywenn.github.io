@@ -5,6 +5,12 @@
 @import '../2_components/related-articles';
 @import '../2_components/cta';
 
+.page--events-list .main-content {
+    @include bp(lg) {
+        flex-basis: $mainContentWidthWithSidebarDefault;
+        max-width: $mainContentWidthWithSidebarDefault;
+    }
+}
 .page--events-list .article .article-body {
     @include bp(smd) {
         display: flex;

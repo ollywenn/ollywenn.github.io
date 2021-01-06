@@ -28,16 +28,16 @@
 }
 .listenOn-item--spotify {
     flex: 0 0 158px;
-    background-image: image-url('listen-spotify.jpg');
+    background-image: image-url('/public/twuae/img/listen-spotify.jpg');
     max-width: 158px;
 }
 .listenOn-item--apple {
     flex: 0 0 159px;
-    background-image: image-url('listen-apple.jpg');
+    background-image: image-url('/public/twuae/img/listen-apple.jpg');
     max-width: 159px;
 }
 .listenOn-item--google {
     flex: 0 0 229px;
-    background-image: image-url('listen-google.jpg');
+    background-image: image-url('/public/twuae/img/listen-google.jpg');
     max-width: 229px;
 }

@@ -83,7 +83,7 @@ $btnSearchColor: $grey2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: image-url('i-menu.svg') center center no-repeat;
+    background: image-url('/public/twuae/img/i-menu.svg') center center no-repeat;
     background-size: 26px 22px;
     width: 40px;
     height: 40px;
@@ -91,7 +91,7 @@ $btnSearchColor: $grey2;
 }
 .btn--toggleNav.is-active::after {
     transform: translate(-50%, -50%) rotate(180deg);
-    background-image: image-url('i-close.svg');
+    background-image: image-url('/public/twuae/img/i-close.svg');
     background-size: 20px 20px;
     @include bp(md) {
         background-size: 20px 20px;
@@ -100,7 +100,7 @@ $btnSearchColor: $grey2;
 .btn--search {
     @include animate;
     border: 0;
-    background: image-url('i-magnifier.svg') center center no-repeat;
+    background: image-url('/public/twuae/img/i-magnifier.svg') center center no-repeat;
     background-size: 23px 23px;
     width: 23px;
     height: 23px;
@@ -109,7 +109,7 @@ $btnSearchColor: $grey2;
 .btn--profile {
     @include animate;
     border: 0;
-    background: image-url('i-profile.svg') center center no-repeat;
+    background: image-url('/public/twuae/img/i-profile.svg') center center no-repeat;
     background-size: 22px 22px;
     width: 22px;
     height: 22px;

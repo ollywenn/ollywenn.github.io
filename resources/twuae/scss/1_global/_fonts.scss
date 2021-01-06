@@ -1,3 +1,151 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * fira-sans:
+ *   - http://typekit.com/eulas/00000000000000003b9b3fab
+ *   - http://typekit.com/eulas/00000000000000003b9b3fac
+ *   - http://typekit.com/eulas/00000000000000003b9b3fad
+ *   - http://typekit.com/eulas/00000000000000003b9b3fae
+ *   - http://typekit.com/eulas/00000000000000003b9b3fb1
+ *   - http://typekit.com/eulas/00000000000000003b9b3fb2
+ *   - http://typekit.com/eulas/00000000000000003b9b3faf
+ *   - http://typekit.com/eulas/00000000000000003b9b3fb0
+ * proxima-nova:
+ *   - http://typekit.com/eulas/00000000000000003b9b306a
+ *
+ * © 2009-2020 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2020-07-26 06:06:37 UTC"}*/
+
+@import url('https://p.typekit.net/p.css?s=1&k=mzp3izq&ht=tk&f=169.22489.22490.22491.22492.22495.22496.24689.24690&a=45286550&app=typekit&e=css');
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('https://use.typekit.net/af/d82519/00000000000000003b9b306a/27/l?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&fvd=n8&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/d82519/00000000000000003b9b306a/27/d?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&fvd=n8&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/d82519/00000000000000003b9b306a/27/a?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&fvd=n8&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('https://use.typekit.net/af/559bf9/00000000000000003b9b3fab/27/l?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n4&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/559bf9/00000000000000003b9b3fab/27/d?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n4&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/559bf9/00000000000000003b9b3fab/27/a?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n4&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('https://use.typekit.net/af/f77933/00000000000000003b9b3fac/27/l?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i4&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/f77933/00000000000000003b9b3fac/27/d?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i4&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/f77933/00000000000000003b9b3fac/27/a?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i4&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('https://use.typekit.net/af/f4190f/00000000000000003b9b3fad/27/l?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n5&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/f4190f/00000000000000003b9b3fad/27/d?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n5&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/f4190f/00000000000000003b9b3fad/27/a?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n5&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('https://use.typekit.net/af/428ecf/00000000000000003b9b3fae/27/l?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i5&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/428ecf/00000000000000003b9b3fae/27/d?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i5&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/428ecf/00000000000000003b9b3fae/27/a?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i5&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('https://use.typekit.net/af/731726/00000000000000003b9b3fb1/27/l?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n7&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/731726/00000000000000003b9b3fb1/27/d?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n7&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/731726/00000000000000003b9b3fb1/27/a?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n7&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('https://use.typekit.net/af/5d36cd/00000000000000003b9b3fb2/27/l?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i7&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/5d36cd/00000000000000003b9b3fb2/27/d?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i7&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/5d36cd/00000000000000003b9b3fb2/27/a?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i7&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('https://use.typekit.net/af/3ad223/00000000000000003b9b3faf/27/l?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n6&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/3ad223/00000000000000003b9b3faf/27/d?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n6&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/3ad223/00000000000000003b9b3faf/27/a?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=n6&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('https://use.typekit.net/af/7845f7/00000000000000003b9b3fb0/27/l?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i6&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/7845f7/00000000000000003b9b3fb0/27/d?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i6&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/7845f7/00000000000000003b9b3fb0/27/a?primer=bdc973ea9945bf2ee2550957b401916e56fc5fc4cec4e29110795767e60d6b9a&fvd=i6&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.tk-proxima-nova {
+    font-family: 'proxima-nova', sans-serif;
+}
+.tk-fira-sans {
+    font-family: 'fira-sans', sans-serif;
+}
+
 // add custom fonts with variables below
 $firaSans: fira-sans, sans-serif;
 $proximaNova: proxima-nova, sans-serif;

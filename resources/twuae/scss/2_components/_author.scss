@@ -15,7 +15,7 @@ $authorDetailsBorderColor: $white1;
     top: 50%;
     left: 0;
     transform: translateY(-50%) rotate(180deg);
-    background: image-url('i-arrow-red.svg') center center no-repeat;
+    background: image-url('/public/twuae/img/i-arrow-red.svg') center center no-repeat;
     background-size: 9px 16px;
     width: 9px;
     height: 16px;
@@ -155,11 +155,11 @@ $authorDetailsBorderColor: $white1;
     content: '';
 }
 .author-socialMediaChannelLink--tt::before {
-    background-image: image-url('i-tt-grey.svg');
+    background-image: image-url('/public/twuae/img/i-tt-grey.svg');
     background-size: 19.5px 15.84px;
 }
 .author-socialMediaChannelLink--ln::before {
-    background-image: image-url('i-ln-grey.svg');
+    background-image: image-url('/public/twuae/img/i-ln-grey.svg');
     background-size: 15.36px 15.35px;
 }
 .author-production {

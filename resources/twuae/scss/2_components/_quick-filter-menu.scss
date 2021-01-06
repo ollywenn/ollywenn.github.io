@@ -64,7 +64,7 @@
         top: 50%;
         right: 11.5px;
         transform: translateY(-50%);
-        background: image-url('i-chevron-grey.svg') center center no-repeat;
+        background: image-url('/public/twuae/img/i-chevron-grey.svg') center center no-repeat;
         background-size: 14.14px 7.07px;
         width: 14.14px;
         height: 7.07px;
@@ -73,7 +73,9 @@
 }
 .article-quickFilterMenu .article-quickFilterMenuParent .btn--dropdown.is-active::after {
     @include bp(smd) {
-        background-image: image-url('i-chevron-white.svg'); //selector needed more specificity to change this
+        background-image: image-url(
+            '/public/twuae/img/i-chevron-grey.svg'
+        ); //selector needed more specificity to change this
     }
 }
 .article-quickFilterMenuSubmenu {

@@ -4,6 +4,18 @@ import { imageLazyLoader } from './../../core/js/imageLoader.js';
 import { attachEventsOnFormElements, fixFormFieldHeight } from './../../core/js/helpers.js';
 import { globalState } from './tw-global-state';
 
+// if IE, create <link> to critical
+var ua = window.navigator.userAgent;
+var isIE = /MSIE|Trident/.test(ua);
+if (isIE) {
+  var headID = document.getElementsByTagName('head')[0];
+  var link = document.createElement('link');
+  link.type = 'text/css';
+  link.rel = 'stylesheet';
+  link.href = '../../public/twuae/css/critical-bundle.css';
+  headID.appendChild(link);
+}
+
 (function($) {
   'use strict';
 

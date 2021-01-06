@@ -51,7 +51,7 @@ $btnDisabledColor: $white;
     top: 50%;
     left: 0;
     transform: translateY(-50%) rotate(180deg);
-    background: image-url('i-arrow-red.svg') left center no-repeat;
+    background: image-url('/public/twuae/img/i-arrow-red.svg') left center no-repeat;
     background-size: 9px 16px;
     width: 9px;
     height: 16px;
@@ -63,7 +63,7 @@ $btnDisabledColor: $white;
     top: 20px;
     right: $paddingDefault;
     border: 0;
-    background: image-url('i-close-circle-black.svg') center center no-repeat;
+    background: image-url('/public/twuae/img/i-close-circle-black.svg') center center no-repeat;
     background-size: 22px 22px;
     padding: 0;
     width: 22px;
@@ -72,7 +72,7 @@ $btnDisabledColor: $white;
 }
 .btn--rss {
     @extend %btn--secondary;
-    background: transparent image-url('i-rss.svg') 21px center no-repeat;
+    background: transparent image-url('/public/twuae/img/i-rss.svg') 21px center no-repeat;
     background-size: 15.67px 15.67px;
     padding-left: 53px;
 }
@@ -109,14 +109,14 @@ $btnDisabledColor: $white;
     color: $btnDisabledColor;
 }
 .btn--calendar {
-    background: image-url('i-calendar.svg') center center no-repeat;
+    background: image-url('/public/twuae/img/i-calendar.svg') center center no-repeat;
     background-size: 24px 26.67px;
     width: 24px;
     height: 26.67px;
     text-indent: -9999px;
 }
 .btn--list {
-    background: image-url('i-list.svg') center center no-repeat;
+    background: image-url('/public/twuae/img/i-list.svg') center center no-repeat;
     background-size: 25.5px 21px;
     width: 25.5px;
     height: 26.67px;

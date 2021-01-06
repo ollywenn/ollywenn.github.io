@@ -10,7 +10,7 @@
 }
 .logo--jacobs {
     display: block;
-    background: image-url('logo-jmg.svg') center center no-repeat;
+    background: image-url('/public/twuae/img/logo-jmg.svg') center center no-repeat;
     background-size: 139px 56px;
     width: 139px;
     height: 56px;
@@ -22,21 +22,21 @@
 }
 .logo--travelweekly {
     @extend %logo;
-    background-image: image-url('logo-tw-grey.svg');
+    background-image: image-url('/public/twuae/img/logo-tw-grey.svg');
     background-size: 149px 30px;
     width: 149px;
     background-position: center;
 }
 .logo--travelweekly-main {
     @extend %logo;
-    background-image: image-url('logo-tw.svg');
+    background-image: image-url('/public/twuae/img/logo-tw.svg');
     background-size: 163px 17px;
     width: 163px;
     background-position: center;
 }
 .logo--travelweekly-footer {
     @extend %logo;
-    background-image: image-url('logo-tw-grey.svg');
+    background-image: image-url('/public/twuae/img/logo-tw-grey.svg');
     background-size: 194px 20px;
     width: 194px;
     height: 20px;

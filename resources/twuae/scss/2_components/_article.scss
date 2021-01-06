@@ -227,17 +227,17 @@ $articleLastUpdatedDateColor: $grey5;
     content: '';
 }
 .article-videoLength::before {
-    background-image: image-url('i-play.svg');
+    background-image: image-url('/public/twuae/img/i-play.svg');
 }
 .article-photoItems::before {
-    background-image: image-url('i-images.svg');
+    background-image: image-url('/public/twuae/img/i-images.svg');
 }
 .article-podcast::before {
-    background-image: image-url('i-podcast.svg');
+    background-image: image-url('/public/twuae/img/i-podcast.svg');
     background-size: 14.69px 21.43px;
 }
 .article-webcast::before {
-    background-image: image-url('i-webcast.svg');
+    background-image: image-url('/public/twuae/img/i-webcast.svg');
     background-size: 26px 26px;
 }
 .article-share {
@@ -308,7 +308,7 @@ $articleLastUpdatedDateColor: $grey5;
 .article-body blockquote::before,
 .article-body blockquote::after {
     position: absolute;
-    background: image-url('i-quote.svg') center center no-repeat;
+    background: image-url('/public/twuae/img/i-quote.svg') center center no-repeat;
     background-size: 26.53px 21.42px;
     width: 26.53px;
     height: 21.42px;
@@ -401,7 +401,7 @@ $articleLastUpdatedDateColor: $grey5;
 }
 .article-linksList li a {
     display: block;
-    background: image-url('i-arrow-red.svg') right center no-repeat;
+    background: image-url('/public/twuae/img/i-arrow-red.svg') right center no-repeat;
     background-size: 9px 16px;
     padding: 15px 30px 15px 0;
     text-decoration: none;
@@ -613,13 +613,13 @@ $articleLastUpdatedDateColor: $grey5;
     content: '';
 }
 .article-ctaBlockTitle--alphabeticalOrder::before {
-    background-image: image-url('i-order-alphabetical.svg');
+    background-image: image-url('/public/twuae/img/i-order-alphabetical.svg');
     background-size: 34px 38px;
     width: 34px;
     height: 38px;
 }
 .article-ctaBlockTitle--numberOrder::before {
-    background-image: image-url('i-order-number.svg');
+    background-image: image-url('/public/twuae/img/i-order-number.svg');
     background-size: 32px 38px;
     width: 32px;
     height: 38px;

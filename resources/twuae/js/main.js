@@ -1,8 +1,11 @@
+//import jquery from "jquery/dist/jquery.min.js";
 import MicroModal from 'micromodal';
 import JmgPopup from './jmg-popup.lib';
 import { imageLazyLoader } from './../../core/js/imageLoader.js';
 import { attachEventsOnFormElements, fixFormFieldHeight } from './../../core/js/helpers.js';
 import { globalState } from './tw-global-state';
+import './user.js';
+import './analytics.js';
 
 // if IE, create <link> to critical
 var ua = window.navigator.userAgent;
@@ -17,7 +20,7 @@ if (isIE) {
 }
 
 // include html snippet
-export function includeHTML() {
+function includeHTML() {
   var z, i, elmnt, file, xhttp;
   z = document.getElementsByTagName('*');
   for (i = 0; i < z.length; i++) {

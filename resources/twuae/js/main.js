@@ -46,6 +46,7 @@ function includeHTML() {
     }
   }
 }
+window.addEventListener('load', includeHTML);
 
 (function($) {
   'use strict';

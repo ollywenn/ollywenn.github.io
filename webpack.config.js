@@ -35,7 +35,6 @@ module.exports = {
     'page-static': styles + 'page-static.scss',
     'page-subscribe': styles + 'page-subscribe.scss',
     'page-supplement-editions': styles + 'page-supplement-editions.scss',
-    critical: src + '/scss/critical.scss',
     main: src + '/scss/main.scss',
     destinations: scripts + '/destinations.js',
     events: scripts + '/events.js',

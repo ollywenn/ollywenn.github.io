@@ -1,37 +1,39 @@
-// adjust the path to the bower libs if you move the src folder
+// @import 'vendor/print';
+@import 'vendor/normalize'; //swap with reset if you don't want normalize
+@import 'toolbox/toolbox';
+@import '1_global/typography';
+@import '1_global/global';
+@import '1_global/btns';
+@import '1_global/logos';
+@import '2_components/bg-ad';
+@import '2_components/top-ad';
+@import '2_components/header';
+@import '2_components/main-nav';
+@import '2_components/header-auxiliary';
+@import '2_components/header-extra-menu';
+@import '2_components/main-nav-search-bar';
+@import '2_components/queens-award';
+@import '2_components/breaking-news';
+@import '2_components/ad';
 @import 'vendor/print';
 @import 'toolbox/toolbox';
 @import '1_global/typography';
 @import '1_global/btns';
 @import '2_components/sub-menu-featured-articles';
-// @import '2_components/breadcrumbs';
+@import '2_components/breadcrumbs';
 @import '2_components/section';
 @import '2_components/form';
-// @import '1_global/global';
-// @import '1_global/logos';
-// @import '2_components/header';
-// @import '2_components/main-nav';
-// @import '2_components/header-auxiliary';
-// @import '2_components/header-extra-menu';
-// @import '2_components/main-nav-search-bar';
 @import '2_components/cookies';
-@import '2_components/quick-search';
 @import '2_components/search';
 @import '2_components/popup';
-// @import '2_components/queens-award';
-
 @import '2_components/article-snippet-item';
 @import '2_components/main-segment';
 @import '2_components/main-content';
-
-// @import '2_components/breaking-news';
 @import '2_components/article';
-
-// @import '2_components/ad';
-// @import '2_components/bg-ad';
-// @import '2_components/top-ad';
-// @import "2_components/quick-search-bar";
 @import '2_components/social-media';
+@import '2_components/footer';
+//@import "2_components/quick-search-bar";
+//@import '2_components/quick-search';
 
 //sidebar
 // TODO: move these to sidebar file and load it only if the sidebar is rendered
@@ -47,5 +49,3 @@
 @import '2_components/most-popular';
 @import '2_components/sharing-widget';
 @import '2_components/in-this-weeks-issue';
-
-@import '2_components/footer';

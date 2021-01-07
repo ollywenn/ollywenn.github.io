@@ -19,7 +19,7 @@ import './analytics.js';
     var link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = '../../public/twuae/css/critical-bundle.css';
+    link.href = '../../public/twuae/css/main-bundle.css';
     headID.appendChild(link);
   }
 

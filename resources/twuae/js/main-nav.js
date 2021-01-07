@@ -1,8 +1,6 @@
 import { globalState } from './tw-global-state';
 
-(function($) {
-  ('use strict');
-
+export default function init() {
   const $window = $(window);
   const $body = $('body');
   const $mainHeader = $('.js-main-header');
@@ -111,4 +109,4 @@ import { globalState } from './tw-global-state';
   $extraMenu.on('click', 'button', function() {
     $extraMenu.removeClass('is-active');
   });
-})(jQuery);
+}

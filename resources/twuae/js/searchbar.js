@@ -1,4 +1,4 @@
-(function() {
+export default function initSearchBar() {
   window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
 
   let searchBarTimeout = null;
@@ -54,7 +54,7 @@
       window.location = '#gsc.tab=0&gsc.q=' + toSnakeCase(searchVal) + '&gsc.page=1';
       $googleSearchDiv.classList.remove('is-active');
     } else {
-      searchBarTimeout = setTimeout(function () {
+      searchBarTimeout = setTimeout(function() {
         window.location = '#gsc.tab=0&gsc.q=' + toSnakeCase(searchVal) + '&gsc.page=1';
         doTagSearch();
       }, 850);
@@ -69,7 +69,7 @@
     window.location = '#gsc.tab=0&gsc.q=' + toSnakeCase($topSearch.value) + '&gsc.page=1';
   });
 
-  document.onkeyup = function (e) {
+  document.onkeyup = function(e) {
     if (e.key === 'Escape' && $searchContainer.classList.contains('is-active')) {
       $searchToggleButton.dispatchEvent(searchClickEvent);
       window.history.replaceState({}, document.title, window.location.pathname);
@@ -85,17 +85,17 @@
     } else {
       searchTarget.html('<img src="/img/loading.gif" class="loading">');
       fetch('/quick-search/' + searchTerm)
-          .then(response => response.text())
-          .then(data => {
-            searchTarget.html(data);
-          });
+        .then(response => response.text())
+        .then(data => {
+          searchTarget.html(data);
+        });
     }
-  }
+  };
 
   const toSnakeCase = str =>
-      str &&
-      str
-          .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-          .map(x => x.toLowerCase())
-          .join('+');
-})();
+    str &&
+    str
+      .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+      .map(x => x.toLowerCase())
+      .join('+');
+}

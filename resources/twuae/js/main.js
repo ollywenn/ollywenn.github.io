@@ -1,58 +1,55 @@
-//import jquery from "jquery/dist/jquery.min.js";
 import MicroModal from 'micromodal';
 import JmgPopup from './jmg-popup.lib';
 import { imageLazyLoader } from './../../core/js/imageLoader.js';
 import { attachEventsOnFormElements, fixFormFieldHeight } from './../../core/js/helpers.js';
 import { globalState } from './tw-global-state';
+import init from './main-nav.js';
+import initSearchBar from './searchbar.js';
 import './user.js';
 import './analytics.js';
-
-// if IE, create <link> to critical
-var ua = window.navigator.userAgent;
-var isIE = /MSIE|Trident/.test(ua);
-if (isIE) {
-  var headID = document.getElementsByTagName('head')[0];
-  var link = document.createElement('link');
-  link.type = 'text/css';
-  link.rel = 'stylesheet';
-  link.href = '../../public/twuae/css/critical-bundle.css';
-  headID.appendChild(link);
-}
-
-// include html snippet
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  z = document.getElementsByTagName('*');
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    file = elmnt.getAttribute('include');
-    if (file) {
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {
-            elmnt.innerHTML = this.responseText;
-          }
-          if (this.status == 404) {
-            elmnt.innerHTML = 'Page not found.';
-          }
-          elmnt.removeAttribute('include');
-          includeHTML();
-        }
-      };
-      xhttp.open('GET', file, true);
-      xhttp.send();
-      return;
-    }
-  }
-}
-window.addEventListener('load', includeHTML);
 
 (function($) {
   'use strict';
 
-  require('./main-nav');
-  require('./searchbar');
+  // if IE, create <link> to critical
+  var ua = window.navigator.userAgent;
+  var isIE = /MSIE|Trident/.test(ua);
+  if (isIE) {
+    var headID = document.getElementsByTagName('head')[0];
+    var link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = '../../public/twuae/css/critical-bundle.css';
+    headID.appendChild(link);
+  }
+
+  // include html snippet
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    z = document.getElementsByTagName('*');
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      file = elmnt.getAttribute('include');
+      if (file) {
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {
+              elmnt.innerHTML = this.responseText;
+            }
+            if (this.status == 404) {
+              elmnt.innerHTML = 'Page not found.';
+            }
+            elmnt.removeAttribute('include');
+            includeHTML();
+          }
+        };
+        xhttp.open('GET', file, true);
+        xhttp.send();
+        return;
+      }
+    }
+  }
 
   $('.js-btn-latest-articles').on('click', function btnLatestArticles() {
     const $this = $(this);
@@ -100,4 +97,9 @@ window.addEventListener('load', includeHTML);
     }
   });
   globalState.loadableImages = imageLazyLoader(document.querySelectorAll('[data-bg]'));
+  includeHTML();
+  window.addEventListener('load', function() {
+    init();
+    initSearchBar();
+  });
 })(jQuery);

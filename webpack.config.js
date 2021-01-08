@@ -67,7 +67,6 @@ module.exports = {
       filename: '../css/[name]-bundle.css'
     }),
     new FixStyleOnlyEntriesPlugin(),
-    //expose jquery to modules:
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'

@@ -1,4 +1,5 @@
 import { globalState } from './tw-global-state';
+import './external/sticky-IE-Fix.min.js'; //IE shim for position sticky
 
 export default function init() {
   const $window = $(window);
@@ -25,33 +26,33 @@ export default function init() {
 
   $window.on('scroll', fixHeaderPos);
 
-  // FIXME: this behaves terribly 🤦🏻‍♂️. Refactor
-  function fixHeaderPos() {
-    // if ($window.scrollTop() >= mainHeaderOffsetTop && !$body.hasClass('no-scroll')) {
-    //   $body.addClass('sticky-nav');
-    //   if ($window.width() < globalState.screenSizes.lg) {
-    //     $body.css('padding-top', mainHeaderHeight);
-    //   } else {
-    //     //FIXME: refactor this to only show sticky menu on lg if you scroll up some pixels otherwise hidden
-    //     let headerNavDiff = mainNavOffsetTop - mainHeaderOffsetTop;
-    //     let windowNavDiff = mainNavOffsetTop - $window.scrollTop() - headerNavDiff;
-    //     let translateValue = 0;
-    //     if ($window.scrollTop() >= mainNavOffsetTop) {
-    //       translateValue = -windowNavDiff;
-    //       if (windowNavDiff < headerNavDiff) {
-    //         translateValue = -headerNavDiff;
-    //       }
-    //     } else {
-    //       translateValue = windowNavDiff;
-    //     }
-    //     $body.css('padding-top', mainHeaderHeight);
-    //     $mainHeader.css('transform', `translate(-50%, ${translateValue}px)`);
-    //   }
-    // } else {
-    //   $body.removeClass('sticky-nav').css('padding-top', 0);
-    //   $mainHeader.css('transform', `translate(-50%, 0)`);
-    // }
-  }
+  // This function has been replaced with a css alternative, due to performance (see_header.scss)
+  //function fixHeaderPos() {
+  // if ($window.scrollTop() >= mainHeaderOffsetTop && !$body.hasClass('no-scroll')) {
+  //   $body.addClass('sticky-nav');
+  //   if ($window.width() < globalState.screenSizes.lg) {
+  //     $body.css('padding-top', mainHeaderHeight);
+  //   } else {
+  //     //FIXME: refactor this to only show sticky menu on lg if you scroll up some pixels otherwise hidden
+  //     let headerNavDiff = mainNavOffsetTop - mainHeaderOffsetTop;
+  //     let windowNavDiff = mainNavOffsetTop - $window.scrollTop() - headerNavDiff;
+  //     let translateValue = 0;
+  //     if ($window.scrollTop() >= mainNavOffsetTop) {
+  //       translateValue = -windowNavDiff;
+  //       if (windowNavDiff < headerNavDiff) {
+  //         translateValue = -headerNavDiff;
+  //       }
+  //     } else {
+  //       translateValue = windowNavDiff;
+  //     }
+  //     $body.css('padding-top', mainHeaderHeight);
+  //     $mainHeader.css('transform', `translate(-50%, ${translateValue}px)`);
+  //   }
+  // } else {
+  //   $body.removeClass('sticky-nav').css('padding-top', 0);
+  //   $mainHeader.css('transform', `translate(-50%, 0)`);
+  // }
+  //}
 
   $window.on('resize', function() {
     mainNavOffsetTop = $mainNav.offset().top;

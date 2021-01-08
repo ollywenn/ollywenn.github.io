@@ -27,32 +27,30 @@ export default function init() {
 
   // FIXME: this behaves terribly 🤦🏻‍♂️. Refactor
   function fixHeaderPos() {
-    if ($window.scrollTop() >= mainHeaderOffsetTop && !$body.hasClass('no-scroll')) {
-      $body.addClass('sticky-nav');
-      if ($window.width() < globalState.screenSizes.lg) {
-        $body.css('padding-top', mainHeaderHeight);
-      } else {
-        //FIXME: refactor this to only show sticky menu on lg if you scroll up some pixels otherwise hidden
-        let headerNavDiff = mainNavOffsetTop - mainHeaderOffsetTop;
-        let windowNavDiff = mainNavOffsetTop - $window.scrollTop() - headerNavDiff;
-        let translateValue = 0;
-
-        if ($window.scrollTop() >= mainNavOffsetTop) {
-          translateValue = -windowNavDiff;
-          if (windowNavDiff < headerNavDiff) {
-            translateValue = -headerNavDiff;
-          }
-        } else {
-          translateValue = windowNavDiff;
-        }
-
-        $body.css('padding-top', mainHeaderHeight);
-        $mainHeader.css('transform', `translate(-50%, ${translateValue}px)`);
-      }
-    } else {
-      $body.removeClass('sticky-nav').css('padding-top', 0);
-      $mainHeader.css('transform', `translate(-50%, 0)`);
-    }
+    // if ($window.scrollTop() >= mainHeaderOffsetTop && !$body.hasClass('no-scroll')) {
+    //   $body.addClass('sticky-nav');
+    //   if ($window.width() < globalState.screenSizes.lg) {
+    //     $body.css('padding-top', mainHeaderHeight);
+    //   } else {
+    //     //FIXME: refactor this to only show sticky menu on lg if you scroll up some pixels otherwise hidden
+    //     let headerNavDiff = mainNavOffsetTop - mainHeaderOffsetTop;
+    //     let windowNavDiff = mainNavOffsetTop - $window.scrollTop() - headerNavDiff;
+    //     let translateValue = 0;
+    //     if ($window.scrollTop() >= mainNavOffsetTop) {
+    //       translateValue = -windowNavDiff;
+    //       if (windowNavDiff < headerNavDiff) {
+    //         translateValue = -headerNavDiff;
+    //       }
+    //     } else {
+    //       translateValue = windowNavDiff;
+    //     }
+    //     $body.css('padding-top', mainHeaderHeight);
+    //     $mainHeader.css('transform', `translate(-50%, ${translateValue}px)`);
+    //   }
+    // } else {
+    //   $body.removeClass('sticky-nav').css('padding-top', 0);
+    //   $mainHeader.css('transform', `translate(-50%, 0)`);
+    // }
   }
 
   $window.on('resize', function() {

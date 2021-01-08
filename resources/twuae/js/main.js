@@ -10,19 +10,6 @@ import './analytics.js';
 
 (function($) {
   'use strict';
-
-  // if IE, create <link> to critical
-  var ua = window.navigator.userAgent;
-  var isIE = /MSIE|Trident/.test(ua);
-  if (isIE) {
-    var headID = document.getElementsByTagName('head')[0];
-    var link = document.createElement('link');
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = '../../public/twuae/css/main-bundle.css';
-    headID.appendChild(link);
-  }
-
   // include html snippet
   function includeHTML() {
     var z, i, elmnt, file, xhttp;

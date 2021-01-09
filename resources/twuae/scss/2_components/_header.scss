@@ -5,7 +5,8 @@ $headerBorderColor: $grey5;
 //sticky nav bar when scrolled past its offset position
 .header-wrapper {
     position: sticky;
-    top: -71px;
+    position: -webkit-sticky;
+    top: -67px;
     z-index: 220;
 }
 //end sticky

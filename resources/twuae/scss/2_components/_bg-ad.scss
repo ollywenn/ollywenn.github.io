@@ -1,31 +1,29 @@
 .bgAd {
     display: none;
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
     top: 0;
-    left: 50%;
     z-index: $z-index-3;
     width: $skyscraperWidth;
     min-height: 600px;
     overflow: hidden;
     @include bp(xxlg) {
-        background-color: $white;
-        width: calc((100% - #{$maxWidth}) / 2);
+        //background-color: $white;
+        //width: calc((100% - #{$maxWidth}) / 2);
     }
 }
 .ad--takeover .bgAd {
     @include bp(xxlg) {
-        display: flex;
+        display: inline-block;
     }
 }
 .bgAd--1 {
     @include bp(xxlg) {
-        left: 0;
-        justify-content: flex-end;
+        transform: translateX(-190px);
     }
 }
 .bgAd--2 {
     @include bp(xxlg) {
-        right: 0;
-        left: auto;
+        transform: translateX(830px);
     }
 }

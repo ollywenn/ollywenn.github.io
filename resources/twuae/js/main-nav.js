@@ -24,9 +24,8 @@ export default function init() {
     });
   }
 
-  $window.on('scroll', fixHeaderPos);
-
   // This function has been replaced with a css alternative, due to performance (see_header.scss)
+  //$window.on('scroll', fixHeaderPos);
   //function fixHeaderPos() {
   // if ($window.scrollTop() >= mainHeaderOffsetTop && !$body.hasClass('no-scroll')) {
   //   $body.addClass('sticky-nav');

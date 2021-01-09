@@ -16,9 +16,9 @@
 .page--home .main-segment {
     margin-bottom: 0;
 }
-.page--home .main-segment--homeHero {
-    margin-top: 0;
-}
+// .page--home .main-segment--homeHero {
+//     margin-top: 0;
+// }
 .page--home .main-segment + .main-segment {
     margin-top: $marginDefault;
     @include bp(smd) {

@@ -11,3 +11,12 @@
     display: block;
     margin: auto;
 }
+
+.section {
+    &.section--topAd {
+        .topAd {
+            margin: auto;
+            width: 728px;
+        }
+    }
+}

@@ -8,6 +8,14 @@ $headerBorderColor: $grey5;
     position: -webkit-sticky;
     top: -67px;
     z-index: 220;
+    @media (max-width: 1023px) {
+        top: -56px;
+    }
+    @media (max-width: 980px) {
+        position: relative;
+        top: 0;
+        z-index: 202;
+    }
 }
 //end sticky
 
@@ -30,6 +38,9 @@ $headerBorderColor: $grey5;
     }
     @include bp(lg) {
         background-color: transparent;
+    }
+    @media (max-width: 666px) {
+        height: 60px;
     }
 }
 .sticky-nav .mainHeader {
@@ -91,6 +102,10 @@ $headerBorderColor: $grey5;
         padding-bottom: 5px;
         max-width: 305px;
         height: auto;
+    }
+    @media (max-width: 666px) {
+        background: transparent;
+        height: 68px;
     }
 }
 .mainHeader .logo--travelweekly-main {

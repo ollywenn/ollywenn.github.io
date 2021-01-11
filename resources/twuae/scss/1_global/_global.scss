@@ -97,3 +97,9 @@ hr {
 .pointer {
     cursor: pointer;
 }
+
+main > .wrapper {
+    @media (max-width: 375px) {
+        padding: 0;
+    }
+}

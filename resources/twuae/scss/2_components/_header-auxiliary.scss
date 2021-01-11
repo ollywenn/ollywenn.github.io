@@ -22,6 +22,10 @@ $btnSearchColor: $grey2;
         transform: translateY(35px);
         height: 28.14px;
     }
+    @media (max-width: 666px) {
+        background: transparent;
+        height: 68px;
+    }
 }
 .header-auxiliaryNav .btn--search {
     position: relative;

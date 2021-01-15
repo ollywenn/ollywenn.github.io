@@ -38,6 +38,10 @@
         margin-top: 0;
         margin-bottom: $marginDefault;
         max-width: calc(50% - 20px);
+        //IE fix, IE does not support flex with calc()
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            width: calc(50% - 20px);
+        }
     }
     @include bp(lg) {
         flex-basis: 100%;

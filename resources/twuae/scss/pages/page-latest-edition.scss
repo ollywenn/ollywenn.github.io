@@ -4,26 +4,31 @@
 $latestEditionColWidth: 330px;
 
 .page--latest-edition .main-segment > .wrapper {
-    @include bp(lg) {
+    @include bp(md) {
         justify-content: center;
     }
 }
 .page--latest-edition .main-content {
-    @include bp(lg) {
+    @include bp(md) {
         // TODO: standardise this
         flex-basis: 750px;
         max-width: 750px;
+        margin: 0 auto;
     }
 }
 .page--latest-edition .article-header {
-    @include bp(lg) {
+    @include bp(md) {
+        margin-top: -29px;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+    }
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
     }
 }
 .page--latest-edition .article-title {
-    @include bp(lg) {
+    @include bp(md) {
         flex: 0 0 $fullCol;
         max-width: $fullCol;
     }
@@ -32,7 +37,7 @@ $latestEditionColWidth: 330px;
     margin-top: 22px;
     border-top: $white1 1px solid;
     padding-top: 17px;
-    @include bp(lg) {
+    @include bp(md) {
         flex: 0 0 $latestEditionColWidth;
         border-top: 0;
         padding-top: 0;
@@ -43,49 +48,79 @@ $latestEditionColWidth: 330px;
 .page--latest-edition .article-body .btn {
     display: block;
     max-width: $latestEditionColWidth;
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: inherit;
+    }
 }
 .page--latest-edition .article-linksList {
     border: 0;
 }
 .page--latest-edition .article-hero {
-    @include bp(lg) {
+    @include bp(md) {
+        margin-top: 0;
         flex: 0 0 $latestEditionColWidth;
         max-width: $latestEditionColWidth;
+    }
+    @media (max-width: 768px) {
+        order: 1;
     }
 }
 .page--latest-edition .article-hero img {
     margin-left: 0;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 .page--latest-edition .article-body--digitalVersionContent {
-    @include bp(lg) {
+    @include bp(md) {
+        display: flex;
+        flex-direction: column;
+        padding-top: 48px;
+        h2 {
+            margin-bottom: 31px;
+        }
+        a {
+            margin-top: 25px;
+            border-radius: 4px;
+        }
         flex: 0 0 $latestEditionColWidth;
-        //FIXME: this had to be hardcoded for release. Rewrite markup to allow proper flow on lg
-        margin-top: -360px;
         max-width: $latestEditionColWidth;
+    }
+    @media (max-width: 768px) {
+        order: 2;
     }
 }
 .page--latest-edition .article-body--contentMenu {
-    @include bp(lg) {
-        flex: 0 0 $latestEditionColWidth;
-        //FIXME: this had to be hardcoded for release. Rewrite markup to allow proper flow on lg
-        margin-top: 80px;
+    @include bp(md) {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: flex-end;
+        margin-top: 20px;
         padding-top: 0;
-        max-width: $latestEditionColWidth;
+
+        .article-linksList {
+            width: 100%;
+
+            li {
+                border-bottom: #f2f2f2 1px solid;
+            }
+        }
     }
 }
 .page--latest-edition .article-body--ctas {
-    @include bp(lg) {
+    @include bp(md) {
         display: flex;
         flex: 0 0 $fullCol;
         justify-content: space-between;
-        //FIXME: this had to be hardcoded for release. Rewrite markup to allow proper flow on lg
-        margin-top: 55px;
+        margin-bottom: 29px;
+        margin-top: 68px;
         padding-top: 0;
         max-width: $fullCol;
     }
 }
 .page--latest-edition .article-body--ctas .article-bodySection {
-    @include bp(lg) {
+    @include bp(md) {
         flex: 0 0 $latestEditionColWidth;
         margin-top: 0;
         border: 0;

@@ -50,15 +50,15 @@ $articleLastUpdatedDateColor: $grey5;
         bottom: $paddingSmd;
         left: $paddingSmd;
         flex: 0 0 510px;
-        justify-content: space-between;
+        //justify-content: space-between;
         margin-top: 0;
         padding-right: 0;
         padding-left: 0;
         max-width: 510px;
     }
     @include bp(lg) {
-        flex-basis: 620px;
-        max-width: 620px;
+        flex-basis: 640px;
+        max-width: 640px;
     }
 }
 .article-heroBodyThumbWrapper {
@@ -74,6 +74,7 @@ $articleLastUpdatedDateColor: $grey5;
         flex-basis: 218px;
         margin-top: $marginDefault;
         max-width: 218px;
+        margin-right: 20px;
     }
 }
 .article-hero .article-heroBodyThumb {

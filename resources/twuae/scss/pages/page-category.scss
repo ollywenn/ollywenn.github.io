@@ -20,6 +20,11 @@
         // TODO: standardise this
         flex: 0 0 calc(100% - 332px); //TODO: review as it was hardcoded due to issues on latest round of designs
         max-width: calc(100% - 332px); //TODO: review as it was hardcoded due to issues on latest round of designs
+
+        //IE fix, IE does not support flex with calc()
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            width: calc(100% - 332px);
+        }
     }
 }
 .page--category .sidebar {

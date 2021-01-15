@@ -164,9 +164,9 @@
     width: 100%;
     box-shadow: 0 -1px 17px 0 rgba(0, 0, 0, 0.16);
     @include bp(smd) {
-        position: initial;
-        bottom: initial;
-        left: initial;
+        position: inherit;
+        bottom: inherit;
+        left: inherit;
         flex: 1 1 380px;
         box-shadow: none;
     }

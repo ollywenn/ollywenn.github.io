@@ -31,6 +31,10 @@
 }
 .categoryHero-secondaryItems .articleSnippet-content {
     flex: 0 0 calc(100% - 70px);
+    //IE fix, IE does not support flex with calc()
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        width: calc(100% - 70px);
+    }
 }
 .categoryHero-secondaryItems .articleSnippet-content p {
     display: none;

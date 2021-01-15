@@ -49,6 +49,11 @@ $footerLegalLinksHoverColor: $red1;
         margin-top: 0;
         padding-left: 50px;
         max-width: calc(100% - 315px);
+
+        //IE fix, IE does not support flex with calc()
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            width: calc(100% - 315px);
+        }
     }
 }
 .mainFooter-travelweeklyDetails .logo--travelweekly-footer {
@@ -250,6 +255,11 @@ $footerLegalLinksHoverColor: $red1;
         width: 100%;
         max-width: calc(100% - 560px);
         min-height: 30px;
+
+        //IE fix, IE does not support flex with calc()
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            width: calc(100% - 560px);
+        }
     }
 }
 .mainFooter-logos a {

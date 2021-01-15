@@ -55,6 +55,10 @@ $cookiesBgColor: $grey2;
     font-size: rc(14);
     @include bp(600px) {
         flex: 0 0 calc(100% - 160px);
+        //IE fix, IE does not support flex with calc()
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            width: calc(100% - 160px);
+        }
     }
     @include bp(xlg) {
         flex: 1 0 auto;

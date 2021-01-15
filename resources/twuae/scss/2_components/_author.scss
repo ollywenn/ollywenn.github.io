@@ -54,6 +54,10 @@ $authorDetailsBorderColor: $white1;
         padding-left: 0;
         max-width: calc(100% - 220px);
         text-align: left;
+        //IE fix, IE does not support flex with calc()
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            width: calc(100% - 220px);
+        }
     }
     @include bp(lg) {
         display: flex;

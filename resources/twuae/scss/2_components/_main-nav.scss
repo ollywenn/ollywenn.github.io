@@ -85,6 +85,9 @@ $mainNavButtonPadding: 15px;
     @media (max-width: 979px) {
         height: 0;
     }
+    @include bp(lg) {
+        border-bottom: $headerBorderColor 1px solid;
+    }
 }
 .mainNav.is-active {
     transform: translateY(0);

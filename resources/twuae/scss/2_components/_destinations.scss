@@ -176,11 +176,11 @@
         flex-basis: 320px;
         //transform: translateY(50%);
         background-color: $white;
-        padding: 30px 24px 26px;
+        padding: 12px 15px 2px;
         max-width: 320px;
     }
     &.--isRight {
-        //add potential for right aligned box
+        // TODO: class to add potential for right aligned box
         @include bp(smd) {
             left: auto;
             right: 24px;

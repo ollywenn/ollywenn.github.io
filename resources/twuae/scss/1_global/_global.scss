@@ -98,10 +98,8 @@ hr {
     cursor: pointer;
 }
 
-main > .wrapper {
-    @media (max-width: 375px) {
-        padding: 0;
-    }
+main > .wrapper .wrapper {
+    padding: 0 !important;
 }
 
 .wrapper > .main-content {

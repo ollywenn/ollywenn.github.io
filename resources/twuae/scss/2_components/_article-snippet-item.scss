@@ -5,17 +5,25 @@ $articleSnippetThumbBgColor: $white1;
 .articleSnippet-item {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    //justify-content: space-between;
     align-self: flex-start;
+    @media (max-width: 666px) {
+        .articleSnippet-thumb {
+            margin-right: 10px;
+        }
+    }
 }
 .articleSnippet-item--fullBg {
     position: relative;
     overflow: hidden;
+    .articleSnippet-thumb {
+        margin-right: 0;
+    }
 }
 .articleSnippet-thumb {
     display: block;
     position: relative;
-    flex: 0 0 100%;
+    //flex: 0 0 100%;
     align-self: flex-start;
     background: center center no-repeat;
     background-size: cover;
@@ -90,13 +98,19 @@ $articleSnippetThumbBgColor: $white1;
         }
     }
     h1 {
-        @include truncate(4);
-    } //4 lines max
+        @include truncate(2); //2 lines max
+        @include bp(lg) {
+            @include truncate(); //3 lines max (default)
+        }
+    }
     p,
     h2,
     h3 {
         @include truncate();
-    } //3 lines max (default)
+        @include bp(lg) {
+            @include truncate(4);
+        }
+    }
 }
 .articleSnippet-category {
     display: inline-block;

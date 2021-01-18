@@ -1,3 +1,5 @@
+@import 'swiper/swiper-bundle.css';
+
 $footerBgColor: $grey2;
 $footerTWNavLinkColor: $white;
 $footerTWColor: $grey1;
@@ -110,6 +112,17 @@ $footerLegalLinksHoverColor: $red1;
     @include bp(smd) {
         text-align: left;
     }
+    li {
+        @media (min-width: 500px) and (max-width: 1023px) {
+            &.jacobs {
+                max-width: 126px;
+                line-height: 19px;
+                a {
+                    line-height: inherit;
+                }
+            }
+        }
+    }
 }
 .mainFooter-nav .mainFooter-title + ul {
     margin-top: 10px;
@@ -123,6 +136,7 @@ $footerLegalLinksHoverColor: $red1;
     color: $footerTWNavLinkColor;
     font-size: rc(14);
     line-height: rc(32);
+
     @include bp(smd) {
         line-height: rc(26);
     }
@@ -262,8 +276,20 @@ $footerLegalLinksHoverColor: $red1;
         }
     }
 }
+
+.mainFooter-logos {
+    margin-bottom: 20px;
+    .swiper-wrapper,
+    .swiper-container {
+        width: 100%;
+    }
+}
 .mainFooter-logos a {
     flex-grow: 0;
     flex-shrink: 0;
     margin-bottom: 5px;
+    &.logo {
+        height: 100%;
+        width: 100%;
+    }
 }

@@ -25,7 +25,6 @@
 }
 .section--comment .articleSnippet-item {
     display: flex;
-    justify-content: space-between;
     @include bp(smd) {
         flex-basis: $threeColsSmd;
         margin-top: $marginDefault;
@@ -60,6 +59,7 @@
 .section--comment .articleSnippet-item:nth-of-type(1) {
     @include bp(smd) {
         flex-basis: $fullCol;
+        justify-content: space-between;
         margin-top: 0;
         max-width: $fullCol;
     }

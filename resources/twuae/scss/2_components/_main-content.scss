@@ -9,7 +9,7 @@ $mainContentThumbWidthSm: $articleThumbWidthSm;
 }
 .main-content .articleSnippet-item {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
 }
 .main-content .articleSnippet-item + .articleSnippet-item {
     margin-top: 10px;
@@ -35,7 +35,7 @@ $mainContentThumbWidthSm: $articleThumbWidthSm;
         //flex-basis: calc(100% - (#{$gutterDefault} + #{$mainContentThumbWidthSm}));
         max-width: calc(100% - (#{$gutterDefault} + #{$mainContentThumbWidthSm}));
     }
-    @include bp(md) {
+    @include bp(smd) {
         margin-top: $marginTwoThirdsDefault;
     }
 }

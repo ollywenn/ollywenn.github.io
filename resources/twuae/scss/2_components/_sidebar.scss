@@ -69,8 +69,12 @@ $sidebarWidgetBgColor: $white2;
     padding: 30px 24px;
 }
 .sidebarWidget-header--doubleTitle {
-    padding-top: 21px;
-    padding-bottom: 17px;
+    padding-top: 14px;
+    padding-bottom: 0;
+    @include bp(lg) {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 }
 .sidebarWidget-header--icon {
     border-bottom: 0;
@@ -88,6 +92,9 @@ $sidebarWidgetBgColor: $white2;
     @include fixPadding;
     @extend %body;
     padding: 30px 24px;
+    @include bp(lg) {
+        padding: 14px;
+    }
 }
 .sidebarWidget-header--icon + .sidebarWidget-content {
     padding-top: 0;

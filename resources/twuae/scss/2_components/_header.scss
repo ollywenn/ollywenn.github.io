@@ -61,9 +61,10 @@ $headerBorderColor: $grey5;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    @include bp(smd) {
+    @media (max-width: 1023px) {
         border-bottom: $headerBorderColor 1px solid;
     }
+
     @include bp(lg) {
         background-color: $headerBgColor;
     }

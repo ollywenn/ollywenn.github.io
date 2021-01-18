@@ -7,8 +7,12 @@ $topAdBgColor: $white;
     margin-left: auto;
     background-color: $topAdBgColor;
     overflow: hidden;
+
     @include bp(lg) {
         min-height: 90px;
+    }
+    @media (min-width: 666px) {
+        margin-top: 14px;
     }
 }
 .topAd {

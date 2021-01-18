@@ -83,6 +83,7 @@
         "owl.carousel": "^2.3.4",
         "plyr": "github:sampotts/plyr",
         "slick-carousel": "^1.8.1",
+        "swiper": "^6.4.5",
         "terser": "^3.17.0",
         "tiny-slider": "^2.9.3",
         "tooltipster": "^4.2.8",

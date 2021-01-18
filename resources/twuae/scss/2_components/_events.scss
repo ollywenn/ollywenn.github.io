@@ -13,7 +13,7 @@
 }
 .section--events .articleSnippet-item {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     @include bp(smd) {
         flex-basis: $threeColsSmd;
         margin-top: $marginDefault;

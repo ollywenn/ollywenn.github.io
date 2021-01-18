@@ -1,4 +1,5 @@
 import MicroModal from 'micromodal';
+import Swiper, { Autoplay } from 'swiper';
 import JmgPopup from './jmg-popup.lib';
 import { imageLazyLoader } from './../../core/js/imageLoader.js';
 import { attachEventsOnFormElements, fixFormFieldHeight } from './../../core/js/helpers.js';
@@ -7,6 +8,7 @@ import init from './main-nav.js';
 import initSearchBar from './searchbar.js';
 import './user.js';
 import './analytics.js';
+Swiper.use([Autoplay]);
 
 (function($) {
   'use strict';
@@ -88,5 +90,19 @@ import './analytics.js';
   window.addEventListener('load', function() {
     init();
     initSearchBar();
+    const mySwiper = new Swiper('.swiper-container', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoplay: { delay: 8000, disableOnInteraction: false },
+      breakpoints: {
+        375: {
+          loop: true,
+          slidesPerView: 3,
+          spaceBetween: 40,
+          autoplay: { delay: 8000, disableOnInteraction: false }
+        }
+      }
+    });
   });
 })(jQuery);

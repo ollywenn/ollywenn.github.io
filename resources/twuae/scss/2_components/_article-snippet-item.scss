@@ -75,8 +75,28 @@ $articleSnippetThumbBgColor: $white1;
 }
 .articleSnippet-content {
     @include fixPadding;
-    flex: 0 0 100%;
+    //flex: 0 0 100%;
     max-width: 100%;
+    h1,
+    p,
+    h2,
+    h3 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            //IE fix, IE does not support line-clamp
+            max-height: 81px;
+        }
+    }
+    h1 {
+        @include truncate(4);
+    } //4 lines max
+    p,
+    h2,
+    h3 {
+        @include truncate();
+    } //3 lines max (default)
 }
 .articleSnippet-category {
     display: inline-block;

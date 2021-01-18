@@ -49,6 +49,9 @@ $browser-context: 16 !default;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+@mixin truncate($lines: 3) {
+    -webkit-line-clamp: $lines;
+}
 //calculete percentage numbers
 @function calc-percent($target, $container) {
     @return ($target / $container) * 100%;

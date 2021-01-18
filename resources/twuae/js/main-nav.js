@@ -24,6 +24,13 @@ export default function init() {
     });
   }
 
+  //detect when main nav hits top of screen
+  const stickyElm = document.querySelector('.js-main-nav');
+  const observer = new IntersectionObserver(([e]) => e.target.classList.toggle('is-stuck', e.intersectionRatio < 1), {
+    threshold: [1]
+  });
+  observer.observe(stickyElm);
+
   // This function has been replaced with a css alternative, due to performance (see_header.scss)
   //$window.on('scroll', fixHeaderPos);
   //function fixHeaderPos() {

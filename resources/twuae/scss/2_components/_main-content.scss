@@ -12,27 +12,27 @@ $mainContentThumbWidthSm: $articleThumbWidthSm;
     justify-content: space-between;
 }
 .main-content .articleSnippet-item + .articleSnippet-item {
-    margin-top: $marginDefault;
-    border-top: $white1 1px solid;
-    padding-top: $marginDefault;
+    margin-top: 10px;
+    border-top: #d9d9d9 1px solid;
+    padding-top: 10px;
 }
 .main-content .articleSnippet-thumb {
-    flex: 0 0 $mainContentThumbWidthDefault;
+    //flex: 0 0 $mainContentThumbWidthDefault;
     max-width: $mainContentThumbWidthDefault;
     @include bp(sm) {
-        flex-basis: $mainContentThumbWidthSm;
-        max-width: $mainContentThumbWidthSm;
+        //flex-basis: $mainContentThumbWidthSm;
+        //max-width: $mainContentThumbWidthSm;
     }
     @include bp(md) {
-        flex-basis: 100%;
+        //flex-basis: 100%;
         max-width: 100%;
     }
 }
 .main-content .articleSnippet-content {
-    flex-basis: calc(100% - (#{$gutterDefault} + #{$mainContentThumbWidthDefault}));
+    //flex-basis: calc(100% - (#{$gutterDefault} + #{$mainContentThumbWidthDefault}));
     max-width: calc(100% - (#{$gutterDefault} + #{$mainContentThumbWidthDefault}));
     @include bp(sm) {
-        flex-basis: calc(100% - (#{$gutterDefault} + #{$mainContentThumbWidthSm}));
+        //flex-basis: calc(100% - (#{$gutterDefault} + #{$mainContentThumbWidthSm}));
         max-width: calc(100% - (#{$gutterDefault} + #{$mainContentThumbWidthSm}));
     }
     @include bp(md) {

@@ -94,6 +94,7 @@
     font-size: rc(20);
     font-weight: $fontWeight-bold;
     line-height: rc(24);
+    @include truncate(5);
     @include bp(lg) {
         //TODO: standardise typography
         font-size: rc(24);
@@ -103,18 +104,21 @@
 .section--events .articleSnippet-item:nth-of-type(1) .articleSnippet-content p {
     display: none;
     @include bp(smd) {
-        display: block;
+        display: -webkit-box;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: block;
+        } //IE11
     }
 }
 .section--events .articleSnippet-item:nth-of-type(2) {
     border-top: 0;
-    margin-top: $marginHalfDefault;
+    //margin-top: $marginHalfDefault;
     @include bp(smd) {
-        margin-top: $gutterSmd;
+        //margin-top: $gutterSmd;
     }
     @include bp(lg) {
         flex-basis: $oneThirdColLg;
-        margin-top: $gutterLg;
+        //margin-top: $gutterLg;
         max-width: $oneThirdColLg;
     }
 }

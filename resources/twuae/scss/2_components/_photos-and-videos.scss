@@ -12,15 +12,74 @@
     }
 }
 .section--photosAndVideos .articleSnippet-item {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-self: auto;
+    justify-content: flex-start;
+    a {
+        position: relative;
+        //flex: 0 1 0px;
+        //flex-basis: 0 !important;
+        //min-height: auto;
+        width: 100%;
+        .btn--partnerContent {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 4;
+            margin-top: 0;
+            @media (max-width: 400px) {
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+    .articleSnippet-content {
+        //flex: 1 1 0px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 666px) {
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                margin-left: 10px;
+            } //IE
+        }
+        .articleSnippet-title {
+            //flex:1 1 43px;
+            flex: 1;
+            max-height: 123px;
+            @media (max-width: 666px) {
+                //flex:1 1 51px;
+                max-height: inherit;
+                line-height: 23px;
+            }
+        }
+    }
+
     @include bp(smd) {
-        flex-basis: $threeColsSmd;
+        //flex-basis: $threeColsSmd;
         max-width: $threeColsSmd;
+        width: $threeColsSmd;
     }
     @include bp(lg) {
-        flex-basis: $threeColsLg;
+        //flex-basis: $threeColsLg;
         max-width: $threeColsLg;
+        width: $threeColsLg;
+    }
+    @media (max-width: 666px) {
+        flex-direction: row;
+        justify-content: space-between;
+        a {
+            //flex: 1 0 0;
+            //flex-basis: calc(50% - 15px) !important;
+        }
+        &:nth-child(2) {
+            flex-direction: column;
+        }
     }
 }
+
 .section--photosAndVideos .articleSnippet-item + .articleSnippet-item {
     @include bp(smd) {
         border-top: 0;
@@ -34,7 +93,7 @@
 .section--photosAndVideos .articleSnippet-item .articleSnippet-thumb,
 .section--photosAndVideos .articleSnippet-item .articleSnippet-content {
     @include bp(smd) {
-        flex-basis: $fullCol;
+        //flex-basis: $fullCol;
         max-width: $fullCol;
     }
 }
@@ -56,26 +115,37 @@
 .section--photosAndVideos .articleSnippet-item:nth-of-type(1) {
     display: flex;
     position: relative;
-    justify-content: space-between;
+    //justify-content: space-between;
     margin-right: -$paddingDefault;
     margin-left: -$paddingDefault;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: 423px;
+    } //IE
     @include bp(sm) {
         margin-right: -$paddingSm;
         margin-left: -$paddingSm;
     }
     @include bp(smd) {
-        flex-basis: $fullCol;
+        //@debug: $fullCol;
         margin-right: 0;
         margin-left: 0;
         max-width: $fullCol;
+        width: 100%;
     }
     @include bp(lg) {
-        flex-basis: $twoThirdsColLg;
+        //flex-basis: $twoThirdsColLg;
         max-width: $twoThirdsColLg;
+    }
+    .articleSnippet-content {
+        @media (max-width: 666px) {
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                margin-left: 0;
+            } //IE
+        }
     }
 }
 .section--photosAndVideos .articleSnippet-item:nth-of-type(1) .articleSnippet-thumb {
-    flex-basis: $fullCol;
+    //flex-basis: $fullCol;
     max-width: $fullCol;
 }
 .section--photosAndVideos .articleSnippet-item:nth-of-type(1) .articleSnippet-title {
@@ -90,7 +160,7 @@
     }
 }
 .section--photosAndVideos .articleSnippet-item:nth-of-type(1) .articleSnippet-content {
-    flex-basis: $fullCol;
+    //flex-basis: $fullCol;
     margin-top: 14px; //TODO: check with designer and standardise
     padding: 0 $paddingDefault;
     max-width: $fullCol;
@@ -113,7 +183,7 @@
         margin-top: $gutterSmd;
     }
     @include bp(lg) {
-        flex-basis: $oneThirdColLg;
+        //flex-basis: $oneThirdColLg;
         margin-top: 0;
         max-width: $oneThirdColLg;
     }

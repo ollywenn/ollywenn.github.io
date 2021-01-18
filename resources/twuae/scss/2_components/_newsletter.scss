@@ -1,5 +1,15 @@
 .section--newsletter {
-    align-self: flex-start;
+    //align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    .sidebarWidget-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 115px;
+        p {
+            flex: 1 1 0px;
+        }
+    }
 }
 .section--newsletter .sidebarWidget-header--icon {
     background: image-url('/public/twuae/img/i-newsletter.svg') 22px center no-repeat;

@@ -16,7 +16,7 @@ $mainNavButtonPadding: 15px;
 
 .mainNav {
     @include animate;
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -24,7 +24,6 @@ $mainNavButtonPadding: 15px;
     transform: translateY(-100vh);
     background-color: $mainNavBgColor;
     width: 100%;
-    height: 100vh;
     overflow-y: scroll;
     @include bp(xmd) {
         position: relative;
@@ -38,20 +37,71 @@ $mainNavButtonPadding: 15px;
         height: auto;
         overflow: initial;
     }
+    .sticky-logo {
+        display: flex;
+        overflow: hidden;
+        width: 0;
+        transition: 0.2s;
+        left: 0;
+        bottom: 19px;
+        position: absolute;
+        img {
+            height: 11px;
+            width: 24px;
+            margin-top: 0.5px;
+            object-fit: cover;
+        }
+        @media (max-width: 1023px) {
+            bottom: 8px;
+            img {
+                margin-top: 7px;
+            }
+        }
+        @media (max-width: 979px) {
+            display: none;
+        }
+    }
+    &.is-stuck {
+        .sticky-logo {
+            width: 24px;
+        }
+        & > ul {
+            margin-left: 50px;
+            @media (max-width: 979px) {
+                margin-left: 0;
+            }
+            @media (max-width: 666px) {
+                margin-left: 12px;
+            }
+            @media (max-width: 375px) {
+                margin-left: 0;
+            }
+        }
+    }
+    @media (max-width: 1023px) {
+        position: relative;
+        top: -7px;
+    }
+    @media (max-width: 979px) {
+        height: 0;
+    }
 }
 .mainNav.is-active {
     transform: translateY(0);
+    height: 100vh;
 }
 .mainNav > ul {
     padding: 89px $paddingDefault 50px;
+    width: 100%;
+    transition: 0.2s;
     @include bp(sm) {
         padding-right: $paddingSm;
-        padding-left: $paddingSm;
+        //padding-left: $paddingSm;
     }
     @include bp(smd) {
         padding-top: 110px;
         padding-right: $paddingSmd;
-        padding-left: $paddingSmd;
+        //padding-left: $paddingSmd;
     }
     @include bp(xmd) {
         display: flex;
@@ -80,6 +130,16 @@ $mainNavButtonPadding: 15px;
 }
 .mainNav > ul > li {
     @include bp(smd) {
+        button,
+        a {
+            span {
+                display: block;
+                transform: translateY(2px);
+                @media (max-width: 1023px) {
+                    transform: translateY(5px);
+                }
+            }
+        }
         width: 38%;
     }
     @include bp(xmd) {
@@ -176,6 +236,7 @@ $mainNavButtonPadding: 15px;
     border: 0;
     background-color: transparent;
 }
+
 .menuParentItem button {
     width: 100%;
     text-align: left;
@@ -268,24 +329,24 @@ $mainNavButtonPadding: 15px;
 }
 .mainNav .subMenu {
     transition: opacity 0.2s ease, height 0.4s ease-in-out 0.5s, transform 0.2s ease-in-out;
-    transform: translateY(-20px);
+    transform: translateY(0);
     z-index: 1;
     opacity: 0;
     height: 0;
     pointer-events: none;
     @include bp(smd) {
         position: absolute;
-        top: 110px;
+        //top: 110px;
         left: 52.1%;
     }
     @include bp(xmd) {
         display: flex;
         justify-content: space-between;
         position: absolute;
-        top: 100%;
+        top: 41px;
         left: 0;
         z-index: $z-index-1;
-        transition: all 0.4s ease-in-out;
+        transition: all 0.2s ease-in-out;
         opacity: 0;
         pointer-events: none;
         margin-right: -$paddingXmd;
@@ -305,6 +366,9 @@ $mainNavButtonPadding: 15px;
         padding-left: $paddingLg;
         width: calc(100% + #{($paddingLg * 2)});
     }
+    @media (max-width: 1024px) {
+        top: 33px;
+    }
 }
 .mainNav .is-current > .subMenu {
     @include bp(xmd) {
@@ -313,7 +377,7 @@ $mainNavButtonPadding: 15px;
     }
 }
 .mainNav .is-active > .subMenu {
-    transform: translateY(0);
+    transform: translateY(8px);
     opacity: 1;
     pointer-events: initial;
     padding-top: 6px;
@@ -330,7 +394,7 @@ $mainNavButtonPadding: 15px;
 }
 .mainNav > ul > li:hover .subMenu {
     @include bp(1025px) {
-        transform: translateY(0);
+        transform: translateY(10px);
         opacity: 1;
         border-bottom: $grey5 1px solid;
         pointer-events: initial;

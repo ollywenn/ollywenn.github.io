@@ -43,6 +43,7 @@ $footerLegalLinksHoverColor: $red1;
     }
 }
 .mainFooter-section--2 {
+    display: flex;
     margin-top: 40px;
     @include bp(xmd) {
         flex: 0 0 calc(100% - 315px);
@@ -83,12 +84,20 @@ $footerLegalLinksHoverColor: $red1;
     }
 }
 .mainFooter-menus {
-    @include bp(smd) {
-        display: flex;
-        justify-content: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    nav {
+        li {
+            a {
+                line-height: 30px;
+            }
+        }
     }
-    @include bp(lg) {
-        justify-content: space-between;
+    @media (max-width: 500px) {
+        flex-direction: column;
+        text-align: center;
     }
 }
 .mainFooter-menus .mainFooter-title {
@@ -96,8 +105,8 @@ $footerLegalLinksHoverColor: $red1;
         text-align: left;
     }
 }
+
 .mainFooter-nav ul {
-    text-align: center;
     @include bp(smd) {
         text-align: left;
     }
@@ -121,46 +130,37 @@ $footerLegalLinksHoverColor: $red1;
 .mainFooter-menusCol--1 {
     @include bp(smd) {
         flex: 0 0 auto;
-        transform: translateY(-5px);
+        display: flex;
+        //transform: translateY(-5px);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
     }
 }
-.mainFooter-menusCol--1 .mainFooter-nav ul {
-    @include bp(smd) {
-        text-align: right;
-    }
-}
-.mainFooter-menusCol--1 .mainFooter-nav a {
-    @include bp(smd) {
-        line-height: rc(26);
-    }
-}
-.mainFooter-menusCol--2,
-.mainFooter-menusCol--2 .mainFooter-nav + .mainFooter-nav {
-    margin-top: 43px;
-}
+
 .mainFooter-menusCol--2 {
+    display: flex;
     @include bp(smd) {
         flex: 0 1 auto;
-        transform: translateY(2px);
         margin-top: 0;
         padding-left: 40px;
         width: auto;
+        justify-content: space-between;
     }
     @include bp(lg) {
         flex: 1 0 auto;
         padding-left: 43px;
     }
 }
-.mainFooter-menusCol--2 .mainFooter-nav + .mainFooter-nav {
-    @include bp(smd) {
-        margin-top: 31px;
-    }
-}
+
 .mainFooter-menusCol--2 .mainFooter-nav ul {
     @include bp(smd) {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        flex-direction: column;
     }
 }
 .mainFooter-menusCol--2 .mainFooter-nav--legal ul {

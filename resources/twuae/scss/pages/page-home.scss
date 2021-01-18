@@ -16,6 +16,11 @@
 .page--home .main-segment {
     margin-bottom: 0;
 }
+.page--home .main-segment--comment .main-content {
+    @include bp(lg) {
+        margin-top: 0;
+    }
+}
 // .page--home .main-segment--homeHero {
 //     margin-top: 0;
 // }

@@ -67,11 +67,11 @@
 .section--comment .articleSnippet-item:nth-of-type(1) .articleSnippet-thumb {
     @include bp(smd) {
         flex-basis: $twoColsSmd;
+        order: 2;
         max-width: $twoColsSmd;
     }
     @include bp(lg) {
         flex-basis: $twoColsLg;
-        order: 2;
         max-width: $twoColsLg;
     }
 }
@@ -101,7 +101,11 @@
 .section--comment .articleSnippet-item:nth-of-type(1) .articleSnippet-content p {
     display: none;
     @include bp(smd) {
-        display: block;
+        display: -webkit-box;
+        @include truncate(4);
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: block;
+        } //IE11
     }
 }
 .main-segment--comment .sidebar {

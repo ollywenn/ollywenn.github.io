@@ -104,6 +104,7 @@ $btnDisabledColor: $white;
     font-size: rc(11);
     line-height: 1em;
     font-weight: $fontWeight-semibold;
+    padding: 8px 8px 5px;
 }
 .btn--partnerContent:hover {
     color: $btnDisabledColor;

@@ -17,7 +17,7 @@ $sociaMediaBorderColor: $white1;
 .socialMedia-link {
     @include animate;
     display: block;
-    border: 1px solid $sociaMediaBorderColor;
+    border: 1px solid #7a7a7a;
     border-radius: 20px;
     background-repeat: no-repeat;
     background-position: center center;

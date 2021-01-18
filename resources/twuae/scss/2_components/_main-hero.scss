@@ -30,7 +30,10 @@
 .section--mainHero .articleSnippet-thumb,
 .section--mainHero .articleSnippet-content {
     @include bp(smd) {
-        flex: 0 0 $fullCol;
+        //flex: 0 0 $fullCol;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            width: calc(100% - 0.6875em);
+        } //IE
         max-width: $fullCol;
     }
 }
@@ -38,6 +41,9 @@
     @include bp(smd) {
         display: flex;
         flex: 0 0 $twoThirdsColSmd;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            width: calc(66.66% - 0.45375em);
+        } //IE
         flex-wrap: wrap;
         justify-content: space-between;
         max-width: $twoThirdsColSmd;
@@ -101,7 +107,10 @@
 .mainHero-col1 .articleSnippet-item:nth-of-type(1) .articleSnippet-content p {
     display: none;
     @include bp(smd) {
-        display: flex;
+        display: -webkit-box;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: flex;
+        } //IE11
         margin-top: 5px;
     }
 }
@@ -139,6 +148,9 @@
         display: flex;
         flex-wrap: wrap;
         flex: 0 0 $threeColsSmd;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            width: calc(33.33% - 0.6875em);
+        } //IE
         max-width: $threeColsSmd;
     }
     @include bp(lg) {
@@ -163,7 +175,7 @@
 }
 .mainHero-col3 .articleSnippet-item {
     @include bp(smd) {
-        flex-basis: $threeColsSmd;
+        //flex-basis: $threeColsSmd;
         max-width: $threeColsSmd;
     }
 }

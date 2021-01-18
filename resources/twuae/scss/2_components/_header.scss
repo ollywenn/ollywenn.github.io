@@ -6,13 +6,16 @@ $headerBorderColor: $grey5;
 .header-wrapper {
     position: sticky;
     position: -webkit-sticky;
-    top: -67px;
+    top: -70px;
     z-index: 220;
+    @media (max-width: 666px) {
+        border-bottom: #9e9e9e 1px solid;
+    }
     @media (max-width: 1023px) {
         top: -56px;
     }
     @media (max-width: 980px) {
-        position: relative;
+        //position: relative;
         top: 0;
         z-index: 202;
     }
@@ -40,7 +43,13 @@ $headerBorderColor: $grey5;
         background-color: transparent;
     }
     @media (max-width: 666px) {
-        height: 60px;
+        height: 54px;
+    }
+    & > .wrapper {
+        background: #fff;
+        @media (max-width: 666px) {
+            padding: 0;
+        }
     }
 }
 .sticky-nav .mainHeader {
@@ -81,16 +90,12 @@ $headerBorderColor: $grey5;
     position: relative;
     align-items: center;
     z-index: $z-index-3;
-    flex: 0 0 163px;
+    flex: 0 0 209px;
     margin-right: 0;
     margin-left: 0;
     background-color: $white;
-    max-width: 163px;
+    max-width: 209px;
     height: 94px;
-    @include bp(425px) {
-        flex-basis: 194px;
-        max-width: 194px;
-    }
     @include bp(smd) {
         flex-basis: 267.27px;
         height: 60px;
@@ -105,18 +110,18 @@ $headerBorderColor: $grey5;
     }
     @media (max-width: 666px) {
         background: transparent;
-        height: 68px;
+        height: 54px;
+        margin-left: 1.4375em;
+    }
+    @media (max-width: 375px) {
+        margin-left: 0.625em;
     }
 }
 .mainHeader .logo--travelweekly-main {
     display: block;
-    width: 163px;
-    height: 17px;
-    @include bp(425px) {
-        background-size: 194px 20px;
-        width: 194px;
-        height: 20px;
-    }
+    width: 210px;
+    background-size: 210px 22px;
+    height: 20px;
     @include bp(smd) {
         background-position: left top;
         background-size: 267.27px 28.153px;

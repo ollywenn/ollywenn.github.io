@@ -15,9 +15,7 @@ body.no-scroll,
 body.search-is-active {
     overflow: hidden;
 }
-body.search-is-active main {
-    filter: blur(5px);
-}
+
 *,
 *:before,
 *:after {

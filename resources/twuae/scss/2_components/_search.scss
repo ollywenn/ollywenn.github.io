@@ -1,25 +1,37 @@
 $backgroundHolder: $grey5;
 $searchLinkColor: $red1;
-$searchBoxDropShadowColor: #00000066;
 
 .search--container {
     @include animate;
     display: none;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 210px;
     left: 0;
     z-index: $z-index-5;
     opacity: 0;
-    background-color: $white;
-    padding: 60px 0;
+    background-color: #f6f6f6;
+    padding: 60px 0 0;
     width: 100%;
     min-height: 200px;
-    box-shadow: 0px 11px 22px $searchBoxDropShadowColor;
+    height: calc(100vh - 225px);
+    box-shadow: 0px 7px 11px -5px rgba(0, 0, 0, 0.4);
+    border-top: 1px solid $grey5;
+    @media (max-width: 1023px) {
+        top: 184px;
+        height: calc(100vh - 184px);
+    }
+    @media (max-width: 979px) {
+        top: 151px;
+        height: calc(100vh - 151px);
+    }
+    @media (max-width: 666px) {
+        top: 144px;
+        height: calc(100vh - 144px);
+    }
 }
 .search--container.is-active {
     display: block;
     opacity: 1;
-    filter: blur(0);
 }
 .search--input-container,
 .btn--close,

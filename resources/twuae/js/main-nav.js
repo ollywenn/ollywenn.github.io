@@ -4,6 +4,7 @@ import './external/sticky-IE-Fix.min.js'; //IE shim for position sticky
 export default function init() {
   const $window = $(window);
   const $body = $('body');
+  const bodyDom = document.querySelector('body');
   const $mainHeader = $('.js-main-header');
   const $mainNav = $mainHeader.find('.js-main-nav');
   const $btnToggleNav = $('.js-btn-toggle-menu');
@@ -15,6 +16,13 @@ export default function init() {
   let mainHeaderHeight = $mainHeader.outerHeight();
   let mainNavOffsetTop = $mainNav.offset().top;
 
+  //detect when main nav hits top of screen
+  const stickyElm = document.querySelector('.js-main-nav');
+  const observer = new IntersectionObserver(([e]) => bodyDom.classList.toggle('is-stuck', e.intersectionRatio < 1), {
+    threshold: [1]
+  });
+  observer.observe(stickyElm);
+
   if ($window.width() < 980) {
     $menuParent.each(function() {
       const $this = $(this);
@@ -23,13 +31,6 @@ export default function init() {
       }
     });
   }
-
-  //detect when main nav hits top of screen
-  const stickyElm = document.querySelector('.js-main-nav');
-  const observer = new IntersectionObserver(([e]) => e.target.classList.toggle('is-stuck', e.intersectionRatio < 1), {
-    threshold: [1]
-  });
-  observer.observe(stickyElm);
 
   // This function has been replaced with a css alternative, due to performance (see_header.scss)
   //$window.on('scroll', fixHeaderPos);
@@ -69,7 +70,22 @@ export default function init() {
         $(this).removeClass('is-active');
       });
     }
+    windowListener();
   });
+
+  function windowListener() {
+    if ($window.width() < 980) {
+      const mobileStickyElm = document.querySelector('.header-wrapper');
+      const mobileObserver = new IntersectionObserver(
+        ([e]) => bodyDom.classList.toggle('is-stuck', e.intersectionRatio < 1),
+        {
+          threshold: [1]
+        }
+      );
+      mobileObserver.observe(mobileStickyElm);
+    }
+  }
+  windowListener();
 
   $btnToggleNav.on('click', function() {
     if ($window.width() <= globalState.screenSizes.lg) {

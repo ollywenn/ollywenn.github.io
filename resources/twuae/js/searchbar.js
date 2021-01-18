@@ -11,6 +11,7 @@ export default function initSearchBar() {
   });
   const $body = document.querySelector('body');
   const $searchToggleButton = $body.querySelector('.js-btn-search-toggle');
+  const $searchToggleButtonSticky = $body.querySelector('.js-btn-search-toggle-sticky');
   const $searchContainer = $body.querySelector('.js-search-container');
   const $topSearch = $searchContainer.querySelector('.js-search-input');
   const $btnCloseSearch = $searchContainer.querySelector('.js-close-search');
@@ -36,6 +37,7 @@ export default function initSearchBar() {
   };
 
   $searchToggleButton.addEventListener('click', toggleSearch);
+  $searchToggleButtonSticky.addEventListener('click', toggleSearch);
   $btnCloseSearch.addEventListener('click', toggleSearch);
 
   // Attache quick search functionality to the top search bar

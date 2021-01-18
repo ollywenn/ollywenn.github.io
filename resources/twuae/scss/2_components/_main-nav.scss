@@ -21,7 +21,7 @@ $mainNavButtonPadding: 15px;
     top: 0;
     left: 0;
     z-index: $z-index-1;
-    transform: translateY(-100vh);
+    //transform: translateY(-100vh);
     background-color: $mainNavBgColor;
     width: 100%;
     overflow-y: scroll;
@@ -38,12 +38,31 @@ $mainNavButtonPadding: 15px;
         overflow: initial;
     }
     .sticky-logo {
+        left: 0;
+        bottom: 19px;
+        @media (max-width: 1023px) {
+            bottom: 8px;
+        }
+    }
+    .sticky-search {
+        right: -3px;
+        z-index: 200;
+        bottom: 14px;
+        button {
+            background-size: 20px 19px;
+            width: 20px;
+            height: 20px;
+        }
+        @media (max-width: 1023px) {
+            bottom: 2px;
+        }
+    }
+    .sticky-logo,
+    .sticky-search {
         display: flex;
         overflow: hidden;
         width: 0;
         transition: 0.2s;
-        left: 0;
-        bottom: 19px;
         position: absolute;
         img {
             height: 11px;
@@ -52,7 +71,6 @@ $mainNavButtonPadding: 15px;
             object-fit: cover;
         }
         @media (max-width: 1023px) {
-            bottom: 8px;
             img {
                 margin-top: 7px;
             }
@@ -61,23 +79,7 @@ $mainNavButtonPadding: 15px;
             display: none;
         }
     }
-    &.is-stuck {
-        .sticky-logo {
-            width: 24px;
-        }
-        & > ul {
-            margin-left: 50px;
-            @media (max-width: 979px) {
-                margin-left: 0;
-            }
-            @media (max-width: 666px) {
-                margin-left: 12px;
-            }
-            @media (max-width: 375px) {
-                margin-left: 0;
-            }
-        }
-    }
+
     @media (max-width: 1023px) {
         position: relative;
         top: -7px;
@@ -109,7 +111,7 @@ $mainNavButtonPadding: 15px;
     @include bp(xmd) {
         display: flex;
         position: relative;
-        justify-content: space-between;
+        //justify-content: space-between;
         z-index: $z-index-2;
         background-color: $mainNavBgColorLg;
         padding: 0;
@@ -191,6 +193,9 @@ $mainNavButtonPadding: 15px;
     }
     @include bp(lg) {
         line-height: rc(50);
+    }
+    @media (max-width: 1023px) {
+        padding: 0 12px;
     }
 }
 .mainNav > ul > li > button {
@@ -459,5 +464,45 @@ $mainNavButtonPadding: 15px;
     @include bp(lg) {
         display: block;
         z-index: 2;
+    }
+}
+
+body {
+    &.is-stuck {
+        .sticky-logo,
+        .sticky-search {
+            width: 24px;
+        }
+        .search--container {
+            top: 50px;
+            position: fixed;
+            height: calc(100vh - 50px);
+            @media (max-width: 1023px) {
+                top: 38px;
+                height: calc(100vh - 38px);
+            }
+            @media (max-width: 979px) {
+                top: 60px;
+                height: calc(100vh - 60px);
+            }
+            @media (max-width: 666px) {
+                top: 53px;
+                height: calc(100vh - 53px);
+            }
+        }
+        .mainNav {
+            & > ul {
+                margin-left: 50px;
+                @media (max-width: 979px) {
+                    margin-left: 0;
+                }
+                @media (max-width: 666px) {
+                    margin-left: 12px;
+                }
+                @media (max-width: 375px) {
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }

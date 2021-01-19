@@ -2,7 +2,7 @@
     display: none;
     position: sticky;
     position: -webkit-sticky;
-    top: 210px;
+    top: 0px;
     z-index: $z-index-3;
     width: $skyscraperWidth;
     min-height: 600px;
@@ -17,13 +17,23 @@
         display: inline-block;
     }
 }
-.bgAd--1 {
-    @include bp(xxlg) {
-        transform: translate(-190px, -210px);
+
+.adTrack {
+    position: absolute;
+    z-index: 221;
+    top: -240px;
+    bottom: -50px;
+    width: 160px;
+
+    &.--left {
+        left: -160px;
     }
-}
-.bgAd--2 {
-    @include bp(xxlg) {
-        transform: translate(830px, -210px);
+
+    &.--right {
+        right: -160px;
+    }
+
+    @media (max-width: 1365px) {
+        display: none;
     }
 }

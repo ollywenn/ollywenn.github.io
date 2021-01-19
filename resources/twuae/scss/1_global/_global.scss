@@ -103,3 +103,10 @@ main > .wrapper .wrapper {
 .wrapper > .main-content {
     width: 100%;
 }
+
+main,
+.main-segment {
+    & > .wrapper {
+        position: relative;
+    }
+}

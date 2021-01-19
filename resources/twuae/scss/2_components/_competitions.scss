@@ -100,7 +100,7 @@
     font-size: rc(20);
     font-weight: $fontWeight-bold;
     line-height: rc(24);
-    @include truncate(5);
+    @include truncate();
     @include bp(lg) {
         //TODO: standardise typography
         font-size: rc(24);

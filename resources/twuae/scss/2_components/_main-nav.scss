@@ -101,15 +101,16 @@ $mainNavButtonPadding: 15px;
     }
 }
 .mainNav > ul {
-    padding: 89px $paddingDefault 50px;
+    padding: 45px $paddingDefault 50px;
     width: 100%;
     transition: 0.2s;
     @include bp(sm) {
         padding-right: $paddingSm;
+        padding-left: 0;
         //padding-left: $paddingSm;
     }
     @include bp(smd) {
-        padding-top: 110px;
+        padding-top: 45px;
         padding-right: $paddingSmd;
         //padding-left: $paddingSmd;
     }
@@ -123,6 +124,12 @@ $mainNavButtonPadding: 15px;
     }
     @include bp(lg) {
         justify-content: flex-start;
+    }
+    @media (max-width: 666px) {
+        padding-left: 24px;
+    }
+    @media (max-width: 375px) {
+        padding-left: 11px;
     }
 }
 .mainNav > ul::after {
@@ -202,6 +209,9 @@ $mainNavButtonPadding: 15px;
     @media (max-width: 1023px) {
         padding: 0 12px;
     }
+    @media (max-width: 979px) {
+        padding: 0;
+    }
 }
 .mainNav > ul > li > button {
     @include bp(xmd) {
@@ -268,7 +278,7 @@ $mainNavButtonPadding: 15px;
     @include bp(xmd) {
         position: relative;
         background-color: transparent;
-        padding: 5px 22px;
+        padding: 5px 22px 5px 0;
         color: $subNavColor;
         text-align: left;
         font-size: rc(14);
@@ -347,9 +357,9 @@ $mainNavButtonPadding: 15px;
     opacity: 0;
     height: 0;
     pointer-events: none;
+    width: calc(100% + 1px);
     @include bp(smd) {
         position: absolute;
-        //top: 110px;
         left: 52.1%;
     }
     @include bp(xmd) {
@@ -357,7 +367,7 @@ $mainNavButtonPadding: 15px;
         justify-content: space-between;
         position: absolute;
         top: 41px;
-        left: 0;
+        left: 30px;
         z-index: $z-index-1;
         transition: all 0.2s ease-in-out;
         opacity: 0;
@@ -365,22 +375,27 @@ $mainNavButtonPadding: 15px;
         margin-right: -$paddingXmd;
         margin-left: -$paddingXmd;
         background-color: $subNavBgColor;
-        padding: 40px $paddingXmd;
-        width: calc(100% + (#{$paddingXmd} * 2));
+        padding: 40px 0 0;
         height: auto;
-        min-height: 550px;
+        min-height: 525px;
         overflow: hidden;
     }
     @include bp(lg) {
         flex-basis: calc(100% + #{($paddingLg * 2)});
         margin-right: -$paddingLg;
         margin-left: -$paddingLg;
-        padding-right: $paddingLg;
-        padding-left: $paddingLg;
-        width: calc(100% + #{($paddingLg * 2)});
+        //padding-right: $paddingLg;
+        //padding-left: $paddingLg;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
         top: 33px;
+        left: 34px;
+        min-height: 491px;
+    }
+    @media (max-width: 979px) {
+        top: 39px;
+        left: 51%;
+        min-height: inherit;
     }
 }
 .mainNav .is-current > .subMenu {
@@ -519,6 +534,16 @@ body {
                 @media (max-width: 979px) {
                     height: calc(100vh - 53px);
                 }
+            }
+        }
+        .subMenu {
+            left: -20px;
+            width: calc(100% + 3.2em);
+            @media (max-width: 1023px) {
+                left: -16px;
+            }
+            @media (max-width: 979px) {
+                left: 51%;
             }
         }
     }

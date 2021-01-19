@@ -73,6 +73,11 @@
         flex-basis: $threeQuartersColLg;
         max-width: $threeQuartersColLg;
     }
+    a {
+        @media (max-width: 666px) {
+            margin-right: 0;
+        }
+    }
 }
 .mainHero-col1 .articleSnippet-item:nth-of-type(1) .articleSnippet-thumb {
     flex-basis: $fullCol;

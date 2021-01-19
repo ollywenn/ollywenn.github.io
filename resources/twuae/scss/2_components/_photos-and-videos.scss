@@ -143,6 +143,11 @@
             } //IE
         }
     }
+    a {
+        @media (max-width: 666px) {
+            margin-right: 0;
+        }
+    }
 }
 .section--photosAndVideos .articleSnippet-item:nth-of-type(1) .articleSnippet-thumb {
     //flex-basis: $fullCol;

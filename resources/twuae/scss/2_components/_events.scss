@@ -48,6 +48,7 @@
 .section--events .articleSnippet-item:nth-of-type(1) {
     margin-right: -$paddingDefault;
     margin-left: -$paddingDefault;
+    justify-content: space-between;
     @include bp(sm) {
         margin-right: -$paddingSm;
         margin-left: -$paddingSm;
@@ -58,6 +59,11 @@
         margin-right: 0;
         margin-left: 0;
         max-width: $fullCol;
+    }
+    a {
+        @media (max-width: 666px) {
+            margin-right: 0;
+        }
     }
 }
 .section--events .articleSnippet-item:nth-of-type(1) .articleSnippet-thumb {

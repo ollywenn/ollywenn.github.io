@@ -16,11 +16,16 @@ export default function initSearchBar() {
   const $topSearch = $searchContainer.querySelector('.js-search-input');
   const $btnCloseSearch = $searchContainer.querySelector('.js-close-search');
   const $performSearch = $searchContainer.querySelector('.js-btn-search');
+  const mainNav = document.querySelector('.js-main-nav');
+  const toggleMenuButton = document.querySelector('.js-btn-toggle-menu');
+
   let $googleSearchDiv = null;
 
   const toggleSearch = () => {
     $searchContainer.classList.toggle('is-active');
-
+    toggleMenuButton.classList.remove('is-active');
+    mainNav.classList.remove('is-active');
+    $body.classList.remove('no-scroll');
     if ($searchContainer.classList.contains('is-active')) {
       $body.classList.add('search-is-active');
       if (!scriptAdded) {

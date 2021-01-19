@@ -5,6 +5,7 @@ export default function init() {
   const $window = $(window);
   const $body = $('body');
   const bodyDom = document.querySelector('body');
+  const searchContainer = document.querySelector('.search--container');
   const $mainHeader = $('.js-main-header');
   const $mainNav = $mainHeader.find('.js-main-nav');
   const $btnToggleNav = $('.js-btn-toggle-menu');
@@ -88,11 +89,13 @@ export default function init() {
   windowListener();
 
   $btnToggleNav.on('click', function() {
+    searchContainer.classList.remove('is-active');
+    bodyDom.classList.remove('search-is-active');
     if ($window.width() <= globalState.screenSizes.lg) {
       $(this).toggleClass('is-active');
-      $mainNav.toggleClass('is-active');
-      $body.toggleClass('no-scroll');
       $extraMenu.removeClass('is-active');
+      $body.toggleClass('no-scroll');
+      $mainNav.toggleClass('is-active');
     }
   });
 

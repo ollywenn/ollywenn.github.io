@@ -93,7 +93,12 @@ $mainNavButtonPadding: 15px;
 }
 .mainNav.is-active {
     transform: translateY(0);
-    height: 100vh;
+    @media (max-width: 979px) {
+        height: calc(100vh - 165px);
+    }
+    @media (max-width: 666px) {
+        height: calc(100vh - 144px);
+    }
 }
 .mainNav > ul {
     padding: 89px $paddingDefault 50px;
@@ -468,6 +473,13 @@ $mainNavButtonPadding: 15px;
 }
 
 body {
+    &.search-is-active {
+        .bgAd--1,
+        .bgAd--2 {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
     &.is-stuck {
         .sticky-logo,
         .sticky-search {
@@ -501,6 +513,11 @@ body {
                 }
                 @media (max-width: 375px) {
                     margin-left: 0;
+                }
+            }
+            &.is-active {
+                @media (max-width: 979px) {
+                    height: calc(100vh - 53px);
                 }
             }
         }

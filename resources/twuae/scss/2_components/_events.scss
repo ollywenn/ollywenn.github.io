@@ -23,6 +23,9 @@
         flex-basis: $threeColsLg;
         max-width: $threeColsLg;
     }
+    .articleSnippet-title {
+        @include truncate(2);
+    }
 }
 .section--events .articleSnippet-thumb,
 .section--events .articleSnippet-content {

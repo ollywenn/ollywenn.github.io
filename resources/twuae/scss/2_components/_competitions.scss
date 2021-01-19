@@ -23,6 +23,11 @@
         flex-basis: $threeColsLg;
         max-width: $threeColsLg;
     }
+    @media (max-width: 1023px) {
+        .articleSnippet-title {
+            @include truncate(4);
+        }
+    }
 }
 .section--competitions .articleSnippet-thumb,
 .section--competitions .articleSnippet-content {
@@ -100,18 +105,23 @@
     font-size: rc(20);
     font-weight: $fontWeight-bold;
     line-height: rc(24);
-    @include truncate();
     @include bp(lg) {
         //TODO: standardise typography
         font-size: rc(24);
         line-height: rc(28);
+    }
+    @media (max-width: 1023px) {
+        @include truncate(2);
+    }
+    @media (max-width: 666px) {
+        @include truncate(3);
     }
 }
 .section--competitions .articleSnippet-item:nth-of-type(1) .articleSnippet-content p {
     display: none;
     @include bp(smd) {
         display: -webkit-box;
-        @include truncate(4);
+        //@include truncate(4);
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
             display: block;
         } //IE11

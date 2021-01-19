@@ -97,18 +97,21 @@ $articleSnippetThumbBgColor: $white1;
             max-height: 81px;
         }
     }
-    h1 {
-        @include truncate(2); //2 lines max
-        @include bp(lg) {
-            @include truncate(); //3 lines max (default)
-        }
-    }
-    p,
+    h1,
     h2,
     h3 {
-        @include truncate();
-        @include bp(lg) {
+        @include truncate(); //3 lines max (default)
+        @media (max-width: 666px) {
             @include truncate(4);
+        }
+    }
+    p {
+        @include truncate(4); //4 lines max
+        @media (max-width: 1023px) {
+            @include truncate(5);
+        }
+        @media (max-width: 666px) {
+            display: none;
         }
     }
 }

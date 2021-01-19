@@ -102,7 +102,7 @@
     display: none;
     @include bp(smd) {
         display: -webkit-box;
-        @include truncate(5);
+        //@include truncate(5);
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
             display: block;
         } //IE11

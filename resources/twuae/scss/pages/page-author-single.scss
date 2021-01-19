@@ -25,13 +25,13 @@
 }
 .author-articles .articleSnippet-item {
     @include bp(smd) {
-        flex: 0 0 $twoColsSm;
+        //flex: 0 0 230px;
         margin-bottom: $marginDefault;
-        max-width: $twoColsSm;
+        //max-width: $twoColsSm;
     }
     @include bp(lg) {
-        flex-basis: $threeColsLg;
-        max-width: $threeColsLg;
+        //flex-basis: 230px;
+        //max-width: $threeColsLg;
     }
 }
 .author-articles .articleSnippet-item + .articleSnippet-item {

@@ -2,7 +2,7 @@
     display: none;
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
+    top: 210px;
     z-index: $z-index-3;
     width: $skyscraperWidth;
     min-height: 600px;
@@ -19,11 +19,11 @@
 }
 .bgAd--1 {
     @include bp(xxlg) {
-        transform: translateX(-190px);
+        transform: translate(-190px, -210px);
     }
 }
 .bgAd--2 {
     @include bp(xxlg) {
-        transform: translateX(830px);
+        transform: translate(830px, -210px);
     }
 }

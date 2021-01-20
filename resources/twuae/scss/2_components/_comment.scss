@@ -81,6 +81,7 @@
         max-width: $twoColsSmd;
     }
     @include bp(lg) {
+        margin-top: 0;
         flex-basis: $twoColsLg;
         order: 1;
         max-width: $twoColsLg;

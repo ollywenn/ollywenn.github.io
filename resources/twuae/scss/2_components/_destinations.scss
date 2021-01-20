@@ -163,9 +163,12 @@
     left: 0;
     z-index: 3;
     flex-basis: $fullCol;
-    padding: 24px;
+    padding: 22px 10px 8px;
     width: 100%;
     max-width: $fullCol;
+    @include bp(sm) {
+        padding: 22px 20px 8px;
+    }
 
     @include bp(smd) {
         //bottom: 50%;
@@ -176,8 +179,13 @@
         flex-basis: 320px;
         //transform: translateY(50%);
         background-color: $white;
-        padding: 12px 15px 2px;
+        padding: 3px 15px 2px;
         max-width: 320px;
+
+        a {
+            line-height: 31px;
+            display: block;
+        }
     }
     &.--isRight {
         // TODO: class to add potential for right aligned box

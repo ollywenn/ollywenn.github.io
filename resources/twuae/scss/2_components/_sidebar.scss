@@ -101,7 +101,7 @@ $sidebarWidgetBgColor: $white2;
 }
 .sidebarWidget-content .btn {
     @extend %btn--primary;
-    display: block;
+    //display: block;
 }
 .sidebarWidget-footer {
     margin-top: 20px;

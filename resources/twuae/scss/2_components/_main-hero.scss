@@ -3,7 +3,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-top: $marginDefault;
+        padding-top: 15px;
     }
 }
 .section--mainHero .wrapper {
@@ -136,7 +136,7 @@
     @include bp(lg) {
         display: flex;
         flex-basis: $fourColsLg;
-        margin-top: $gutterLg;
+        margin-top: 21px;
         max-width: $fourColsLg;
     }
 }
@@ -152,6 +152,7 @@
     @include bp(smd) {
         display: flex;
         flex-wrap: wrap;
+        align-content: flex-start;
         flex: 0 0 $threeColsSmd;
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             width: calc(33.33% - 0.6875em);
@@ -185,7 +186,7 @@
     }
 }
 .btn--viewAllNews {
-    display: block;
+    //display: block;
     flex: 0 0 329px;
     max-width: 329px;
     margin: 30px auto 0;

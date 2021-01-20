@@ -106,6 +106,7 @@ $articleSnippetThumbBgColor: $white1;
         }
     }
     p {
+        margin-top: 5px;
         @include truncate(4); //4 lines max
         @media (max-width: 1023px) {
             @include truncate(5);
@@ -128,7 +129,7 @@ $articleSnippetThumbBgColor: $white1;
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: $gapUnitMd $gapUnitSmd;
+    padding: $gapUnitMd 27px 5px;
 }
 .articleSnippet-item--fullBg .articleSnippet-content::after {
     position: absolute;
@@ -150,6 +151,7 @@ $articleSnippetThumbBgColor: $white1;
     font-size: rc(20);
     font-weight: $fontWeight-bold;
     line-height: rc(27);
+    margin-top: 8px;
     @include bp(lg) {
         font-size: rc(26);
         line-height: rc(35);

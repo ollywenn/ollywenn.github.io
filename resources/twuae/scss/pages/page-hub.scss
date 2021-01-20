@@ -9,20 +9,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: -$paddingDefault;
-    margin-left: -$paddingDefault;
-    @include bp(sm) {
-        margin-right: -$paddingSm;
-        margin-left: -$paddingSm;
-    }
-    @include bp(smd) {
-        margin-right: -$paddingSmd;
-        margin-left: -$paddingSmd;
-    }
-    @include bp(lg) {
-        margin-right: -$paddingLg;
-        margin-left: -$paddingLg;
-    }
+    // margin-right: -$paddingDefault;
+    // margin-left: -$paddingDefault;
+    // @include bp(sm) {
+    //     margin-right: -$paddingSm;
+    //     margin-left: -$paddingSm;
+    // }
+    // @include bp(smd) {
+    //     margin-right: -$paddingSmd;
+    //     margin-left: -$paddingSmd;
+    // }
+    // @include bp(lg) {
+    //     margin-right: -$paddingLg;
+    //     margin-left: -$paddingLg;
+    // }
 }
 .page--hub-list .article-hero {
     width: 100%;

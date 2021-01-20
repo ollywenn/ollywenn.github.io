@@ -1,15 +1,15 @@
-$btnPrimaryColor: $white;
 $btnPrimaryBgColor: $red1;
+$btnSecondaryBgColor: $white;
+$btnPrimaryColor: $white;
 $btnSecondaryColor: $red1;
 $btnSecondaryBorderColor: $red1;
-$btnSecondaryBgColor: $white;
 $btnFontFamily: $bodyFontFamily;
 $btnDisabledBgColor: $grey12;
 $btnDisabledColor: $white;
 
 .btn,
 %btn {
-    display: inline-block;
+    //display: inline-block;
     border: 0;
     cursor: pointer;
     text-align: center;
@@ -20,13 +20,17 @@ $btnDisabledColor: $white;
     @include animate;
     @extend .btn;
     background-color: $btnPrimaryBgColor;
-    padding: 9px 20px;
+    height: 36px;
+    padding: 4px 10px 0;
+    line-height: 9px;
     text-decoration: none;
     text-transform: uppercase;
     color: $btnPrimaryColor;
     font-size: rc(16);
     font-weight: $fontWeight-bold;
-    line-height: rc(25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn--secondary,
 %btn--secondary {
@@ -37,6 +41,10 @@ $btnDisabledColor: $white;
     background-color: $btnSecondaryBgColor;
     color: $btnSecondaryColor;
     font-weight: $fontWeight-bold;
+    padding: 3px 20px 0;
+    line-height: 8px;
+    height: 47px;
+    display: flex;
 }
 .btn--back {
     @extend .btn;
@@ -58,7 +66,7 @@ $btnDisabledColor: $white;
     content: '';
 }
 .btn--close {
-    display: block;
+    //display: block;
     position: absolute;
     top: 20px;
     right: $paddingDefault;
@@ -87,7 +95,7 @@ $btnDisabledColor: $white;
     @include bp(md) {
         padding-top: 9px;
         padding-bottom: 9px;
-        line-height: rc(15);
+        //line-height: rc(15);
     }
     @include bp(lg) {
         max-width: 230px;
@@ -101,6 +109,8 @@ $btnDisabledColor: $white;
 }
 .btn--partnerContent {
     @extend %btn--disabled;
+    height: 24px;
+    display: inline-block;
     font-size: rc(11);
     line-height: 1em;
     font-weight: $fontWeight-semibold;
@@ -137,7 +147,7 @@ $btnDisabledColor: $white;
 }
 .btn--submit {
     @extend %btn--primary;
-    display: block;
+    //display: block;
     width: 100%;
     max-width: 330px;
 }
@@ -146,11 +156,11 @@ $btnDisabledColor: $white;
 }
 .btn--quickFilterMenuSubmenuClose {
     @extend .btn;
-    display: block;
+    //display: block;
     position: relative;
     margin: auto;
     width: 60px;
-    height: 45px;
+    height: 47px;
     background-color: $white;
     text-indent: -9999px;
 }

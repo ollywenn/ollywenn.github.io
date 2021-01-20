@@ -127,12 +127,12 @@ $popupSignUpFooterLinkColor: $red1;
 }
 .btn--acknowledge {
     @extend %btn--primary;
-    display: block;
+    //display: block;
     width: 100%;
 }
 .btn--dismiss {
     @extend %btn--secondary;
-    display: block;
+    //display: block;
     width: 100%;
 }
 .modal-content p + .btn {

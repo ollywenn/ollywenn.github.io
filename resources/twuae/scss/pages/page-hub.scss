@@ -25,9 +25,22 @@
     // }
 }
 .page--hub-list .article-hero {
-    width: 100%;
     position: relative;
     margin-top: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    @include bp(sm) {
+        margin-left: -23px;
+        margin-right: -23px;
+    }
+    @include bp(smd) {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    @include bp(lg) {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 .page--hub-list .article-body {
     @include bp(smd) {

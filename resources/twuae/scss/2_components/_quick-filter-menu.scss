@@ -21,6 +21,12 @@
 .article-quickFilterMenu li {
     position: relative;
     list-style: none;
+
+    a {
+        height: 37px;
+        display: inline-block;
+        padding-top: 3px;
+    }
 }
 .article-quickFilterMenu .btn {
     background-color: $white;

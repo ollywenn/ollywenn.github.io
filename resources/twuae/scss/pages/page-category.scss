@@ -6,9 +6,6 @@
 
 .page--category .main-content {
     margin-top: 0;
-    @include bp(smd) {
-        margin-top: $marginDefault;
-    }
     @include bp(lg) {
         flex: 0 0 $fullCol;
         max-width: $fullCol;
@@ -46,7 +43,7 @@
     }
 }
 .page--category .btn--back + .article-title {
-    margin-top: 50px;
+    margin-top: 20px;
     @include bp(smd) {
         margin-top: 40px;
     }
@@ -99,7 +96,8 @@
     @include bp(smd) {
         margin-bottom: 9px;
         font-size: rc(20);
-        line-height: rc(32);
+        line-height: 24px;
+        display: inline-block;
     }
 }
 .page--category .main-content .article-loadMoreTarget {

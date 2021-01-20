@@ -93,8 +93,8 @@ $btnDisabledColor: $white;
     @extend %btn--secondary;
     @extend %btn--block;
     @include bp(md) {
-        padding-top: 9px;
-        padding-bottom: 9px;
+        // padding-top: 9px;
+        // padding-bottom: 9px;
         //line-height: rc(15);
     }
     @include bp(lg) {

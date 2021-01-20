@@ -67,6 +67,26 @@ $articleSnippetThumbBgColor: $white1;
     text-decoration: none;
     font-weight: $fontWeight-semibold;
     line-height: rc(21);
+
+    &.--closed {
+        position: relative;
+        padding-top: 18px;
+        color: #9e9e9e;
+        &:before {
+            content: 'CLOSED';
+            position: absolute;
+            top: -3px;
+            left: 0;
+            color: #e21235;
+            font-size: 12px;
+        }
+        @include bp(smd) {
+            padding-top: 20px;
+            &:before {
+                font-size: 14px;
+            }
+        }
+    }
 }
 .articleSnippet-title a {
     text-decoration: inherit;

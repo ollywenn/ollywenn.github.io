@@ -11,7 +11,8 @@
     }
 }
 .section--cta .btn {
-    display: block;
+    //display: block;
+    padding: 2px 10px 0;
     @include bp(smd) {
         margin-right: auto;
         margin-left: auto;

@@ -6,6 +6,7 @@
 
 .page--category .main-content {
     margin-top: 0;
+
     @include bp(lg) {
         flex: 0 0 $fullCol;
         max-width: $fullCol;
@@ -27,8 +28,8 @@
 .page--category .sidebar {
     margin-bottom: 50px;
     @include bp(lg) {
-        margin-top: 0;
-        margin-left: 32px;
+        margin-top: 15px;
+        margin-left: 15px;
     }
 }
 .page--category .main-content + .main-content .article:first-of-type {
@@ -51,26 +52,125 @@
         margin-top: 28px;
     }
 }
-.page--category .article .article-body {
-    @include bp(smd) {
+.page--category .main-content {
+    .articleSnippet-thumb,
+    .articleSnippet-content {
+        max-width: 50%;
+        .articleSnippet-title {
+            margin-bottom: 0;
+        }
+    }
+    .articleSnippet-thumb {
+        flex: 0 1 auto;
+        img {
+            max-height: 86px;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .articleSnippet-content {
+        flex: 1;
+    }
+    .article .article-body {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        .articleSnippet-item {
+            margin-top: 10px;
+            @include bp(smd) {
+                flex-wrap: nowrap;
+                flex-direction: column;
+                border: 0;
+                padding-top: 0;
+                margin-top: 15px;
+                max-width: calc(100% / 2 - 8px);
+                margin-right: 15px;
+                &:nth-child(2n + 2) {
+                    margin-right: 0;
+                }
+                .articleSnippet-thumb,
+                .articleSnippet-content {
+                    max-width: 100%;
+                }
+                .articleSnippet-content {
+                    display: flex;
+                    flex-direction: column;
+                    h3 {
+                        flex: 1;
+                    }
+                }
+                .articleSnippet-thumb {
+                    img {
+                        max-height: 153px;
+                    }
+                }
+            }
+            @include bp(lg) {
+                border: 0;
+                padding-top: 0;
+                margin-top: 15px;
+                max-width: calc(100% / 3 - 10px);
+                margin-right: 15px;
+                &:nth-child(2n + 2) {
+                    margin-right: 15px;
+                }
+                &:nth-child(3n + 3) {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }
-.page--category .main-content .articleSnippet-item {
+
+.page--category .main-content.--last .article .article-body {
+    padding-top: 0;
+    .articleSnippet-item {
+        @include bp(smd) {
+            margin-top: 15px;
+            max-width: calc(100% / 2 - 8px);
+            margin-right: 15px;
+            &:nth-child(2n + 2) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.page--category .main-content.--last {
+    margin-top: 10px;
     @include bp(smd) {
-        flex: 0 0 $twoColsSmd;
-        margin-bottom: $marginDefault;
-        border: 0;
-        padding-top: 0;
-        max-width: $twoColsSmd;
-        align-self: flex-start;
+        margin-top: 0;
+    }
+}
+
+.page--category .main-content .articleSnippet-item--fullImg {
+    .articleSnippet-thumb {
+        margin-right: 0;
+        max-width: 100%;
+        img {
+            @media (max-width: 666px) {
+                max-height: none;
+            }
+        }
+    }
+    .articleSnippet-content {
+        max-width: 100%;
+    }
+}
+
+.page--category .main-content .articleSnippet-item {
+    align-self: stretch;
+    @include bp(smd) {
+        // flex: 0 0 $twoColsSmd;
+        // margin-bottom: $marginDefault;
+        // border: 0;
+        // padding-top: 0;
+        // max-width: $twoColsSmd;
+        // align-self: flex-start;
     }
     @include bp(lg) {
         // TODO: the sidebar defined the column width of all cols
-        flex-basis: 300px; //TODO: review as it was hardcoded due to issues on latest round of designs
-        max-width: 300px; //TODO: review as it was hardcoded due to issues on latest round of designs
+        //flex-basis: 300px; //TODO: review as it was hardcoded due to issues on latest round of designs
+        //max-width: 300px; //TODO: review as it was hardcoded due to issues on latest round of designs
     }
 }
 .page--category .main-content .articleSnippet-item + .articleSnippet-item {
@@ -81,14 +181,14 @@
 .page--category .main-content .articleSnippet-item .articleSnippet-thumb,
 .page--category .main-content .articleSnippet-item .articleSnippet-content {
     @include bp(smd) {
-        flex-basis: $fullCol;
-        align-self: flex-start;
-        max-width: $fullCol;
+        // flex-basis: $fullCol;
+        // align-self: flex-start;
+        // max-width: $fullCol;
     }
 }
 .page--category .main-content .articleSnippet-item .articleSnippet-content {
     @include bp(smd) {
-        margin-top: $marginHalfDefault;
+        //margin-top: $marginHalfDefault;
     }
 }
 .page--category .main-content .articleSnippet-item .articleSnippet-title {
@@ -97,7 +197,7 @@
         margin-bottom: 9px;
         font-size: rc(20);
         line-height: 24px;
-        display: inline-block;
+        //display: inline-block;
     }
 }
 .page--category .main-content .article-loadMoreTarget {
@@ -106,21 +206,21 @@
 }
 .page--category .article-loadMoreTarget .articleSnippet-item:first-of-type {
     @include bp(md) {
-        margin-top: $marginDefault;
-        border: 0;
-        padding-top: 0;
+        // margin-top: $marginDefault;
+        // border: 0;
+        // padding-top: 0;
     }
 }
 .page--category .main-content .article-metadata {
     display: none;
     @include bp(smd) {
         display: block;
-        flex: 0 0 $fullCol;
+        //flex: 0 0 $fullCol;
         max-width: $fullCol;
     }
 }
 .page--category .main-content .btn--loadMore {
     @include bp(md) {
-        max-width: 300px; //TODO: review as it was hardcoded due to issues on latest round of designs
+        //max-width: 300px; //TODO: review as it was hardcoded due to issues on latest round of designs
     }
 }

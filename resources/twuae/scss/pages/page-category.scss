@@ -63,7 +63,7 @@
     .articleSnippet-thumb {
         flex: 0 1 auto;
         img {
-            max-height: 86px;
+            //max-height: 86px;
             object-fit: cover;
             width: 100%;
         }
@@ -98,11 +98,11 @@
                         flex: 1;
                     }
                 }
-                .articleSnippet-thumb {
-                    img {
-                        max-height: 153px;
-                    }
-                }
+                // .articleSnippet-thumb {
+                //     img {
+                //         max-height: 153px;
+                //     }
+                // }
             }
             @include bp(lg) {
                 border: 0;

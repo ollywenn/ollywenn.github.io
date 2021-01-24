@@ -18,5 +18,14 @@
             margin: auto;
             width: 728px;
         }
+
+        @media (max-width: 666px) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 90px;
+            background: white;
+        }
     }
 }

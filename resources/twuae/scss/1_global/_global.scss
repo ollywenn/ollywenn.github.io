@@ -10,6 +10,13 @@ body {
     position: relative;
     color: $bodyDefaultColor;
     font-family: $bodyFontFamily;
+    @media (max-width: 666px) {
+        padding-top: 90px;
+
+        .header-wrapper {
+            top: 90px;
+        }
+    }
 }
 body.no-scroll,
 body.search-is-active {
@@ -113,4 +120,13 @@ main,
 
 .main-segment {
     margin-top: 36px;
+}
+
+.--noFlex {
+    .articleSnippet-item {
+        flex-direction: row;
+    }
+    .articleSnippet-title {
+        flex: none;
+    }
 }

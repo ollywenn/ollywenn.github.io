@@ -15,6 +15,7 @@ export default function initSearchBar() {
   const $searchContainer = $body.querySelector('.js-search-container');
   const $topSearch = $searchContainer.querySelector('.js-search-input');
   const $btnCloseSearch = $searchContainer.querySelector('.js-close-search');
+  const $btnCloseMenu = document.querySelectorAll('.subMenu .js-close-menu');
   const $performSearch = $searchContainer.querySelector('.js-btn-search');
   const mainNav = document.querySelector('.js-main-nav');
   const toggleMenuButton = document.querySelector('.js-btn-toggle-menu');
@@ -40,6 +41,14 @@ export default function initSearchBar() {
       window.history.replaceState({}, document.title, window.location.pathname);
     }
   };
+
+  const closeSearch = () => {
+    $('.js-menu-parent').removeClass('is-active');
+  };
+
+  for (let i = 0; i < $btnCloseMenu.length; i++) {
+    $btnCloseMenu[i].addEventListener('click', closeSearch);
+  }
 
   $searchToggleButton.addEventListener('click', toggleSearch);
   $searchToggleButtonSticky.addEventListener('click', toggleSearch);

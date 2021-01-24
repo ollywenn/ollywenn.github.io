@@ -109,6 +109,11 @@
         margin-top: $gutterLg;
         max-width: $threeColsLg;
     }
+    @media (max-width: 666px) {
+        &:nth-child(1n + 7) {
+            display: none;
+        }
+    }
 }
 .section--destinations .articleSnippet-item .articleSnippet-thumb,
 .section--destinations .articleSnippet-item .articleSnippet-content {

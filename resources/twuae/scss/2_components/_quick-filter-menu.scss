@@ -85,6 +85,7 @@
     }
 }
 .article-quickFilterMenuSubmenu {
+    overflow: auto;
     @include animate;
     position: fixed;
     bottom: 0;
@@ -95,7 +96,7 @@
     padding: 0 $paddingDefault $paddingDefault;
     width: 100%;
     max-height: calc(100vh - 94px);
-    overflow: scroll;
+    //overflow: scroll;
     @include bp(sm) {
         padding-right: $paddingSm;
         padding-bottom: $paddingSm;

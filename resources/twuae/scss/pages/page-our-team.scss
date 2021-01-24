@@ -14,23 +14,51 @@
 .article--ourTeam .ourTeam-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    //justify-content: space-between;
     margin-top: 40px;
+    @media (max-width: 520px) {
+        justify-content: center;
+    }
 }
 .article--ourTeam .authorSnippet {
     display: none;
-    flex: 0 0 $twoCols;
+    //flex: 0 0 $twoCols;
     margin-bottom: $gutterDefault;
-    max-width: $twoCols;
+    //max-width: $twoCols;
     @include bp(smd) {
-        flex-basis: $oneThirdColSmd;
+        //flex-basis: $oneThirdColSmd;
         margin-bottom: $gutterSmd;
-        max-width: $oneThirdColSmd;
+        //max-width: $oneThirdColSmd;
     }
     @include bp(lg) {
-        flex-basis: $fourColsLg;
+        //flex-basis: $fourColsLg;
         margin-bottom: $gutterLg;
-        max-width: $fourColsLg;
+        //max-width: $fourColsLg;
+    }
+
+    max-width: calc(100% / 4 - 12px);
+    margin-right: 15px;
+    &:nth-child(4n + 4) {
+        margin-right: 0px;
+    }
+
+    @media (max-width: 666px) {
+        max-width: calc(100% / 3 - 10px);
+        &:nth-child(4n + 4) {
+            margin-right: 15px;
+        }
+        &:nth-child(3n + 3) {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 520px) {
+        max-width: 100%;
+        margin-right: 0;
+        &:nth-child(3n + 3),
+        &:nth-child(4n + 4) {
+            margin-right: 0;
+        }
     }
 }
 .article--ourTeam .authorSnippet.is-active {

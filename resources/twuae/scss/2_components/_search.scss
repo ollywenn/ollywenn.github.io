@@ -29,6 +29,23 @@ $searchLinkColor: $red1;
         }
     }
 
+    & > .wrapper {
+        position: relative;
+        .btn--close {
+            top: -39px;
+            right: 29px;
+            @media (max-width: 1023px) {
+                top: -19px;
+            }
+            @media (max-width: 666px) {
+                right: 22px;
+            }
+            @media (max-width: 374px) {
+                right: 8px;
+            }
+        }
+    }
+
     @media (max-width: 1023px) {
         padding: 40px 0 0;
         top: 184px;

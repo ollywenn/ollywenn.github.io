@@ -108,6 +108,7 @@ $btnDisabledColor: $white;
     color: $btnDisabledColor;
 }
 .btn--partnerContent {
+    align-self: flex-start;
     @extend %btn--disabled;
     height: 24px;
     display: inline-block;
@@ -115,6 +116,9 @@ $btnDisabledColor: $white;
     line-height: 1em;
     font-weight: $fontWeight-semibold;
     padding: 8px 8px 5px;
+    &.no-link {
+        pointer-events: none;
+    }
 }
 .btn--partnerContent:hover {
     color: $btnDisabledColor;

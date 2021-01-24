@@ -80,6 +80,20 @@ $mainNavButtonPadding: 15px;
         }
     }
 
+    .btn.btn--close.js-close-menu {
+        position: absolute;
+        right: 29px;
+        top: 7px;
+        width: 25px;
+        padding: 0;
+        @media (min-width: 1024px) {
+            display: none;
+        } //works until hover kicks in, todo
+        @media (max-width: 979px) {
+            display: none;
+        }
+    }
+
     @media (max-width: 1023px) {
         position: relative;
         top: -7px;
@@ -206,12 +220,12 @@ $mainNavButtonPadding: 15px;
     @include bp(lg) {
         line-height: rc(50);
     }
-    @media (max-width: 1023px) {
-        padding: 0 12px;
-    }
-    @media (max-width: 979px) {
-        padding: 0;
-    }
+    // @media (max-width: 1023px) {
+    //     padding: 0 12px;
+    // }
+    // @media (max-width: 979px) {
+    //     padding: 0;
+    // }
 }
 .mainNav > ul > li > button {
     @include bp(xmd) {
@@ -234,7 +248,7 @@ $mainNavButtonPadding: 15px;
     font-size: rc(22);
     @include bp(smd) {
         padding-top: 7.5px;
-        padding-bottom: 7.5px;
+        padding-bottom: 8.5px;
         font-size: rc(14);
     }
     @include bp(xmd) {
@@ -313,7 +327,7 @@ $mainNavButtonPadding: 15px;
 .mainNav .menuParentItem button::before {
     @include animate;
     position: absolute;
-    top: 50%;
+    top: 46%;
     right: 0;
     transform: translateY(-50%);
     background: image-url('/public/twuae/img/i-arrow-red.svg') left center no-repeat;
@@ -323,6 +337,9 @@ $mainNavButtonPadding: 15px;
     content: '';
     @include bp(xmd) {
         display: none;
+    }
+    @media (min-width: 666px) {
+        top: 56%;
     }
 }
 .mainNav .menuParentItem.is-active button::before {
@@ -358,8 +375,11 @@ $mainNavButtonPadding: 15px;
     height: 0;
     pointer-events: none;
     //width: calc(100% + 2px);
-    @media (max-width: 1023px) {
+    @media (min-width: 979px) {
         border-bottom: $grey5 1px solid;
+    }
+    @media (min-width: 1023px) {
+        border-bottom: none;
     }
 
     & > ul {
@@ -405,9 +425,25 @@ $mainNavButtonPadding: 15px;
         min-height: 491px;
     }
     @media (max-width: 979px) {
-        top: 39px;
+        top: 42px;
         left: 51%;
         min-height: inherit;
+    }
+
+    &.slim {
+        @media (min-width: 979px) {
+            left: auto;
+            right: auto;
+            min-height: inherit;
+            border-bottom: $grey5 1px solid;
+            & > ul {
+                padding-bottom: 15px;
+                border-bottom: none;
+                li {
+                    display: block;
+                }
+            }
+        }
     }
 }
 .mainNav .is-current > .subMenu {
@@ -420,14 +456,14 @@ $mainNavButtonPadding: 15px;
     transform: translateY(8px);
     opacity: 1;
     pointer-events: initial;
-    padding-top: 6px;
+    //padding-top: 6px;
     height: auto;
     @include bp(smd) {
-        padding-top: 0;
+        //padding-top: 0;
     }
     @include bp(xmd) {
         opacity: 1;
-        padding-top: 22px;
+        //padding-top: 22px;
         pointer-events: initial;
     }
 }
@@ -547,7 +583,10 @@ body {
             }
         }
         .subMenu {
-            left: -80px;
+            @media (min-width: 979px) {
+                left: -80px;
+            }
+
             // border-bottom: #9e9e9e 1px solid;
             //width: calc(100% + 3.25em);
             // @media (max-width: 1023px) {

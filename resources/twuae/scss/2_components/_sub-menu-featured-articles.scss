@@ -37,7 +37,8 @@
     @include animate;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    //justify-content: space-between;
     flex: 0 0 $threeColsLg;
     margin-bottom: 35px;
     max-width: $threeColsLg;
@@ -48,20 +49,21 @@
     padding: 0;
 }
 .subMenu-featuredArticles .articleSnippet-item > a.articleSnippet-thumb {
-    flex: 0 0 $fullCol;
+    //flex: 0 0 $fullCol;
     max-width: $fullCol;
 }
 .subMenu-featuredArticles .articleSnippet-content {
-    flex: 0 0 $fullCol;
-    margin-top: 15px;
+    //flex: 0 0 $fullCol;
+    margin-top: 10px;
     max-width: $fullCol;
+    flex: 1;
 }
 .subMenu-featuredArticles .articleSnippet-item .articleSnippet-title,
 .subMenu-featuredArticles .articleSnippet-item .articleSnippet-title a {
     white-space: inherit;
 }
 .subMenu-featuredArticles .articleSnippet-metaData {
-    flex: 0 0 100%;
+    //flex: 0 0 100%;
     margin-top: 3px;
     line-height: rc(17);
 }

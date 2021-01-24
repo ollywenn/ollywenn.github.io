@@ -17,6 +17,7 @@ $mostPopBtnColorActive: $grey2;
     min-height: 86px;
     color: $mostPopBtnColor;
     font-size: rc(14);
+    padding-top: 9px;
 }
 .section--mostPopular .btn.is-active {
     background-color: $mostPopBtnBgColorActive;
@@ -44,6 +45,7 @@ $mostPopBtnColorActive: $grey2;
     padding-left: 0;
     list-style: none;
     counter-reset: li;
+    margin: 0;
 }
 .section--mostPopular .articleSnippet-list.is-active {
     display: block;
@@ -61,7 +63,7 @@ $mostPopBtnColorActive: $grey2;
     left: 0;
     opacity: 0.1;
     width: 33px; //magic number defined by the width of the longest character (length)
-    text-align: right; //essential to align the dots to the right based on the magic number (width)
+    text-align: left; //essential to align the dots to the right based on the magic number (width)
     font-family: $specialFont;
     font-size: rc(37);
     line-height: 1em;

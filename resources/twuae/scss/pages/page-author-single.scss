@@ -44,7 +44,7 @@
 .author-articles .articleSnippet-thumb,
 .author-articles .articleSnippet-content {
     @include bp(smd) {
-        flex-basis: $fullCol;
+        //flex-basis: $fullCol;
         max-width: $fullCol;
     }
 }

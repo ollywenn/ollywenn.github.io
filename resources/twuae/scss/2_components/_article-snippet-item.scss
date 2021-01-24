@@ -6,11 +6,11 @@ $articleSnippetThumbBgColor: $white1;
     display: flex;
     flex-wrap: wrap;
     //justify-content: space-between;
-    align-self: flex-start;
-    @media (max-width: 666px) {
-        .articleSnippet-thumb {
-            margin-right: 10px;
-        }
+    //align-self: flex-start;
+    align-content: flex-start;
+
+    @include bp(smd) {
+        flex-direction: column; //here
     }
 }
 .articleSnippet-item--fullBg {
@@ -19,7 +19,28 @@ $articleSnippetThumbBgColor: $white1;
     .articleSnippet-thumb {
         margin-right: 0;
     }
+    &:first-child {
+        @media (max-width: 666px) {
+            .articleSnippet-content {
+                margin-left: 0;
+                margin-top: 15px;
+                padding: 0 15px !important;
+            }
+        }
+    }
 }
+
+.articleSnippet-item--fullImg {
+    &:first-child {
+        @media (max-width: 666px) {
+            .articleSnippet-content {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
 .articleSnippet-thumb {
     display: block;
     position: relative;
@@ -57,6 +78,9 @@ $articleSnippetThumbBgColor: $white1;
     position: relative;
     z-index: 2;
     margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .articleSnippet-img,
 .articleSnippet-img img {
@@ -66,7 +90,8 @@ $articleSnippetThumbBgColor: $white1;
     @extend %body;
     text-decoration: none;
     font-weight: $fontWeight-semibold;
-    line-height: rc(21);
+    line-height: 19px;
+    flex: 1; //here
 
     &.--closed {
         position: relative;
@@ -103,6 +128,8 @@ $articleSnippetThumbBgColor: $white1;
 }
 .articleSnippet-content {
     @include fixPadding;
+    display: flex;
+    flex-direction: column;
     //flex: 0 0 100%;
     max-width: 100%;
     h1,
@@ -134,6 +161,9 @@ $articleSnippetThumbBgColor: $white1;
         @media (max-width: 666px) {
             display: none;
         }
+    }
+    @media (max-width: 666px) {
+        margin-left: 10px;
     }
 }
 .articleSnippet-category {

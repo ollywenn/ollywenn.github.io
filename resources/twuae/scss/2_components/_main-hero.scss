@@ -51,6 +51,13 @@
         flex-basis: $fullCol;
         max-width: $fullCol;
     }
+    .articleSnippet-item {
+        @media (max-width: 666px) {
+            &:nth-child(1n + 6) {
+                display: none;
+            }
+        }
+    }
 }
 .mainHero-col1 .articleSnippet-item:nth-of-type(1) {
     display: flex;
@@ -106,6 +113,10 @@
         order: 1;
         margin-top: 0;
         max-width: $oneThirdColLg;
+    }
+
+    @media (max-width: 666px) {
+        margin-left: 0;
     }
 }
 .mainHero-col1 .articleSnippet-item:nth-of-type(1) .articleSnippet-content p {

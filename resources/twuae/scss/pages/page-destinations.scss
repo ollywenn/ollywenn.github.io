@@ -116,7 +116,7 @@
     width: 100%;
     max-width: $fullCol;
     @include bp(smd) {
-        bottom: 50%;
+        bottom: 150px;
         left: $paddingSmd;
         flex-basis: 320px;
         transform: translateY(50%);

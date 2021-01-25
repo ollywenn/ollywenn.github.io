@@ -122,6 +122,9 @@
     flex-basis: $fullCol;
     width: $fullCol;
     max-width: $fullCol;
+    @media (max-width: 666px) {
+        margin-left: 0;
+    }
 }
 .section--highlights .articleSnippet-item--fullBg:nth-of-type(1) .articleSnippet-content {
     @include bp(smd) {

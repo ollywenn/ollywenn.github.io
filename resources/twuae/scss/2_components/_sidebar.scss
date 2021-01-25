@@ -23,6 +23,16 @@ $sidebarWidgetBgColor: $white2;
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    .sidebarWidget-title {
+        line-height: 17px;
+        transform: translateY(0);
+    }
+    .sidebarWidget-header--icon {
+        padding-bottom: 17px;
+    }
+    .sidebar-widget {
+        padding-top: 20px;
+    }
 }
 .sidebar .section,
 .sidebar--extra .section {
@@ -132,5 +142,11 @@ $sidebarWidgetBgColor: $white2;
     @include bp(lg) {
         flex-basis: $fullCol;
         max-width: $fullCol;
+    }
+}
+
+.sidebarWidget-footer {
+    a {
+        height: 44px !important;
     }
 }

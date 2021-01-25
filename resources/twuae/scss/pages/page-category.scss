@@ -33,7 +33,7 @@
     }
 }
 .page--category .main-content + .main-content .article:first-of-type {
-    border-top: $white1 1px solid;
+    border-top: #d9d9d9 1px solid;
     @include bp(smd) {
         border-top: 0;
     }

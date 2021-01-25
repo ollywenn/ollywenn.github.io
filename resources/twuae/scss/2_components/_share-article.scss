@@ -13,6 +13,7 @@
 }
 .section--shareArticle .section-title {
     flex: 1 1 100%;
+    height: 17px;
     padding-right: 10px;
     max-width: 100%;
     @include bp(570px) {

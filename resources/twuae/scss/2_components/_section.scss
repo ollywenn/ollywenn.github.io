@@ -21,6 +21,8 @@
 .section-titleIconWrapper {
     position: relative;
     padding-right: 21px;
+    height: 16px;
+    display: inline-block;
 }
 .section-titleIconWrapper::after {
     position: absolute;

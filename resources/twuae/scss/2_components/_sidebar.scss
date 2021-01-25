@@ -24,14 +24,17 @@ $sidebarWidgetBgColor: $white2;
         justify-content: space-between;
     }
     .sidebarWidget-title {
-        line-height: 17px;
+        line-height: 20px;
         transform: translateY(0);
     }
     .sidebarWidget-header--icon {
         padding-bottom: 17px;
     }
     .sidebar-widget {
-        padding-top: 20px;
+        padding-top: 15px;
+        @media (max-width: 666px) {
+            padding-top: 15px;
+        }
     }
 }
 .sidebar .section,
@@ -60,14 +63,14 @@ $sidebarWidgetBgColor: $white2;
     }
 }
 .sidebar .section + .section {
-    margin-top: 40px;
+    margin-top: 36px;
 }
 .sidebar .section + .section:nth-of-type(2) {
     @include bp(smd) {
         margin-top: 0;
     }
     @include bp(lg) {
-        margin-top: 40px;
+        margin-top: 36px;
     }
 }
 .sidebar-widget {
@@ -79,8 +82,8 @@ $sidebarWidgetBgColor: $white2;
     padding: 30px 24px;
 }
 .sidebarWidget-header--doubleTitle {
-    padding-top: 14px;
-    padding-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 4px;
     @include bp(lg) {
         padding-left: 14px;
         padding-right: 14px;
@@ -103,7 +106,7 @@ $sidebarWidgetBgColor: $white2;
     @extend %body;
     padding: 30px 24px;
     @include bp(lg) {
-        padding: 14px;
+        padding: 14px 25px 21px;
     }
 }
 .sidebarWidget-header--icon + .sidebarWidget-content {

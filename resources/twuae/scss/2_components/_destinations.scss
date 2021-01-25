@@ -17,7 +17,7 @@
         max-width: $sidebarWidthNarrow;
     }
 }
-.main-segment--destinations .section--sponsoredContent {
+.section--sponsoredContent {
     display: none;
     @include bp(smd) {
         display: block;
@@ -25,14 +25,14 @@
         max-width: 100%;
     }
 }
-.main-segment--destinations .section--sponsoredContent .articleSnippet-list {
+.section--sponsoredContent .articleSnippet-list {
     @include bp(smd) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 }
-.main-segment--destinations .section--sponsoredContent .articleSnippet-item {
+.section--sponsoredContent .articleSnippet-item {
     @include bp(smd) {
         flex: 0 0 calc(50% - 20px);
         margin-top: 0;
@@ -48,12 +48,12 @@
         max-width: 100%;
     }
 }
-.main-segment--destinations .section--sponsoredContent .articleSnippet-item + .articleSnippet-item {
+.section--sponsoredContent .articleSnippet-item + .articleSnippet-item {
     @include bp(sm) {
         margin-top: 0;
     }
 }
-.main-segment--destinations .section--sponsoredContent .articleSnippet-item:nth-last-child(-n + 2) {
+.section--sponsoredContent .articleSnippet-item:nth-last-child(-n + 2) {
     @include bp(sm) {
         margin-bottom: 0;
     }
@@ -61,18 +61,18 @@
         margin-bottom: $marginDefault;
     }
 }
-.main-segment--destinations .section--sponsoredContent .articleSnippet-item:last-of-type {
+.section--sponsoredContent .articleSnippet-item:last-of-type {
     @include bp(lg) {
         margin-bottom: 0;
     }
 }
-.main-segment--destinations .section--sponsoredContent .articleSnippet-thumb {
+.section--sponsoredContent .articleSnippet-thumb {
     @include bp(lg) {
         flex-basis: 100px;
         max-width: 100px;
     }
 }
-.main-segment--destinations .section--sponsoredContent .articleSnippet-content {
+.section--sponsoredContent .articleSnippet-content {
     @include bp(lg) {
         flex-basis: calc(100% - 115px);
         max-width: calc(100% - 115px);
@@ -150,6 +150,11 @@
         margin-right: 0;
         margin-left: 0;
         max-width: $fullCol;
+    }
+    @media (max-width: 666px) {
+        .articleSnippet-content {
+            margin-left: 0;
+        }
     }
 }
 .section--destinations .articleSnippet-item:nth-of-type(1) .articleSnippet-title {

@@ -13,13 +13,18 @@ Swiper.use([Autoplay]);
 (function($) {
   'use strict';
   // include html snippet
-  function includeHTML() {
+  var includestack = 0;
+
+  function includeHTML(onload) {
+    /// quick hack to pull in "included" compoents. once complete, called includesDone
     var z, i, elmnt, file, xhttp;
     z = document.getElementsByTagName('*');
+
     for (i = 0; i < z.length; i++) {
       elmnt = z[i];
       file = elmnt.getAttribute('include');
       if (file) {
+        includestack++;
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4) {
@@ -30,7 +35,8 @@ Swiper.use([Autoplay]);
               elmnt.innerHTML = 'Page not found.';
             }
             elmnt.removeAttribute('include');
-            includeHTML();
+            includestack--;
+            includeHTML(onload);
           }
         };
         xhttp.open('GET', file, true);
@@ -38,71 +44,76 @@ Swiper.use([Autoplay]);
         return;
       }
     }
+    if (includestack == 0) onload();
   }
 
-  $('.js-btn-latest-articles').on('click', function btnLatestArticles() {
-    const $this = $(this);
-    const target = $this.attr('data-target');
-    // debugger;
-    $this
-      .addClass('is-active')
-      .siblings('.btn')
-      .removeClass('is-active');
-
-    $('.' + target)
-      .addClass('is-active')
-      .siblings('.js-latest-articles-list.is-active')
-      .removeClass('is-active');
-  });
-
-  MicroModal.init({
-    onShow: () => {
-      $('body').addClass('no-scroll');
-    },
-    onClose: () => {
-      $('body').removeClass('no-scroll');
-    },
-    disableScroll: true
-  });
-
-  if (document.querySelector('.form')) {
-    attachEventsOnFormElements('.form input, .form textarea');
-  }
-
-  $(window).on('resize', function resizeWindowHappening() {
-    //TODO: revisit this, maybe use rxjs or MutationObserver?
-    fixFormFieldHeight('.form input, .form textarea');
-  });
-
-  window.Popup = new JmgPopup({ id: 'global-popup' });
-
-  $(window).on('scroll', function() {
-    if (!globalState.scrollPause) {
-      globalState.scrollPause = true;
-      setTimeout(function() {
-        globalState.loadableImages = imageLazyLoader(globalState.loadableImages);
-        globalState.scrollPause = false;
-      }, 125);
-    }
-  });
-  globalState.loadableImages = imageLazyLoader(document.querySelectorAll('[data-bg]'));
-  includeHTML();
   window.addEventListener('load', function() {
-    init();
-    initSearchBar();
-    const mySwiper = new Swiper('.swiper-container', {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      autoplay: { delay: 8000, disableOnInteraction: false },
-      breakpoints: {
-        375: {
-          loop: true,
-          slidesPerView: 3,
-          spaceBetween: 40,
-          autoplay: { delay: 8000, disableOnInteraction: false }
-        }
+    includeHTML(function() {
+      /// quick hack to pull in "included" compoents. once complete, called includesDone
+
+      $('.js-btn-latest-articles').on('click', function btnLatestArticles() {
+        const $this = $(this);
+        const target = $this.attr('data-target');
+        // debugger;
+        $this
+          .addClass('is-active')
+          .siblings('.btn')
+          .removeClass('is-active');
+
+        $('.' + target)
+          .addClass('is-active')
+          .siblings('.js-latest-articles-list.is-active')
+          .removeClass('is-active');
+      });
+
+      MicroModal.init({
+        onShow: () => {
+          $('body').addClass('no-scroll');
+        },
+        onClose: () => {
+          $('body').removeClass('no-scroll');
+        },
+        disableScroll: true
+      });
+
+      if (document.querySelector('.form')) {
+        attachEventsOnFormElements('.form input, .form textarea');
       }
+
+      $(window).on('resize', function resizeWindowHappening() {
+        //TODO: revisit this, maybe use rxjs or MutationObserver?
+        fixFormFieldHeight('.form input, .form textarea');
+      });
+
+      window.Popup = new JmgPopup({ id: 'global-popup' });
+
+      $(window).on('scroll', function() {
+        if (!globalState.scrollPause) {
+          globalState.scrollPause = true;
+          setTimeout(function() {
+            globalState.loadableImages = imageLazyLoader(globalState.loadableImages);
+            globalState.scrollPause = false;
+          }, 125);
+        }
+      });
+      globalState.loadableImages = imageLazyLoader(document.querySelectorAll('[data-bg]'));
+
+      init();
+      initSearchBar();
+      const mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: { delay: 8000, disableOnInteraction: false },
+        breakpoints: {
+          375: {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 40,
+            autoplay: { delay: 8000, disableOnInteraction: false }
+          }
+        }
+      });
     });
   });
 })(jQuery);

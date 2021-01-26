@@ -47,6 +47,8 @@ $latestEditionColWidth: 330px;
 }
 .page--latest-edition .article-body .btn {
     display: block;
+    height: 44px;
+    padding-top: 11px;
     max-width: $latestEditionColWidth;
     @media (max-width: 768px) {
         width: 100%;
@@ -55,6 +57,7 @@ $latestEditionColWidth: 330px;
 }
 .page--latest-edition .article-linksList {
     border: 0;
+    border-bottom: #d9d9d9 1px solid;
 }
 .page--latest-edition .article-hero {
     @include bp(md) {
@@ -64,6 +67,8 @@ $latestEditionColWidth: 330px;
     }
     @media (max-width: 768px) {
         order: 1;
+        margin: 20px auto;
+        max-width: 330px;
     }
 }
 .page--latest-edition .article-hero img {
@@ -73,6 +78,11 @@ $latestEditionColWidth: 330px;
     }
 }
 .page--latest-edition .article-body--digitalVersionContent {
+    a.btn--primary {
+        &:hover {
+            color: white;
+        }
+    }
     @include bp(md) {
         display: flex;
         flex-direction: column;
@@ -82,7 +92,7 @@ $latestEditionColWidth: 330px;
         }
         a {
             margin-top: 25px;
-            border-radius: 4px;
+            //border-radius: 4px;
         }
         flex: 0 0 $latestEditionColWidth;
         max-width: $latestEditionColWidth;
@@ -98,12 +108,17 @@ $latestEditionColWidth: 330px;
         align-items: flex-end;
         margin-top: 20px;
         padding-top: 0;
+        a {
+            margin-top: 0;
+        }
 
         .article-linksList {
             width: 100%;
-
+            a {
+                background-position-y: 48%;
+            }
             li {
-                border-bottom: #d9d9d9 1px solid;
+                border-top: #d9d9d9 1px solid;
             }
         }
     }
@@ -118,6 +133,9 @@ $latestEditionColWidth: 330px;
         padding-top: 0;
         max-width: $fullCol;
     }
+    @media (max-width: 767px) {
+        margin-top: 5px;
+    }
 }
 .page--latest-edition .article-body--ctas .article-bodySection {
     @include bp(md) {
@@ -126,5 +144,8 @@ $latestEditionColWidth: 330px;
         border: 0;
         padding-top: 0;
         max-width: $latestEditionColWidth;
+    }
+    @media (max-width: 767px) {
+        border: 0;
     }
 }

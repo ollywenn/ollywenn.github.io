@@ -22,3 +22,11 @@
 .page--editions-archive .article-linksList {
     border-top: 0;
 }
+
+.article-linksList {
+    li {
+        a {
+            background-position-y: 47%;
+        }
+    }
+}

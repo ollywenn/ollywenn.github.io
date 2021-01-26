@@ -1,0 +1,37 @@
+.article {
+    .article-brands {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        .article-brand {
+            margin-right: 30px;
+            margin-bottom: 55px;
+            width: calc(50% - 15px);
+            img {
+                margin-bottom: 23px;
+                width: 100%;
+            }
+            &:nth-child(2n + 2) {
+                margin-right: 0;
+            }
+            h2 {
+                font-size: 22px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            a {
+                text-decoration: none;
+            }
+            p {
+                margin: 0;
+            }
+            @media (max-width: 666px) {
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+        @media (max-width: 666px) {
+            margin-top: 20px;
+        }
+    }
+}

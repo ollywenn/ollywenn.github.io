@@ -11,10 +11,10 @@ body {
     color: $bodyDefaultColor;
     font-family: $bodyFontFamily;
     @media (max-width: 666px) {
-        padding-top: 90px;
+        padding-top: 89px;
 
         .header-wrapper {
-            top: 90px;
+            top: 89px;
         }
     }
 }

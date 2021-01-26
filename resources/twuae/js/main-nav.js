@@ -17,12 +17,14 @@ export default function init() {
   let mainHeaderHeight = $mainHeader.outerHeight();
   let mainNavOffsetTop = $mainNav.offset().top;
 
-  //detect when main nav hits top of screen
-  const stickyElm = document.querySelector('.js-main-nav');
-  const observer = new IntersectionObserver(([e]) => bodyDom.classList.toggle('is-stuck', e.intersectionRatio < 1), {
-    threshold: [1]
-  });
-  observer.observe(stickyElm);
+  setTimeout(() => {
+    //detect when main nav hits top of screen
+    const stickyElm = document.querySelector('.js-main-nav, .section--topAd');
+    const observer = new IntersectionObserver(([e]) => bodyDom.classList.toggle('is-stuck', e.intersectionRatio < 1), {
+      threshold: [1]
+    });
+    observer.observe(stickyElm);
+  }, 100);
 
   if ($window.width() < 980) {
     $menuParent.each(function() {

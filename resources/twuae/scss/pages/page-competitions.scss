@@ -108,6 +108,10 @@
         max-width: $twoColsLg;
         margin-bottom: $gutterLg;
     }
+    .articleSnippet-content {
+        margin-left: 0;
+        padding: 20px 15px 10px !important;
+    }
 }
 .page--competition-list .main-content .articleSnippet-item--fullBg + .articleSnippet-item--fullBg {
     border-top: 0;
@@ -132,7 +136,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    //align-items: flex-end;
     flex-basis: $fullCol;
     width: 100%;
     max-width: $fullCol;
@@ -157,5 +161,15 @@
 .page--competition-list .sidebar .section + .section {
     @include bp(lg) {
         margin-top: 0;
+    }
+}
+
+.sidebar {
+    @media (max-width: 667px) {
+        flex-direction: column;
+        align-items: center;
+        .section--latestJobs {
+            align-self: center;
+        }
     }
 }

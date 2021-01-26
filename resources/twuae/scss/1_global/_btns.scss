@@ -56,7 +56,7 @@ $btnDisabledColor: $white;
 }
 .btn--back::before {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 0;
     transform: translateY(-50%) rotate(180deg);
     background: image-url('/public/twuae/img/i-arrow-red.svg') left center no-repeat;

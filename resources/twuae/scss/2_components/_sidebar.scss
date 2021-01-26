@@ -13,7 +13,7 @@ $sidebarWidgetBgColor: $white2;
         flex: 0 0 $sidebarWidthDefault;
         align-self: flex-start;
         justify-content: center;
-        margin: $marginDefault 0 $marginDefault $gutterMd;
+        margin: 0 0 $marginDefault $gutterMd;
         max-width: $sidebarWidthDefault;
     }
 }
@@ -41,7 +41,7 @@ $sidebarWidgetBgColor: $white2;
 .sidebar--extra .section {
     @include bp(smd) {
         flex: 0 0 $twoColsSmd;
-        margin: 0;
+        //margin: 0;
         max-width: $twoColsSmd;
     }
     @include bp(lg) {
@@ -59,22 +59,27 @@ $sidebarWidgetBgColor: $white2;
 .sidebar .sidebarAd + .section {
     margin-top: $marginDefault;
     @include bp(smd) {
-        margin-top: 0;
+        //margin-bottom: 0;
     }
 }
-.sidebar .section + .section {
-    margin-top: 36px;
+.sidebar section {
+    margin-bottom: 36px;
 }
 .sidebar .section + .section:nth-of-type(2) {
     @include bp(smd) {
-        margin-top: 0;
+        margin-bottom: 0;
     }
     @include bp(lg) {
-        margin-top: 36px;
+        margin-bottom: 36px;
     }
 }
 .sidebar-widget {
     background-color: $sidebarWidgetBgColor;
+    &.--extra {
+        @media (min-width: 666px) {
+            display: none;
+        }
+    }
 }
 .sidebarWidget-header {
     @include fixPadding;
@@ -151,5 +156,24 @@ $sidebarWidgetBgColor: $white2;
 .sidebarWidget-footer {
     a {
         height: 44px !important;
+    }
+}
+
+.sidebar {
+    &.--hasAd {
+        @media (max-width: 1024px) {
+            .sidebarAd {
+                display: none;
+            }
+        }
+    }
+}
+
+.sidebarAd {
+    &.--contentAd {
+        margin-bottom: 40px;
+        @media (min-width: 1024px) {
+            display: none;
+        }
     }
 }

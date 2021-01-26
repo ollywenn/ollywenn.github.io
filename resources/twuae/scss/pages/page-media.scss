@@ -88,7 +88,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    //align-items: flex-end;
     flex-basis: $fullCol;
     width: 100%;
     max-width: $fullCol;
@@ -113,5 +113,43 @@
     @include bp(smd) {
         margin-top: 0;
         padding-bottom: 0;
+    }
+}
+.sidebar {
+    @include bp(lg) {
+        margin-top: 48px;
+    }
+    .sidebarAd {
+        padding-bottom: 40px;
+    }
+
+    @media (max-width: 667px) {
+        flex-direction: column;
+        align-items: center;
+        .section--latestJobs {
+            align-self: center;
+            margin-top: 40px;
+        }
+    }
+}
+
+.section.section--mostPopular.sidebar-widget {
+    margin-top: 0;
+}
+.articleSnippet-item--fullBg .articleSnippet-content {
+    padding: 20px 20px 0;
+    .articleSnippet-title {
+        margin: 0 0 4px;
+    }
+    .articleSnippet-metaData {
+        margin-bottom: 15px;
+    }
+}
+
+.articleSnippet-item--fullBg + {
+    .articleSnippet-item {
+        @media (max-width: 666px) {
+            border-top: 0 !important;
+        }
     }
 }

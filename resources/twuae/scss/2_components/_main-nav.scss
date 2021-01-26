@@ -432,9 +432,11 @@ $mainNavButtonPadding: 15px;
 
     &.slim {
         @media (min-width: 979px) {
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
             left: auto;
             right: auto;
             min-height: inherit;
+            padding-top: 12px;
             border-bottom: $grey5 1px solid;
             & > ul {
                 padding-bottom: 15px;
@@ -443,6 +445,10 @@ $mainNavButtonPadding: 15px;
                     display: block;
                 }
             }
+        }
+        .btn--close {
+            right: 18px;
+            top: 18px;
         }
     }
 }

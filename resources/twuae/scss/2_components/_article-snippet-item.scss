@@ -12,6 +12,19 @@ $articleSnippetThumbBgColor: $white1;
     @include bp(smd) {
         flex-direction: column; //here
     }
+
+    .btn--partnerContent {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        z-index: 4;
+        margin-top: 0;
+        @media (max-width: 400px) {
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
 }
 .articleSnippet-item--fullBg {
     position: relative;
@@ -152,12 +165,18 @@ $articleSnippetThumbBgColor: $white1;
             @include truncate(4);
         }
     }
+    h1 {
+        @media (max-width: 1023px) {
+            @include truncate(2);
+        }
+    }
     p {
         margin-top: 5px;
         @include truncate(4); //4 lines max
         @media (max-width: 1023px) {
             @include truncate(5);
         }
+        //@media (max-width: 667px) {@include truncate(2);}
         @media (max-width: 666px) {
             display: none;
         }

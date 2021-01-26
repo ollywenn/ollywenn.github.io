@@ -12,3 +12,33 @@
         justify-content: center;
     }
 }
+
+.page--media--default .main-content {
+    @include bp(lg) {
+        flex: 0 0 $mainContentWidthWithSidebarDefault;
+        max-width: $mainContentWidthWithSidebarDefault;
+    }
+}
+
+.sidebar {
+    @include bp(lg) {
+        margin-top: 48px;
+    }
+    .sidebarAd {
+        padding-bottom: 40px;
+    }
+    @media (max-width: 667px) {
+        flex-direction: column;
+        align-items: center;
+        .section--latestJobs {
+            align-self: center;
+            margin-top: 40px;
+        }
+    }
+}
+
+.main-content {
+    .article-metadata {
+        margin-bottom: 20px;
+    }
+}

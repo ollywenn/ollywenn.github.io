@@ -17,7 +17,7 @@ export default function init() {
   let mainHeaderHeight = $mainHeader.outerHeight();
   let mainNavOffsetTop = $mainNav.offset().top;
 
-  setTimeout(() => {
+  setTimeout(function() {
     //detect when main nav hits top of screen
     const stickyElm = document.querySelector('.js-main-nav, .section--topAd');
     const observer = new IntersectionObserver(([e]) => bodyDom.classList.toggle('is-stuck', e.intersectionRatio < 1), {
@@ -78,7 +78,7 @@ export default function init() {
 
   function windowListener() {
     if ($window.width() < 980) {
-      const mobileStickyElm = document.querySelector('.header-wrapper');
+      const mobileStickyElm = document.querySelector('.header-wrapper, .section--topAd');
       const mobileObserver = new IntersectionObserver(
         ([e]) => bodyDom.classList.toggle('is-stuck', e.intersectionRatio < 1),
         {

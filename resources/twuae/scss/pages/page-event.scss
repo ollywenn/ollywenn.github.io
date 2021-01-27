@@ -1,0 +1,28 @@
+@import '../toolbox/toolbox';
+@import '../1_global/typography';
+
+.main-content {
+    max-width: 698px;
+    margin: 0 auto;
+    .article-metadata {
+        justify-content: flex-end;
+        margin: 23px 0;
+    }
+    .event-details {
+        padding-left: 0;
+        li {
+            list-style: none;
+            margin: 15px 0;
+            label {
+                font-weight: bold;
+            }
+            span {
+                display: block;
+                a {
+                    text-decoration: none;
+                    word-break: break-all;
+                }
+            }
+        }
+    }
+}

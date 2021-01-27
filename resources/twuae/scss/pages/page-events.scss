@@ -82,3 +82,57 @@
 .page--events-list .article-body .articleSnippet-item--fullImg .articleSnippet-thumb {
     margin-right: 0;
 }
+
+.section.section--cta {
+    .btn--primary {
+        height: 44px;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+.success-modal-wrapper {
+    position: fixed;
+    z-index: -99999999;
+    cursor: pointer;
+    pointer-events: none;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    .success-modal {
+        background-color: white;
+        padding: 40px;
+        text-align: center;
+        margin: 20px;
+        width: 100%;
+        max-width: 635px;
+        cursor: default;
+        position: relative;
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .btn--close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        a {
+            margin: 20px auto 0;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    &.is-active {
+        z-index: 99999999;
+        pointer-events: all;
+        display: flex;
+    }
+}

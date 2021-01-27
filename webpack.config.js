@@ -19,6 +19,7 @@ module.exports = {
     'page-contact': styles + 'page-contact.scss',
     'page-destination-single': styles + 'page-destination-single.scss',
     'page-destinations': styles + 'page-destinations.scss',
+    'page-destination-features': styles + 'page-destination-features.scss',
     'page-editions-archive': styles + 'page-editions-archive.scss',
     'page-events': styles + 'page-events.scss',
     'page-event': styles + 'page-event.scss',

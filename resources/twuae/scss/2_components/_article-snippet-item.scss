@@ -63,9 +63,9 @@ $articleSnippetThumbBgColor: $white1;
     background-size: cover;
     background-color: $articleSnippetThumbBgColor;
     min-height: 63px;
-    @include bp(sm) {
-        min-height: 78px;
-    }
+    // @include bp(sm) {
+    //     min-height: 78px;
+    // }
 }
 .articleSnippet-thumb::before,
 .articleSnippet-thumb::after {
